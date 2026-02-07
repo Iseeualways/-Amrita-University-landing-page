@@ -1,0 +1,2179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+        
+    <style>
+        :root {
+            --primary: #be1f4f;
+            --primary-dark: #9B0C24;
+            --accent: #FF6B35;
+            --accent-light: #FFB088;
+            --dark: #0F0F23;
+            --dark-alt: #1A1A2E;
+            --light: #ffffff;
+            --text: #2D3748;
+            --text-light: #64748B;
+            --bg-gradient: linear-gradient(135deg, #C41E3A 0%, #9B0C24 100%);
+            --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            color: var(--text);
+            background: var(--light);
+            overflow-x: hidden;
+        }
+
+        /* Floating Navbar */
+        .navbar {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 15px 40px;
+            border-radius: 100px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            display: flex;
+            gap: 50px;
+            align-items: center;
+            animation: slideDown 0.8s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateX(-50%) translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 600;
+            font-size: 1rem;
+            white-space: nowrap;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: var(--primary);
+        }
+
+        .navbar .apply-btn {
+            background: var(--bg-gradient);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 50px;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar .apply-btn:hover {
+            transform: scale(1.05);
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, rgba(196, 30, 58, 0.97) 0%, rgba(155, 12, 36, 0.99) 100%);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(255, 107, 53, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(255, 182, 136, 0.15) 0%, transparent 50%);
+            animation: pulseGlow 8s ease-in-out infinite;
+        }
+
+        @keyframes pulseGlow {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.7;
+            }
+        }
+
+        .hero-bg-shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .shape:nth-child(1) {
+            width: 300px;
+            height: 300px;
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .shape:nth-child(2) {
+            width: 200px;
+            height: 200px;
+            top: 60%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+
+        .shape:nth-child(3) {
+            width: 150px;
+            height: 150px;
+            bottom: 20%;
+            left: 50%;
+            animation-delay: 4s;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-30px) rotate(180deg);
+            }
+        }
+
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 120px 40px 80px;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 80px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3rem, 7vw, 3.3rem);
+            color: white;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            font-weight: 900;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-content h1 .highlight {
+            background: linear-gradient(90deg, #FFB088, #FF6B35);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-content .subtitle {
+            font-size: 1.4rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 30px;
+            font-weight: 300;
+            line-height: 1.7;
+            animation: fadeInUp 1s ease-out 0.2s backwards;
+        }
+
+        .hero-badges {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+            animation: fadeInUp 1s ease-out 0.4s backwards;
+        }
+
+        .badge {
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            color: white;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 60px;
+            animation: fadeInUp 1s ease-out 0.6s backwards;
+        }
+
+        .stat-item {
+            text-align: left;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--accent-light);
+            display: block;
+            margin-bottom: 8px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 400;
+        }
+
+        /* Contact Form - Modern Card */
+        .contact-form {
+            background: white;
+            padding: 50px;
+            border-radius: 30px;
+            box-shadow: 0 30px 90px rgba(0, 0, 0, 0.25);
+            animation: fadeInUp 1s ease-out 0.8s backwards;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-form h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: var(--dark);
+            font-weight: 700;
+        }
+
+        .contact-form p {
+            color: var(--text-light);
+            margin-bottom: 35px;
+            font-size: 1.05rem;
+        }
+
+        .form-group {
+            margin-bottom: 5px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: var(--text);
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px 20px;
+            border: 2px solid #E2E8F0;
+            border-radius: 14px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.3s ease;
+            background: #F8FAFC;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: white;
+            box-shadow: 0 0 0 5px rgba(196, 30, 58, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background: var(--bg-gradient);
+            color: white;
+            border: none;
+            border-radius: 14px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(196, 30, 58, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .submit-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .submit-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(196, 30, 58, 0.4);
+        }
+
+
+
+        /* Trusted By Section - Unique Carousel */
+        .trusted-section {
+            padding: 100px 40px;
+            background: linear-gradient(130deg, #ffffff 0%, #ffffff 100%);
+            border-bottom: 1px solid #ffffff;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .trusted-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -50%;
+            width: 200%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 30% 50%, rgba(196, 30, 58, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 70% 50%, rgba(255, 107, 53, 0.03) 0%, transparent 50%);
+            animation: moveBackground 20s ease-in-out infinite;
+        }
+
+        @keyframes moveBackground {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            50% {
+                transform: translateX(5%);
+            }
+        }
+
+        .trusted-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .trusted-title {
+            font-size: 2rem;
+            color: rgb(0, 0, 0);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 60px;
+        }
+
+        .logo-carousel-container {
+            position: relative;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+
+        .logo-carousel-track {
+            display: flex;
+            gap: 30px;
+            animation: scrollLogos 30s linear infinite;
+            width: fit-content;
+        }
+
+        @keyframes scrollLogos {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .logo-carousel-container:hover .logo-carousel-track {
+            animation-play-state: paused;
+        }
+
+        .logo-card {
+            min-width: 280px;
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid transparent;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--bg-gradient);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 0;
+        }
+
+        .logo-card:hover::before {
+            opacity: 0.05;
+
+        }
+
+        .logo-card:hover {
+            transform: translateY(-10px) scale(1);
+            box-shadow: 0 20px 60px rgba(196, 30, 58, 0.15);
+            border-color: var(--primary);
+        }
+
+        .logo-icon {
+            width: 110px;
+            height: 110px;
+            background: linear-gradient(135deg, rgba(196, 30, 58, 0.1), rgba(255, 107, 53, 0.1));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            transition: all 0.4s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* IMAGE INSIDE ICON */
+        .logo-icon img {
+            width: 75%;
+            height: 75%;
+            object-fit: contain;
+            transition: transform 0.4s ease;
+        }
+
+        /* HOVER EFFECT */
+        .logo-card:hover .logo-icon {
+            background: #ad1b3150;
+            transform: rotate(360deg) scale(1.1);
+        }
+
+        .logo-card:hover .logo-icon img {
+            transform: scale(1.05);
+        }
+
+
+        .logo-card h4 {
+            font-size: 1.6rem;
+            color: var(--dark);
+            margin-bottom: 10px;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo-card p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Alternative: Diagonal Grid Pattern */
+        @media (min-width: 1200px) {
+            .logo-carousel-container {
+                perspective: 1000px;
+            }
+
+            .logo-card {
+                transform-style: preserve-3d;
+            }
+
+            .logo-card:hover {
+                transform: translateY(-10px) scale(1.05) rotateY(5deg);
+            }
+        }
+
+
+
+        /* Features Section - Bento Grid */
+        .features-section {
+            padding: 120px 40px;
+            background: linear-gradient(180deg, #FFFFFF 0%, #F1F5F9 100%);
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 80px;
+        }
+
+        .section-label {
+            display: inline-block;
+            padding: 10px 24px;
+            background: rgba(196, 30, 58, 0.1);
+            color: var(--primary);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            color: var(--dark);
+            margin-bottom: 20px;
+            line-height: 1.2;
+            font-weight: 700;
+        }
+
+        .section-description {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+
+        .bento-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .bento-item {
+            background: white;
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bento-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-gradient);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .bento-item:hover::before {
+            opacity: 0.05;
+        }
+
+        .bento-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(196, 30, 58, 0.15);
+        }
+
+        .bento-item.large {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .bento-item.wide {
+            grid-column: span 2;
+        }
+
+        .bento-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--bg-gradient);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            font-size: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .bento-item h4 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+
+        .bento-item p {
+            color: var(--text-light);
+            line-height: 1.7;
+            font-size: 1.05rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Carousel Section - Enhanced */
+        .carousel-section {
+            padding: 120px 40px;
+            background: var(--dark);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .carousel-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(circle at 30% 40%, rgba(196, 30, 58, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(255, 107, 53, 0.1) 0%, transparent 50%);
+        }
+
+        .carousel-section .section-title,
+        .carousel-section .section-description {
+            color: white;
+        }
+
+        .carousel-section .section-label {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--accent-light);
+        }
+
+        .carousel-wrapper {
+            position: relative;
+            max-width: 1400px;
+            margin: 0 auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+
+        .carousel-track {
+            display: flex;
+            gap: 30px;
+            animation: scroll 40s linear infinite;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .carousel-card {
+            min-width: 380px;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 45px;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .carousel-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 24px;
+            padding: 2px;
+            background: linear-gradient(135deg, var(--accent), var(--primary));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .carousel-card:hover::after {
+            opacity: 1;
+        }
+
+        .carousel-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .carousel-icon {
+            width: 75px;
+            height: 75px;
+            background: linear-gradient(135deg, var(--accent), var(--primary));
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            font-size: 2.2rem;
+        }
+
+        .carousel-card h4 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            color: white;
+            font-weight: 700;
+        }
+
+        .carousel-card p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        /* Courses Section - Card Grid */
+        .courses-section {
+            padding: 120px 40px;
+            background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
+        }
+
+        .courses-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 35px;
+        }
+
+        .course-card {
+            background: white;
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid transparent;
+        }
+
+        .course-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 25px 70px rgba(196, 30, 58, 0.2);
+            border-color: var(--primary);
+        }
+
+        .course-header {
+            padding: 35px;
+            background: linear-gradient(135deg, rgba(196, 30, 58, 0.05), rgba(255, 107, 53, 0.05));
+            position: relative;
+        }
+
+        .course-badge {
+            display: inline-block;
+            padding: 8px 18px;
+            background: var(--accent);
+            color: white;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+        }
+
+        .course-card h3 {
+            font-size: 2rem;
+            color: var(--dark);
+            margin-bottom: 15px;
+            font-weight: 700;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .course-meta {
+            display: flex;
+            gap: 25px;
+            color: var(--text-light);
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .course-meta span {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .course-body {
+            padding: 35px;
+        }
+
+        .course-body p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 25px;
+            font-size: 1.05rem;
+        }
+
+        .course-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .course-features li {
+            color: var(--text);
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 14px;
+            font-size: 1rem;
+        }
+
+        .course-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .course-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 32px;
+            background: var(--bg-gradient);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            font-size: 1.05rem;
+        }
+
+        .course-btn:hover {
+            transform: translateX(5px);
+            box-shadow: 0 10px 30px rgba(196, 30, 58, 0.3);
+        }
+
+        /* Testimonials Section - Modern Slider */
+        .testimonials-section {
+            padding: 120px 40px;
+            background: var(--dark);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonials-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(196, 30, 58, 0.1) 0%, transparent 40%),
+                radial-gradient(circle at 80% 70%, rgba(255, 107, 53, 0.08) 0%, transparent 40%);
+        }
+
+        .testimonials-section .section-title,
+        .testimonials-section .section-description {
+            color: white;
+        }
+
+        .testimonials-section .section-label {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--accent-light);
+        }
+
+        .testimonials-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 28px;
+            padding: 50px;
+            margin-bottom: 30px;
+        }
+
+        .testimonial-content {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.8;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: var(--bg-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .author-info h5 {
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        .author-info p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            padding: 100px 40px;
+            background: white;
+        }
+
+        .stats-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+        }
+
+        .stat-box {
+            text-align: center;
+            padding: 40px;
+            border-radius: 24px;
+            background: linear-gradient(135deg, rgba(196, 30, 58, 0.05), rgba(255, 107, 53, 0.05));
+            transition: all 0.4s ease;
+        }
+
+        .stat-box:hover {
+            transform: translateY(-10px);
+            background: linear-gradient(135deg, rgba(196, 30, 58, 0.1), rgba(255, 107, 53, 0.1));
+        }
+
+        .stat-box .number {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 900;
+            background: var(--bg-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+        }
+
+        .stat-box .label {
+            font-size: 1.15rem;
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 120px 40px;
+            background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-item.active {
+            border-color: var(--primary);
+        }
+
+        .faq-question {
+            padding: 30px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--dark);
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            color: var(--primary);
+        }
+
+        .faq-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: var(--bg-gradient);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+            font-size: 1.3rem;
+            flex-shrink: 0;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 600px;
+            padding: 0 30px 30px 30px;
+        }
+
+        .faq-answer p {
+            color: var(--text-light);
+            line-height: 1.9;
+            font-size: 1.05rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            position: relative;
+            padding: 140px 40px;
+            background:
+                linear-gradient(135deg, rgba(196, 30, 58, 0.96) 0%, rgba(155, 12, 36, 0.98) 100%),
+                url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(circle at 30% 50%, rgba(255, 107, 53, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 70% 50%, rgba(196, 30, 58, 0.3) 0%, transparent 50%);
+        }
+
+        .cta-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.8rem, 6vw, 5rem);
+            color: white;
+            margin-bottom: 30px;
+            line-height: 1.2;
+            font-weight: 900;
+        }
+
+        .cta-content p {
+            font-size: 1.4rem;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 50px;
+            line-height: 1.8;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            padding: 22px 50px;
+            font-size: 1.15rem;
+            font-weight: 700;
+            border-radius: 14px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .cta-btn-primary {
+            background: white;
+            color: var(--primary);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-btn-primary:hover {
+            background: var(--accent);
+            color: white;
+            transform: translateY(-4px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        .cta-btn-secondary {
+            background: transparent;
+            color: white;
+            border: 3px solid white;
+        }
+
+        .cta-btn-secondary:hover {
+            background: white;
+            color: var(--primary);
+            transform: translateY(-4px);
+        }
+
+        .cta-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 90px;
+        }
+
+        .cta-feature {
+            text-align: center;
+        }
+
+        .cta-feature-icon {
+            width: 90px;
+            height: 90px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 22px;
+            margin: 0 auto 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .cta-feature:hover .cta-feature-icon {
+            transform: scale(1.1) rotate(5deg);
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        .cta-feature h4 {
+            color: white;
+            font-size: 1.4rem;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .cta-feature p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.05rem;
+            margin-bottom: 0;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 60px 40px 30px;
+            background: var(--dark);
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        .footer-section h4 {
+            color: white;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-section a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--accent-light);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 1200px) {
+            .bento-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .bento-item.large {
+                grid-column: span 2;
+                grid-row: span 1;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .navbar {
+                padding: 12px 25px;
+                gap: 25px;
+            }
+
+            .navbar a {
+                font-size: 0.85rem;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 60px;
+                padding-top: 140px;
+            }
+
+            .courses-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                width: calc(100% - 40px);
+                padding: 12px 20px;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .navbar a:not(.apply-btn) {
+                display: none;
+            }
+
+            .hero-stats {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .contact-form {
+                padding: 35px;
+            }
+
+            .bento-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .bento-item.large,
+            .bento-item.wide {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+
+            .carousel-card {
+                min-width: 320px;
+                padding: 35px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .cta-btn {
+                width: 100%;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        /* Scroll Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Loading Animation */
+        @keyframes shimmer {
+            0% {
+                background-position: -1000px 0;
+            }
+
+            100% {
+                background-position: 1000px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Floating Navbar -->
+    <nav class="navbar">
+        <img src="https://admin.onlineamrita.com/sites/default/files/2025-04/Amrita%20Online%20Logo%20red%201.svg"
+            alt="">
+        <a href="#home">Home</a>
+        <a href="#features">About Us</a>
+        <a href="#courses">Programmes</a>
+        <a href="#faq">Why Amrita</a>
+        <a href="#faq">FAQs</a>
+        <a href="#faq">Contact</a>
+        <a href="https://admission.onlineamrita.com/" class="apply-btn">Apply Now</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Unlock Your Potential with
+                    <br><span class="highlight">Amrita University</span> Online
+                </h1>
+                <p class="subtitle">Transform your career with UGC Entitled Online Degrees from India's 8th Ranked
+                    University. Join 50+ countries of ambitious learners.</p>
+
+                <div class="hero-badges">
+                    <span class="badge">🏆 NIRF Rank #8</span>
+                    <span class="badge">✓ NAAC A++ Accredited</span>
+                    <span class="badge">🌍 WES Approved</span>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">50%</span>
+                        <span class="stat-label">Average Salary Growth</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">30+</span>
+                        <span class="stat-label">Programs & Specializations</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Countries Represented</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3>Start Your Journey</h3>
+                <p>Get free career counseling from our experts</p>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="your@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Contact Number</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="+91 98765 43210">
+                    </div>
+                    <div class="form-group">
+                        <label for="course">Program of Interest</label>
+                        <select id="course" name="course" required>
+                            <option value="">Select a program</option>
+                            <option value="mba">Online MBA</option>
+                            <option value="mca">Online MCA</option>
+                            <option value="mcom">Online M.Com</option>
+                            <option value="bba">Online BBA</option>
+                            <option value="bca">Online BCA</option>
+                            <option value="bcom">Online B.Com</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-btn">Get Free Counseling →</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="aboutus">
+        <div class="container text-center">
+            <h2>About <span class="highlight">Amrita</span> University</h2>
+            <p>Amrita Online is the Online learning initiative of Amrita Vishwa Vidyapeetham, one of India’s premier
+                multi-campus and multi-disciplinary universities accredited with the highest NAAC grade of A++ and
+                ranked 8th nationally by NIRF 2025.
+
+                Amrita Online brings the excellence of Amrita University into a flexible and learner-driven online
+                environment, empowering individuals across India and the world to pursue UGC-entitled and AICTE-approved
+                undergraduate and postgraduate programs.
+
+                The Amrita Online courses combine academic rigor, industry alignment, and global recognition (including
+                WES equivalence in the USA and Canada). Learners benefit from live interactive sessions, recorded
+                content, and a comprehensive Learning Management System that ensures continuous engagement and
+                personalized academic support.
+
+                Amrita Online degree programs are in high-demand areas such as Management, Computer Applications,
+                Commerce, and Emerging Technologies with a strong focus on future-ready skills, designed for working
+                professionals, graduates, and lifelong learners seeking to upgrade their qualifications without
+                disrupting their careers.
+
+                Every Amrita Online learner becomes part of Amrita University’s legacy of compassion-driven education,
+                research excellence, and global impact, supported by a strong network of faculty mentors, industry
+                collaborators, and alumni across the world.
+            </p>
+
+        </div>
+    </section>
+
+
+    <!-- Trusted By Section - Unique Carousel -->
+    <section class="trusted-section">
+        <div class="trusted-content">
+            <p class="trusted-title">Recognized & Accredited</p>
+            <div class="logo-carousel-container">
+                <div class="logo-carousel-track">
+                    <div class="logo-card">
+                        <div class="logo-icon">
+                            <img src="Carousal/NIRF.png" alt="">
+                        </div>
+                        <h4>UGC</h4>
+                        <p>University Grants Commission</p>
+                    </div>
+                    <div class="logo-card">
+                        <div class="logo-icon">
+                            <img src="Carousal/NIRF.png" alt="">
+                        </div>
+                        <h4>AICTE</h4>
+                        <p>Technical Education Council</p>
+                    </div>
+                    <div class="logo-card">
+                        <div class="logo-icon">
+                            <img src="Carousal/NIRF.png" alt="">
+                        </div>
+                        <h4>NAAC A++</h4>
+                        <p>Highest Grade Accreditation</p>
+                    </div>
+                    <div class="logo-card">
+                        <div class="logo-icon">
+                            <img src="Carousal/NIRF.png" alt="">
+                        </div>
+                        <h4>NIRF #8</h4>
+                        <p>National Ranking Framework</p>
+                    </div>
+                    <div class="logo-card">
+                        <div class="logo-icon">
+                            <img src="Carousal/NIRF.png" alt="">
+                        </div>
+                        <h4>WES</h4>
+                        <p>Global Recognition USA/Canada</p>
+                    </div>
+                    <div class="logo-card">
+                        <div class="logo-icon">
+                            <img src="Carousal/NIRF.png" alt="">
+                        </div>
+                        <h4>THE Impact</h4>
+                        <p>Top 50 Global Universities</p>
+                    </div>
+                    <div class="logo-card">
+                        <div class="logo-icon">
+                            <img src="Carousal/NIRF.png" alt="">
+                        </div>
+                        <h4>QS Ranked</h4>
+                        <p>#1 International Faculty</p>
+                    </div>
+
+                    <div class="logo-card">
+                        <div class="logo-icon">
+                            <img src="Carousal/NIRF.png" alt="">
+                        </div>
+                        <h4>QS Ranked</h4>
+                        <p>#1 International Faculty</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Features Section - Bento Grid -->
+    <section class="features-section" id="features">
+        <div class="section-header">
+            <span class="section-label">Why Choose Us</span>
+            <h2 class="section-title">Excellence That Sets Us Apart</h2>
+            <p class="section-description">World-class education meets flexibility and innovation</p>
+        </div>
+
+        <div class="bento-grid">
+            <div class="bento-item large">
+                <div class="bento-icon">🎓</div>
+                <h4>Top Ranked University</h4>
+                <p>Ranked #8 in India by NIRF 2025, NAAC A++ accredited with the highest grade. Recognized globally
+                    among top 50 universities in THE Impact Rankings 2025. Join an elite academic community trusted by
+                    learners across 50+ countries and 28 Indian states.</p>
+            </div>
+
+            <div class="bento-item wide">
+                <div class="bento-icon">🌍</div>
+                <h4>Global Recognition</h4>
+                <p>WES equivalence in USA & Canada. Study abroad programs with UC Davis, University of Barcelona, and
+                    more.</p>
+            </div>
+
+            <div class="bento-item">
+                <div class="bento-icon">📚</div>
+                <h4>UGC Entitled</h4>
+                <p>Fully recognized and AICTE approved programs.</p>
+            </div>
+
+            <div class="bento-item">
+                <div class="bento-icon">💼</div>
+                <h4>Career Growth</h4>
+                <p>50% average salary increase reported by graduates.</p>
+            </div>
+
+            <div class="bento-item wide">
+                <div class="bento-icon">👨‍🏫</div>
+                <h4>Expert Faculty</h4>
+                <p>Learn from 800+ PhD-qualified professors with decades of teaching and industry experience.</p>
+            </div>
+
+            <div class="bento-item">
+                <div class="bento-icon">⏰</div>
+                <h4>Flexible Learning</h4>
+                <p>Weekend live classes with 24/7 content access.</p>
+            </div>
+
+            <div class="bento-item">
+                <div class="bento-icon">🎯</div>
+                <h4>Placement Support</h4>
+                <p>Comprehensive career assistance and mentorship.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carousel Section -->
+    <section class="carousel-section">
+        <div class="section-header">
+            <span class="section-label">Learning Experience</span>
+            <h2 class="section-title">Innovative Online Education</h2>
+            <p class="section-description">Experience world-class education with cutting-edge technology</p>
+        </div>
+
+        <div class="carousel-wrapper">
+            <div class="carousel-track">
+                <div class="carousel-card">
+                    <div class="carousel-icon">💻</div>
+                    <h4>Live Interactive Classes</h4>
+                    <p>Real-time LIVE sessions held on weekends with direct faculty interaction and collaborative
+                        learning.</p>
+                </div>
+                <div class="carousel-card">
+                    <div class="carousel-icon">📹</div>
+                    <h4>Recorded Content</h4>
+                    <p>Structured e-learning materials including video lectures, whitepapers, and quizzes for self-paced
+                        study.</p>
+                </div>
+                <div class="carousel-card">
+                    <div class="carousel-icon">🔒</div>
+                    <h4>Proctored Exams</h4>
+                    <p>Secure online examinations from home through advanced proctoring technology.</p>
+                </div>
+                <div class="carousel-card">
+                    <div class="carousel-icon">💬</div>
+                    <h4>Discussion Forums</h4>
+                    <p>Engage with peers and faculty through LMS-based forums for collaborative learning.</p>
+                </div>
+                <div class="carousel-card">
+                    <div class="carousel-icon">🎯</div>
+                    <h4>Learning Management System</h4>
+                    <p>All-in-one platform bringing together classes, content, assignments, and resources.</p>
+                </div>
+                <div class="carousel-card">
+                    <div class="carousel-icon">🤝</div>
+                    <h4>Dedicated Support</h4>
+                    <p>Academic support, career counseling, and personalized guidance whenever needed.</p>
+                </div>
+                <!-- Duplicate for seamless scroll -->
+                <div class="carousel-card">
+                    <div class="carousel-icon">💻</div>
+                    <h4>Live Interactive Classes</h4>
+                    <p>Real-time LIVE sessions held on weekends with direct faculty interaction and collaborative
+                        learning.</p>
+                </div>
+                <div class="carousel-card">
+                    <div class="carousel-icon">📹</div>
+                    <h4>Recorded Content</h4>
+                    <p>Structured e-learning materials including video lectures, whitepapers, and quizzes for self-paced
+                        study.</p>
+                </div>
+                <div class="carousel-card">
+                    <div class="carousel-icon">🔒</div>
+                    <h4>Proctored Exams</h4>
+                    <p>Secure online examinations from home through advanced proctoring technology.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="number">20+</div>
+                <div class="label">Years of Academic Excellence</div>
+            </div>
+            <div class="stat-box">
+                <div class="number">800+</div>
+                <div class="label">PhD-Qualified Faculty</div>
+            </div>
+            <div class="stat-box">
+                <div class="number">28</div>
+                <div class="label">Indian State Students</div>
+            </div>
+            <div class="stat-box">
+                <div class="number">300+</div>
+                <div class="label">Academic Programs</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="courses-section" id="courses">
+        <div class="section-header">
+            <span class="section-label">Programs</span>
+            <h2 class="section-title">Explore Our Programs</h2>
+            <p class="section-description">Choose from 30+ UG, PG, and Certificate programs designed for global learners
+            </p>
+        </div>
+
+        <div class="courses-grid">
+            <div class="course-card">
+                <div class="course-header">
+                    <span class="course-badge">Most Popular</span>
+                    <h3>Online MBA</h3>
+                    <div class="course-meta">
+                        <span>⏱ 2 Years</span>
+                        <span>💰 ₹1,70,000</span>
+                    </div>
+                </div>
+                <div class="course-body">
+                    <p>Master business leadership with 15+ specializations including AI, ESG, Finance, Marketing, and
+                        more. Industry-aligned curriculum with global exposure opportunities.</p>
+                    <ul class="course-features">
+                        <li>15+ Specializations Available</li>
+                        <li>Live Weekend Classes</li>
+                        <li>Industry Expert Sessions</li>
+                        <li>Global Study Opportunities</li>
+                    </ul>
+                    <a href="#" class="course-btn">Explore Program →</a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-header">
+                    <span class="course-badge">Tech Focused</span>
+                    <h3>Online MCA</h3>
+                    <div class="course-meta">
+                        <span>⏱ 2 Years</span>
+                        <span>💰 ₹1,40,000</span>
+                    </div>
+                </div>
+                <div class="course-body">
+                    <p>Advanced computer applications degree with specializations in AI/ML and Cybersecurity. Build
+                        expertise for the tech industry with hands-on projects.</p>
+                    <ul class="course-features">
+                        <li>AI/ML & Cybersecurity Tracks</li>
+                        <li>Hands-on Lab Sessions</li>
+                        <li>Industry Projects</li>
+                        <li>Placement Assistance</li>
+                    </ul>
+                    <a href="#" class="course-btn">Explore Program →</a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-header">
+                    <span class="course-badge">Undergraduate</span>
+                    <h3>Online BCA</h3>
+                    <div class="course-meta">
+                        <span>⏱ 3 Years</span>
+                        <span>💰 ₹1,35,000</span>
+                    </div>
+                </div>
+                <div class="course-body">
+                    <p>Bachelor's degree in computer applications with practical, hands-on approach. Build a strong
+                        foundation in programming and IT fundamentals.</p>
+                    <ul class="course-features">
+                        <li>Comprehensive Programming Skills</li>
+                        <li>Virtual Labs & Projects</li>
+                        <li>Career Development Support</li>
+                        <li>International Student Support</li>
+                    </ul>
+                    <a href="#" class="course-btn">Explore Program →</a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-header">
+                    <span class="course-badge">Business</span>
+                    <h3>Online BBA</h3>
+                    <div class="course-meta">
+                        <span>⏱ 3 Years</span>
+                        <span>💰 ₹1,35,000</span>
+                    </div>
+                </div>
+                <div class="course-body">
+                    <p>Develop essential business and management skills. Perfect for aspiring entrepreneurs and business
+                        leaders with marketing specialization.</p>
+                    <ul class="course-features">
+                        <li>Marketing Specialization</li>
+                        <li>Exchange Programs (USA)</li>
+                        <li>Entrepreneurship Focus</li>
+                        <li>Flexible Learning Schedule</li>
+                    </ul>
+                    <a href="#" class="course-btn">Explore Program →</a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-header">
+                    <span class="course-badge">Commerce</span>
+                    <h3>B.Com with ACCA</h3>
+                    <div class="course-meta">
+                        <span>⏱ 3 Years</span>
+                        <span>💰 ₹2,85,000</span>
+                    </div>
+                </div>
+                <div class="course-body">
+                    <p>Bachelor of Commerce with ACCA electives in International Finance and Accounting. Open doors to
+                        global career opportunities.</p>
+                    <ul class="course-features">
+                        <li>ACCA Integration</li>
+                        <li>International Finance Focus</li>
+                        <li>Professional Certification Path</li>
+                        <li>Global Recognition</li>
+                    </ul>
+                    <a href="#" class="course-btn">Explore Program →</a>
+                </div>
+            </div>
+
+            <div class="course-card">
+                <div class="course-header">
+                    <span class="course-badge">Professional</span>
+                    <h3>M.Com with CPA</h3>
+                    <div class="course-meta">
+                        <span>⏱ 2 Years</span>
+                        <span>💰 ₹1,20,000</span>
+                    </div>
+                </div>
+                <div class="course-body">
+                    <p>Master of Commerce with CPA integration. Specialized training in international finance and
+                        accounting practices for career advancement.</p>
+                    <ul class="course-features">
+                        <li>CPA Preparation</li>
+                        <li>Advanced Accounting</li>
+                        <li>Audit Excellence</li>
+                        <li>Career Advancement Track</li>
+                    </ul>
+                    <a href="#" class="course-btn">Explore Program →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="section-header">
+            <span class="section-label">Success Stories</span>
+            <h2 class="section-title">What Our Students Say</h2>
+            <p class="section-description">Real experiences from real students transforming their careers</p>
+        </div>
+
+        <div class="testimonials-container">
+            <div class="testimonial-card">
+                <p class="testimonial-content">"Enrolling in Amrita's online BCA program was one of the best decisions
+                    of my life. As an international student from Nigeria, I was impressed by its practical approach and
+                    comprehensive guidance. The program helped me secure a job as a Data Certification Executive."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">KG</div>
+                    <div class="author-info">
+                        <h5>Kelechi Godwin</h5>
+                        <p>BCA Graduate, Nigeria</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <p class="testimonial-content">"The flexibility of Amrita Online allowed me to balance my demanding job
+                    at JP Morgan Chase with my education. The curriculum quality is comparable to Stanford's Master's
+                    program. It has fortified my skills and I'm proud of this accomplishment."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">G</div>
+                    <div class="author-info">
+                        <h5>Gauraw</h5>
+                        <p>VP of Technology, JP Morgan Chase</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <p class="testimonial-content">"As a working professional in HR, the online MBA was vital for my growth.
+                    The program gave me flexibility while exposing me to current industry scenarios through webinars and
+                    courses. The experience matched my regular Bachelor's education quality."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">N</div>
+                    <div class="author-info">
+                        <h5>Nithyasree</h5>
+                        <p>Online MBA Graduate</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="section-header">
+            <span class="section-label">FAQs</span>
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-description">Find answers to common questions about Amrita Online programs</p>
+        </div>
+
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Is Amrita Online UGC-approved and recognized?</span>
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, all Amrita Online programs are UGC-entitled and AICTE-approved. They hold the same academic
+                        value as on-campus degrees from Amrita Vishwa Vidyapeetham, which is NAAC A++ accredited and
+                        ranked 8th in India by NIRF 2025. Our degrees are also WES evaluated for use in USA and Canada.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>How does the online learning model work?</span>
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer">
+                    <p>Amrita Online combines live interactive sessions on weekends with self-paced recorded content
+                        available 24/7. You'll have access to virtual labs, discussion forums, and a comprehensive
+                        Learning Management System. Exams are conducted online through a secure, proctored environment
+                        from your home.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What career support do you provide?</span>
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer">
+                    <p>We offer comprehensive placement assistance including mentorship from industry experts, soft
+                        skills training, resume building, mock interviews, SWOT analysis, skill mapping, and internship
+                        opportunities. Our graduates report an average of 50% salary growth from enrollment to
+                        graduation.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Can I study abroad through Amrita Online?</span>
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes! We offer student exchange programs, study abroad opportunities, 3+1+X Integrated Master's
+                        pathways, and summer programs with leading universities in USA and Europe, including UC Davis,
+                        University of Barcelona, Oakland University, and more.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>What are the eligibility criteria for admission?</span>
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer">
+                    <p>For UG programs (BBA, BCA, B.Com), you need a minimum of 45% in 12th grade. For PG programs (MBA,
+                        MCA, M.Com), you need a minimum of 50% in your 10th, 12th, and undergraduate degree.
+                        International students are welcome and must provide a Certificate of Equivalence from AIU.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>Are there any scholarships available?</span>
+                    <div class="faq-icon">+</div>
+                </div>
+                <div class="faq-answer">
+                    <p>We offer flexible payment options and affordable fee structures. The one-time registration fee is
+                        Rs. 500, with a semester examination fee of Rs. 2,500. For specific scholarship opportunities,
+                        please contact our admissions team for personalized guidance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Ready to Transform Your Future?</h2>
+            <p>Join thousands of learners who have advanced their careers with Amrita Online. Start your journey today
+                with India's 8th ranked university.</p>
+
+            <div class="cta-buttons">
+                <a href="https://admission.onlineamrita.com/" class="cta-btn cta-btn-primary">Apply Now</a>
+                <a href="tel:+918065131430" class="cta-btn cta-btn-secondary">Talk to Expert</a>
+            </div>
+
+            <div class="cta-features">
+                <div class="cta-feature">
+                    <div class="cta-feature-icon">⚡</div>
+                    <h4>Quick Admission</h4>
+                    <p>Simple online application with instant support</p>
+                </div>
+                <div class="cta-feature">
+                    <div class="cta-feature-icon">💳</div>
+                    <h4>Flexible Payment</h4>
+                    <p>Affordable fees with easy payment plans</p>
+                </div>
+                <div class="cta-feature">
+                    <div class="cta-feature-icon">🎯</div>
+                    <h4>Career Focused</h4>
+                    <p>Industry-aligned programs with placement support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Amrita Online</h4>
+                <p>UGC Entitled Online UG & PG Degrees from Amrita Vishwa Vidyapeetham</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#courses">Programs</a></li>
+                    <li><a href="#features">Why Choose Us</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="https://admission.onlineamrita.com/">Apply Now</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="tel:+918065131430">+91 80651 31430</a></li>
+                    <li><a href="tel:+919447498840">+91 94474 98840</a></li>
+                    <li><a href="mailto:online@amrita.edu">online@amrita.edu</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>2025 © Amrita Vishwa Vidyapeetham | Privacy Policy</p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const isActive = item.classList.contains('active');
+
+                document.querySelectorAll('.faq-item').forEach(i => {
+                    i.classList.remove('active');
+                });
+
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your interest! Our team will contact you shortly.');
+            e.target.reset();
+        });
+
+        // Pause carousel on hover
+        const carousel = document.querySelector('.carousel-track');
+        carousel.addEventListener('mouseenter', () => {
+            carousel.style.animationPlayState = 'paused';
+        });
+        carousel.addEventListener('mouseleave', () => {
+            carousel.style.animationPlayState = 'running';
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.bento-item, .course-card, .testimonial-card').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+
+</html>
