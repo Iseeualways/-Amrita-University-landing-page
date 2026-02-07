@@ -4,550 +4,707 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karnataka B.Sc Nursing Entrance Exam 2025-26 | Complete Guide</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Amrita University | Landing Page</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <style>
         :root {
-            --primary-color: #0d6efd;
-            --secondary-color: #6c757d;
-            --accent-color: #198754;
-            --light-bg: #f8f9fa;
-            --dark-bg: #212529;
-            --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            --transition: all 0.3s ease;
+            --primary: #be1f4f;
+            --primary-dark: #9B0C24;
+            --accent: #FF6B35;
+            --accent-light: #FFB088;
+            --dark: #0F0F23;
+            --dark-alt: #1A1A2E;
+            --light: #ffffff;
+            --text: #2D3748;
+            --text-light: #64748B;
+            --bg-gradient: linear-gradient(135deg, #C41E3A 0%, #9B0C24 100%);
+            --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            padding-top: 76px;
+            font-family: 'Poppins', sans-serif;
+            color: var(--text);
+            overflow-x: hidden;
         }
 
-        /* Header & Navigation */
-        .navbar {
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            background-color: white !important;
-            padding: 0.8rem 0;
+        .highlight {
+            background: linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
+            font-size: 4.3rem !important;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        .navbar-brand {
-            font-weight: 700;
-            font-size: 1.5rem;
-            color: var(--primary-color) !important;
+        .playfair-display {
+            font-family: 'Poppins', sans-serif;
         }
 
-        .nav-link {
-            font-weight: 500;
-            margin: 0 5px;
-            color: #495057 !important;
+        /* ========================================
+           NAVBAR STYLES
+           ======================================== */
+        .custom-navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+            position: fixed;
+            top: 22px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 95%;
+            max-width: 1200px;
+            z-index: 1000;
+            border-radius: 100px;
+            animation: slideDown 0.8s ease-out;
         }
 
-        .nav-link:hover,
-        .nav-link.active {
-            color: var(--primary-color) !important;
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateX(-50%) translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(-50%) translateY(0);
+            }
         }
 
-        /* Hero Section */
+        .navbar-logo {
+            height: 36px;
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--text) !important;
+            font-weight: 600;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--primary) !important;
+        }
+
+        .apply-btn-nav {
+            background: var(--bg-gradient);
+            color: white !important;
+            padding: 10px 25px !important;
+            border-radius: 50px;
+            transition: transform 0.3s ease;
+            font-weight: 600;
+        }
+
+        .apply-btn-nav:hover {
+            transform: scale(1.05);
+        }
+
+        /* ========================================
+           HERO SECTION STYLES
+           ======================================== */
         .hero-section {
-            background: linear-gradient(135deg, #f0f7ff 0%, #e6f0ff 100%);
-            padding: 4rem 0;
-            border-radius: 0 0 20px 20px;
-            margin-bottom: 3rem;
+            margin: 10px;
+            border-radius: 30px;
+            height: 95vh !important;
+            padding-top: 140px;
+            padding-bottom: 70px;
+            position: relative;
+            overflow: hidden;
+            background:
+                linear-gradient(90deg,
+                    rgba(0, 0, 0, 0.286),
+                    rgba(0, 0, 0, 0.286),
+                    rgba(0, 0, 0, 0.286)),
+                url("Media/2147772273.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(circle at 20% 30%, rgba(255, 107, 53, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(255, 182, 136, 0.15) 0%, transparent 50%);
+            animation: pulseGlow 8s ease-in-out infinite;
+        }
+
+        @keyframes pulseGlow {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.7;
+            }
         }
 
         .hero-title {
+            position: relative;
+            display: inline-block;
+            font-size: clamp(2.5rem, 5vw, 3.3rem);
+            line-height: 1.2;
             font-weight: 700;
-            color: var(--dark-bg);
-            margin-bottom: 1.5rem;
+            color: #ffffff;
+            animation: fadeInUp 1s ease-out;
+            animation-fill-mode: both;
+        }
+
+        .hero-title::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            padding: 0.15em 0.4em;
+            margin-left: -0.4em;
+            background: linear-gradient(90deg,
+                    rgba(190, 31, 79, 0.95) 0%,
+                    rgba(190, 31, 79, 0.85) 40%,
+                    rgba(190, 31, 79, 0.85) 70%,
+                    rgba(190, 31, 79, 0) 100%);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .hero-subtitle {
-            color: var(--secondary-color);
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-        }
-
-        .cta-button {
-            padding: 0.8rem 2rem;
-            font-weight: 600;
-            border-radius: 50px;
-            transition: var(--transition);
-        }
-
-        /* Cards */
-        .card {
-            border: none;
-            border-radius: 12px;
-            box-shadow: var(--card-shadow);
-            transition: var(--transition);
-            height: 100%;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
-        }
-
-        .card-icon {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        /* Timeline */
-        .timeline-step {
-            position: relative;
-            padding-left: 2.5rem;
-            margin-bottom: 2.5rem;
-        }
-
-        .timeline-step:before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 2rem;
-            height: 2rem;
-            background-color: var(--primary-color);
-            border-radius: 50%;
-            color: white;
-            text-align: center;
-            line-height: 2rem;
-            font-weight: bold;
-        }
-
-        .step-1:before {
-            content: '1';
-        }
-
-        .step-2:before {
-            content: '2';
-        }
-
-        .step-3:before {
-            content: '3';
-        }
-
-        .timeline-step:after {
-            content: '';
-            position: absolute;
-            left: 0.95rem;
-            top: 2rem;
-            width: 2px;
-            height: calc(100% + 0.5rem);
-            background-color: #e9ecef;
-        }
-
-        .timeline-step:last-child:after {
-            display: none;
-        }
-
-        /* Table Styling */
-        .schedule-table {
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: var(--card-shadow);
-        }
-
-        .schedule-table thead {
-            background-color: var(--primary-color);
-            color: white;
-        }
-
-        /* College Cards */
-        .college-card {
-            border-left: 4px solid var(--primary-color);
-        }
-
-        .college-card .location {
-            color: var(--secondary-color);
-            font-size: 0.9rem;
-        }
-
-        .badge-private {
-            background-color: #e9ecef;
-            color: #495057;
+            font-size: 1.1rem;
             font-weight: 500;
+            line-height: 2 !important;
+            color: rgba(0, 0, 0, 0.95);
+            display: inline;
+            padding: 0.2em 0.35em;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 6px;
+            box-decoration-break: clone;
+            -webkit-box-decoration-break: clone;
         }
 
-        /* Eligibility & Syllabus */
-        .eligibility-card {
-            border-top: 4px solid var(--accent-color);
+        .hero-title {
+            box-decoration-break: clone;
+            -webkit-box-decoration-break: clone;
         }
 
-        .syllabus-card {
-            border-top: 4px solid #6f42c1;
-        }
-
-        /* Tips Section */
-        .tip-card {
-            border-left: 4px solid #ffc107;
-        }
-
-        /* Footer */
-        .footer {
-            background-color: var(--dark-bg);
-            color: white;
-            padding: 3rem 0 1.5rem;
-            margin-top: 4rem;
-        }
-
-        .footer-heading {
+        /* ========================================
+           BADGES & STATS
+           ======================================== */
+        .badge-custom {
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.475);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            color: rgb(0, 0, 0);
+            font-size: 0.95rem;
             font-weight: 600;
-            margin-bottom: 1.5rem;
-            color: #f8f9fa;
+            border: 1px solid rgba(255, 255, 255, 0.454);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
         }
 
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .hero-section {
-                padding: 3rem 0;
+        .stat-item {
+            text-align: left;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 600;
+            color: var(--accent-light);
+            display: block;
+            margin-bottom: 8px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .stat-label {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 400;
+        }
+
+        /* ========================================
+           CONTACT FORM STYLES
+           ======================================== */
+        .contact-form-card {
+            background: white;
+            padding: 30px;
+            border-radius: 30px;
+            box-shadow: 0 30px 90px rgba(0, 0, 0, 0.25);
+            animation: fadeInUp 1s ease-out 0.8s backwards;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-form-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        .form-control-custom {
+            width: 100%;
+            padding: 6px 20px !important;
+            border: 2px solid #E2E8F0;
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: #F8FAFC;
+        }
+
+        .form-control-custom:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: white;
+            box-shadow: 0 0 0 5px rgba(196, 30, 58, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .submit-btn-custom {
+            width: 100%;
+            margin-top: 10px;
+            padding: 14px;
+            background: var(--bg-gradient);
+            color: white;
+            border: none;
+            border-radius: 14px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(196, 30, 58, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .submit-btn-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(196, 30, 58, 0.4);
+        }
+
+        /* ========================================
+           MOBILE RESPONSIVE STYLES
+           ======================================== */
+
+        /* Tablet and below */
+        @media (max-width: 992px) {
+            .custom-navbar {
+                top: 10px;
+                width: 96%;
+                padding: 12px 0;
+                border-radius: 60px;
+            }
+
+            .navbar-brand {
+                padding-left: 10px;
+            }
+
+            .navbar-toggler {
+                margin-right: 10px;
+                border: none;
+                padding: 8px;
+            }
+
+            .navbar-toggler:focus {
+                box-shadow: none;
+            }
+
+            .navbar-collapse {
+                background: white;
+                margin-top: 15px;
+                border-radius: 20px;
+                padding: 15px;
+            }
+
+            .navbar-nav {
+                padding-top: 10px;
+                gap: 5px;
+            }
+
+            .navbar-nav .nav-link {
+                margin: 5px 0;
+                padding: 10px 15px;
+                border-radius: 10px;
+                transition: background 0.3s ease;
+            }
+
+            .navbar-nav .nav-link:hover {
+                background: rgba(190, 31, 79, 0.05);
+            }
+
+            .apply-btn-nav {
+                margin-top: 10px;
                 text-align: center;
+                display: block;
+            }
+
+            .hero-section {
+                min-height: auto;
+                padding: 120px 20px 60px;
+                margin: 8px;
+                border-radius: 24px;
             }
 
             .hero-title {
+                font-size: clamp(2rem, 6vw, 2.6rem);
+                line-height: 1.3;
+            }
+
+            .highlight {
+                font-size: clamp(2.4rem, 7vw, 3rem) !important;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+                line-height: 1.8 !important;
+            }
+
+            .contact-form-card {
+                margin-top: 40px;
+                padding: 24px;
+                border-radius: 24px;
+            }
+
+            .contact-form-card h3 {
+                font-size: 1.2rem;
+            }
+
+            .stat-item {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Mobile phones */
+        @media (max-width: 576px) {
+            .custom-navbar {
+                top: 8px;
+                width: 97%;
+                border-radius: 50px;
+                padding: 10px 0;
+            }
+
+            .navbar-logo {
+                height: 28px;
+            }
+
+            .hero-section {
+                padding: 100px 15px 50px;
+                margin: 6px;
+                border-radius: 20px;
+                min-height: auto;
+            }
+
+            .hero-title {
+                font-size: 1.8rem;
+                line-height: 1.3;
+                margin-bottom: 20px !important;
+            }
+
+            .hero-title::before {
+                padding: 0.1em 0.3em;
+                margin-left: -0.3em;
+            }
+
+            .highlight {
+                font-size: 2.2rem !important;
+            }
+
+            .hero-subtitle {
+                font-size: 0.95rem;
+                line-height: 1.7 !important;
+                padding: 0.15em 0.3em;
+            }
+
+            .badge-custom {
+                font-size: 0.8rem;
+                padding: 8px 14px;
+                white-space: nowrap;
+            }
+
+            .badge-custom svg {
+                width: 14px;
+                height: 14px;
+            }
+
+            .d-flex.gap-3 {
+                gap: 8px !important;
+            }
+
+            .stat-number {
+                font-size: 2.2rem;
+                margin-bottom: 5px;
+            }
+
+            .stat-label {
+                font-size: 0.85rem;
+            }
+
+            .contact-form-card {
+                padding: 20px;
+                border-radius: 20px;
+                margin-top: 30px;
+            }
+
+            .contact-form-card h3 {
+                font-size: 1.1rem;
+                margin-bottom: 15px;
+            }
+
+            .form-control-custom {
+                padding: 10px 16px;
+                font-size: 0.95rem;
+                border-radius: 10px;
+            }
+
+            .submit-btn-custom {
+                padding: 12px;
+                font-size: 1rem;
+                border-radius: 12px;
+            }
+
+            .mb-3 {
+                margin-bottom: 12px !important;
+            }
+
+            .row.mt-5 {
+                margin-top: 30px !important;
+            }
+        }
+
+        /* Extra small phones */
+        @media (max-width: 380px) {
+            .hero-title {
+                font-size: 1.6rem;
+            }
+
+            .highlight {
+                font-size: 2rem !important;
+            }
+
+            .hero-subtitle {
+                font-size: 0.9rem;
+            }
+
+            .badge-custom {
+                font-size: 0.75rem;
+                padding: 6px 12px;
+            }
+
+            .stat-number {
                 font-size: 2rem;
             }
 
-            .timeline-step {
-                padding-left: 2.2rem;
+            .contact-form-card {
+                padding: 18px;
+            }
+
+            .navbar-logo {
+                height: 26px;
             }
         }
 
-        /* Back to top button */
-        #backToTop {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 1000;
-            display: none;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        /* Landscape mobile optimization */
+        @media (max-width: 992px) and (orientation: landscape) {
+            .hero-section {
+                min-height: auto;
+                padding: 100px 20px 50px;
+            }
+
+            .stat-item {
+                text-align: left;
+            }
+
+            .contact-form-card {
+                margin-top: 30px;
+            }
         }
 
-        /* Form styling */
-        .info-form {
-            background-color: white;
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: var(--card-shadow);
-        }
+        /* Ensure form inputs are properly sized on mobile */
+        @media (max-width: 576px) {
 
-        .form-label {
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .form-control {
-            border-radius: 8px;
-            padding: 0.75rem 1rem;
-            border: 1px solid #dee2e6;
-        }
-
-        .form-control:focus {
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+            select.form-control-custom,
+            input.form-control-custom,
+            textarea.form-control-custom {
+                font-size: 16px;
+                /* Prevents zoom on iOS */
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <section class="nursing-hero">
-        <div class="container">
-            <div class="row align-items-center gy-4">
-
-                <!-- LEFT CONTENT -->
-                <div class="col-lg-7">
-                    <div class="hero-content">
-                        <span class="hero-badge">Admissions 2025–26</span>
-
-                        <h1>
-                            Karnataka <span>B.Sc Nursing</span><br />
-                            Entrance Examination
-                        </h1>
-
-                        <p class="hero-desc">
-                            Planning to build your future in Nursing?
-                            Get complete guidance on Karnataka B.Sc Nursing Entrance Exam and admissions.
-                        </p>
-
-                        <ul class="hero-points">
-                            <li>INC & KSNC Approved Colleges</li>
-                            <li>Hospitals & Clinical Training Support</li>
-                            <li>Expert Admission Guidance</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- RIGHT FORM (UNCHANGED STRUCTURE) -->
-                <div class="col-lg-5">
-                    <div class="hero-form">
-                        <h5>B.Sc Nursing Karnataka Entrance Exam</h5>
-                        <p>Fill in Your Details for More Information</p>
-
-                        <form>
-                            <input type="text" placeholder="Name" />
-                            <input type="email" placeholder="Email ID*" />
-                            <input type="tel" placeholder="Contact No." />
-                            <select>
-                                <option>Select your State</option>
-                            </select>
-                            <textarea placeholder="Message (optional)"></textarea>
-                            <button type="submit">Submit</button>
-                        </form>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- SCROLLING LOOP -->
-        <div class="scroll-strip">
-            <div class="scroll-track">
-                <span>B.Sc Nursing Entrance Exam Mandatory from 2023–24</span>
-                <span>B.Sc Nursing Entrance Exam Mandatory from 2023–24</span>
-                <span>B.Sc Nursing Entrance Exam Mandatory from 2023–24</span>
-                <span>B.Sc Nursing Entrance Exam Mandatory from 2023–24</span>
-            </div>
-        </div>
-    </section>
-    <style>
-        .nursing-hero {
-            position: relative;
-            padding: 90px 0 0;
-            background: linear-gradient(180deg,
-                    rgba(255, 255, 255, 0),
-                    rgba(177, 67, 67, 0.85)),
-                url("Media/9252.jpg");
-
-            background-size: cover;
-            background-position: center;
-            color: #fff;
-            overflow: hidden;
-        }
-
-        /* LEFT CONTENT */
-        .hero-content {
-            max-width: 600px;
-        }
-
-        .hero-badge {
-            display: inline-block;
-            background: #ff4d6d;
-            padding: 6px 16px;
-            border-radius: 30px;
-            font-size: 13px;
-            margin-bottom: 15px;
-        }
-
-        .hero-content h1 {
-            font-size: 46px;
-            font-weight: 700;
-            line-height: 1.2;
-        }
-
-        .hero-content h1 span {
-            color: #ffd166;
-        }
-
-        .hero-desc {
-            margin: 20px 0;
-            font-size: 17px;
-            opacity: 0.95;
-        }
-
-        .hero-points {
-            list-style: none;
-            padding: 0;
-        }
-
-        .hero-points li {
-            margin-bottom: 10px;
-            position: relative;
-            padding-left: 24px;
-        }
-
-        .hero-points li::before {
-            content: "✔";
-            position: absolute;
-            left: 0;
-            color: #ffd166;
-        }
-
-        /* FORM */
-        .hero-form {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 30px;
-            border-radius: 16px;
-            color: #333;
-        }
-
-        .hero-form h5 {
-            font-weight: 600;
-        }
-
-        .hero-form p {
-            font-size: 14px;
-            margin-bottom: 15px;
-        }
-
-        .hero-form input,
-        .hero-form select,
-        .hero-form textarea {
-            width: 100%;
-            margin-bottom: 12px;
-            padding: 5px 14px;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-        }
-
-        .hero-form button {
-            width: 100%;
-            padding: 12px;
-            border-radius: 8px;
-            background: #ff4d6d;
-            color: #fff;
-            border: none;
-            font-weight: 500;
-        }
-
-        /* SCROLL STRIP */
-        .scroll-strip {
-            margin-top: 60px;
-            background: #0b2c4a;
-            overflow: hidden;
-            white-space: nowrap;
-        }
-
-        .scroll-track {
-            display: inline-flex;
-            animation: scrollLoop 18s linear infinite;
-        }
-
-        .scroll-track span {
-            padding: 18px 40px;
-            font-size: 20px;
-            color: #ff4d6d;
-            font-weight: 600;
-        }
-
-        @keyframes scrollLoop {
-            from {
-                transform: translateX(0);
-            }
-
-            to {
-                transform: translateX(-50%);
-            }
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            .hero-content h1 {
-                font-size: 34px;
-            }
-        }
-    </style>
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <!-- ========================================
+         NAVBAR
+         ======================================== -->
+    <nav class="navbar custom-navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand" href="#">
-              
+                <img src="https://admin.onlineamrita.com/sites/default/files/2025-04/Amrita%20Online%20Logo%20red%201.svg"
+                    alt="Amrita Online" class="navbar-logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#overview">Home</a>
+                        <a class="nav-link" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#admission-process">About us</a>
+                        <a class="nav-link" href="#features">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#schedule">Why</a>
+                        <a class="nav-link" href="#courses">Programmes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#eligibility"></a>
+                        <a class="nav-link" href="#why-amrita">Why Amrita</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#colleges">FAQ</a>
+                        <a class="nav-link" href="#faq">FAQs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#tips">Tips</a>
+                        <a class="nav-link" href="#contact">Contact</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn btn-outline-primary btn-sm ms-2" href="#contact-form">Helpline</a>
+                    <li class="nav-item ms-lg-2">
+                        <a class="nav-link apply-btn-nav" href="https://admission.onlineamrita.com/">Apply Now</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
+    <!-- ========================================
+         HERO SECTION
+         ======================================== -->
+    <section class="hero-section" id="home">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-7">
-                    <h1 class="hero-title display-4">Karnataka B.Sc Nursing Entrance Exam 2025-26</h1>
-                    <p class="hero-subtitle">Want to make Nursing your career? Curious to learn more about the Karnataka
-                        B.Sc Nursing Entrance Examination? WE'RE HERE FOR YOU!</p>
-                    <p class="lead mb-4">Secure a seat in INC & KSNC approved colleges with connected Hospitals/Clinics
-                        through our guidance.</p>
-                    <div class="d-flex flex-wrap gap-3">
-                        <a href="#contact-form" class="btn btn-primary cta-button">
-                            <i class="fas fa-info-circle me-2"></i>Get Information
-                        </a>
-                        <a href="#admission-process" class="btn btn-outline-primary cta-button">
-                            <i class="fas fa-list-ol me-2"></i>View Admission Process
-                        </a>
+                <div class="col-lg-8">
+                    <h1 class="hero-title playfair-display mb-4">
+                        Unlock Your Potential with
+                        <br><span class="highlight">Amrita University</span> Online
+                    </h1>
+                    <p class="hero-subtitle mb-5">
+                        Discover in-demand programmes with
+                        global recognition at Amrita Online
+                    </p>
+
+                    <div class="d-flex flex-wrap gap-3 mb-0 mt-5">
+                        <span class="badge-custom">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-award-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="m8 0 1.669.864 1.858.282.842 1.68 1.337 1.32L13.4 6l.306 1.854-1.337 1.32-.842 1.68-1.858.282L8 12l-1.669-.864-1.858-.282-.842-1.68-1.337-1.32L2.6 6l-.306-1.854 1.337-1.32.842-1.68L6.331.864z" />
+                                <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1z" />
+                            </svg> NIRF Rank #8
+                        </span>
+                        <span class="badge-custom">✓ NAAC A++ Accredited</span>
+                        <span class="badge-custom">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-globe-americas-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="m8 0 .412.01A7.97 7.97 0 0 1 13.29 2a8.04 8.04 0 0 1 2.548 4.382 8 8 0 1 1-15.674 0 8 8 0 0 1 1.361-3.078A8 8 0 0 1 2.711 2 7.96 7.96 0 0 1 8 0m0 1a7 7 0 0 0-5.958 3.324C2.497 6.192 6.669 7.827 6.5 8c-.5.5-1.034.884-1 1.5.07 1.248 2.259.774 2.5 2 .202 1.032-1.051 3 0 3 1.5-.5 3.798-3.186 4-5 .138-1.242-2-2-3.5-2.5-.828-.276-1.055.648-1.5.5S4.5 5.5 5.5 5s1 0 1.5.5c1 .5.5-1 1-1.5.838-.838 3.16-1.394 3.605-2.001A6.97 6.97 0 0 0 8 1" />
+                            </svg> WES Approved
+                        </span>
+                    </div>
+
+                    <div class="row mt-5">
+                        <div class="col-md-4 mb-4 mb-md-0">
+                            <div class="stat-item">
+                                <span class="stat-number">50%</span>
+                                <span class="stat-label">Average Salary Growth</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4 mb-md-0">
+                            <div class="stat-item">
+                                <span class="stat-number">30+</span>
+                                <span class="stat-label">Programs & Specializations</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="stat-item">
+                                <span class="stat-number">50+</span>
+                                <span class="stat-label">Countries Represented</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-5 mt-5 mt-lg-0">
-                    <div class="info-form" id="contact-form">
-                        <h3 class="mb-4">B.Sc Nursing Karnataka Entrance Exam 2025 Information Helpline</h3>
-                        <p class="text-muted mb-4">Fill in Your Details Now for More Information!</p>
-                        <form id="helplineForm">
+
+                <div class="col-lg-4">
+                    <div class="contact-form-card">
+                        <h3 class="text-center">Enter Your Details to Get Started</h3>
+                        <form id="contactForm">
                             <div class="mb-3">
-                                <label for="fullName" class="form-label">Full Name</label>
-                                <input type="text" class="form-control" id="fullName" placeholder="Enter your full name"
-                                    required>
+                                <input type="text" class="form-control form-control-custom" id="name" name="name"
+                                    required placeholder="Enter your name">
                             </div>
                             <div class="mb-3">
-                                <label for="email" class="form-label">Email Address</label>
-                                <input type="email" class="form-control" id="email" placeholder="Enter your email"
-                                    required>
+                                <input type="email" class="form-control form-control-custom" id="email" name="email"
+                                    required placeholder="your@email.com">
                             </div>
                             <div class="mb-3">
-                                <label for="phone" class="form-label">Phone Number</label>
-                                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number"
-                                    required>
+                                <input type="tel" class="form-control form-control-custom" id="phone" name="phone"
+                                    required placeholder="Phone No">
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-md-6 mb-3 mb-md-0">
+                                    <input type="text" class="form-control form-control-custom" id="state" name="state"
+                                        placeholder="State">
+                                </div>
+                                <div class="col-md-6">
+                                    <select class="form-select form-control-custom" id="course" name="course" required>
+                                        <option value="">Program</option>
+                                        <option value="mba">Online MBA</option>
+                                        <option value="mca">Online MCA</option>
+                                        <option value="mcom">Online M.Com</option>
+                                        <option value="bba">Online BBA</option>
+                                        <option value="bca">Online BCA</option>
+                                        <option value="bcom">Online B.Com</option>
+                                    </select>
+                                </div>
                             </div>
                             <div class="mb-3">
-                                <label for="qualification" class="form-label">Current Qualification</label>
-                                <select class="form-select" id="qualification" required>
-                                    <option value="">Select your qualification</option>
-                                    <option value="12th">12th / 2nd PUC</option>
-                                    <option value="diploma">Diploma in Nursing</option>
-                                    <option value="other">Other</option>
-                                </select>
+                                <textarea class="form-control form-control-custom" id="message" name="message" rows="2"
+                                    placeholder="Message (optional)"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary w-100 py-2">
-                                <i class="fas fa-paper-plane me-2"></i>Submit for More Information
-                            </button>
-                            <p class="text-muted small mt-3">We respect your privacy and will not share your information
-                                with third parties.</p>
+                            <button type="submit" class="submit-btn-custom">Submit →</button>
                         </form>
                     </div>
                 </div>
@@ -555,617 +712,1089 @@
         </div>
     </section>
 
-    <!-- Main Content Container -->
-    <div class="container">
-        <!-- Mandatory Exam Section -->
-        <section id="overview" class="mb-5">
-            <div class="row">
-                <div class="col-12">
-                    <div class="card p-4">
-                        <h2 class="mb-4"><i class="fas fa-exclamation-circle text-primary me-2"></i>B.Sc Nursing
-                            Entrance Exam Made Mandatory from 2023-24</h2>
-                        <p class="lead">The Karnataka State Government made B.Sc Nursing entrance exam mandatory for
-                            admissions to the course from the academic year 2023-24.</p>
-                        <p>Candidates interested in pursuing B.Sc Nursing in Karnataka have to appear in the Common
-                            Entrance Test (CET) conducted by the Karnataka Examinations Authority (KEA) to be eligible
-                            for B.Sc Nursing admissions in colleges across the state.</p>
-                        <div class="alert alert-info mt-3">
-                            <i class="fas fa-info-circle me-2"></i>
-                            <strong>Important Note:</strong> There was no compulsory entrance exam for securing a B.Sc
-                            Nursing seat in Karnataka till 2022-23 and candidates were allotted seats based on marks
-                            secured in 10+2/ 2nd PUC exams. From 2023-24 onwards, Nursing aspirants have to mandatorily
-                            write KCET and attend the state counselling to secure a B.Sc Nursing seat at any of the best
-                            nursing colleges in Karnataka. KEA KCET 2025 B.Sc Nursing Counselling will be conducted for
-                            both government and management quota seats.
+
+    <section class="aboutus mt-5">
+        <div class="container text-center">
+            <h2 class="text-dark fs-3 fw-bold"><span class="text-muted"></span> About <br>Amrita University</h2>
+            <p class="section-subtitle">Amrita Online is the Online learning initiative of Amrita Vishwa Vidyapeetham, one of India’s premier
+                multi-campus and multi-disciplinary universities accredited with the highest NAAC grade of A++ and
+                ranked 8th nationally by NIRF 2025.
+
+                Amrita Online brings the excellence of Amrita University into a flexible and learner-driven online
+                environment, empowering individuals across India and the world to pursue UGC-entitled and AICTE-approved
+                undergraduate and postgraduate programs.
+
+                The Amrita Online courses combine academic rigor, industry alignment, and global recognition (including
+                WES equivalence in the USA and Canada). Learners benefit from live interactive sessions, recorded
+                content, and a comprehensive Learning Management System that ensures continuous engagement and
+                personalized academic support.<br>
+
+                Amrita University online degrees are in high-demand areas such as Management, Computer Applications,
+                Commerce, and Emerging Technologies as they have a strong focus on future-ready skills, designed for
+                working professionals, graduates, and lifelong learners seeking to upgrade their qualifications without
+                disrupting their careers.
+
+                Every Amrita Online learner becomes part of Amrita University’s legacy of compassion-driven education,
+                research excellence, and global impact, supported by a strong network of faculty mentors, industry
+                collaborators, and alumni across the world.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- Trusted By Section - Unique Carousel -->
+    <section class="trusted-section">
+        <div class="trusted-content">
+            <p class="trusted-title">Recognized & Accredited</p>
+            <div class="logo-carousel-container">
+                <div class="logo-carousel-track">
+                    <div class="logo-card">
+                        <div class="logo-icon">
+                            <img src="Carousal/NAAC A++.svg" alt="">
                         </div>
+                        <h4>UGC</h4>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Admission Process -->
-        <section id="admission-process" class="mb-5">
-            <div class="row mb-4">
-                <div class="col-12">
-                    <h2 class="text-center mb-3">Karnataka B.Sc Nursing Admissions 2025-26</h2>
-                    <p class="text-center text-muted lead">Here is the Karnataka B.Sc Nursing admission process broken
-                        down into 3 simple steps!</p>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <div class="card h-100 p-4">
-                        <div class="card-icon text-center">
-                            <i class="fas fa-clipboard-list"></i>
+                    <div class="logo-card">
+                        <div class="logo-icon">
+                            <img src="Carousal/NIRF.svg" alt="">
                         </div>
-                        <div class="timeline-step step-1">
-                            <h4 class="mb-3">Step 1: Register for B.Sc Nursing Entrance Exam 2025</h4>
-                            <p>Complete the KCET B.Sc application form 2025 on the official website. Alternatively, let
-                                our experts get you registered for the exam while you focus on preparation!</p>
-                            <div class="mt-3">
-                                <span class="badge bg-light text-dark"><i class="fas fa-calendar-alt me-1"></i> Jan 23 -
-                                    Feb 24, 2025</span>
-                            </div>
+                        <h4>AICTE</h4>
+                    </div>
+                    <div class="logo-card">
+                        <div class="logo-icon">
+                            <img src="Carousal/QS World University Rankings 2020.svg" alt="">
                         </div>
+                        <h4>NAAC A++</h4>
                     </div>
-                </div>
-
-                <div class="col-lg-4 mb-4">
-                    <div class="card h-100 p-4">
-                        <div class="card-icon text-center">
-                            <i class="fas fa-file-signature"></i>
+                    <div class="logo-card">
+                        <div class="logo-icon">
+                            <img src="Carousal/THE.svg" alt="">
                         </div>
-                        <div class="timeline-step step-2">
-                            <h4 class="mb-3">Step 2: Write B.Sc Nursing Entrance Exam</h4>
-                            <p>Attend KCET 2025 B.Sc Nursing Entrance exam on the scheduled date. Do not forget to take
-                                a copy of your KCET B.Sc Nursing Admit Card!</p>
-                            <div class="mt-3">
-                                <span class="badge bg-light text-dark"><i class="fas fa-calendar-alt me-1"></i> April 16
-                                    & 17, 2025</span>
-                            </div>
+                        <h4>NIRF #8</h4>
+                    </div>
+                    <div class="logo-card">
+                        <div class="logo-icon">
+                            <img src="Carousal/UGC.svg" alt="">
                         </div>
+                        <h4>WES</h4>
                     </div>
-                </div>
-
-                <div class="col-lg-4 mb-4">
-                    <div class="card h-100 p-4">
-                        <div class="card-icon text-center">
-                            <i class="fas fa-handshake"></i>
+                    <div class="logo-card">
+                        <div class="logo-icon">
+                            <img src="Carousal/WES.svg" alt="">
                         </div>
-                        <div class="timeline-step step-3">
-                            <h4 class="mb-3">Step 3: Attend B.Sc Nursing Counselling 2025-26</h4>
-                            <p>If you clear the B.Sc Nursing entrance exam and meet the eligibility requirements,
-                                register for the KCET 2025 B.Sc Nursing Counselling. Get in touch with us to strategize
-                                your college choices and secure B.Sc Nursing admission in the best Nursing colleges in
-                                Karnataka!</p>
+                        <h4>THE Impact</h4>
+                    </div>
+
+                    <div class="logo-card">
+                        <div class="logo-icon">
+                            <img src="Carousal/NAAC A++.svg" alt="">
                         </div>
+                        <h4>UGC</h4>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Schedule Section -->
-        <section id="schedule" class="mb-5">
-            <div class="row mb-4">
-                <div class="col-12">
-                    <h2 class="mb-3">B.Sc Nursing Admissions 2025-26 Schedule</h2>
-                    <p class="text-muted">Important dates for the Karnataka B.Sc Nursing Entrance Exam process</p>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-12">
-                    <div class="table-responsive schedule-table">
-                        <table class="table table-hover mb-0">
-                            <thead>
-                                <tr>
-                                    <th scope="col" width="60%">Event</th>
-                                    <th scope="col" width="40%">Tentative Date</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>KCET 2025 B.Sc Nursing Application Date Starts</td>
-                                    <td>January 23, 2025 (From 11:59 PM)</td>
-                                </tr>
-                                <tr>
-                                    <td>KCET 2025 B.Sc Nursing Application Date Ends</td>
-                                    <td>February 24, 2025 (Till 11:59 PM)</td>
-                                </tr>
-                                <tr>
-                                    <td>B.Sc Nursing Admit Card Release Date</td>
-                                    <td>April 6, 2025 (11:00 AM) Onwards</td>
-                                </tr>
-                                <tr>
-                                    <td>KCET 2025 B.Sc Nursing Entrance Exam Date</td>
-                                    <td>April 16 & 17, 2025</td>
-                                </tr>
-                                <tr>
-                                    <td>Result Announcement Date</td>
-                                    <td>To be announced</td>
-                                </tr>
-                                <tr>
-                                    <td>Last Date for B.Sc Nursing Admissions 2025</td>
-                                    <td>To be announced</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="alert alert-warning mt-3">
-                        <i class="fas fa-exclamation-triangle me-2"></i>
-                        <strong>Note:</strong> Dates are tentative and subject to change. Please check the official KEA
-                        website for updates.
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Eligibility & Syllabus -->
-        <section id="eligibility" class="mb-5">
-            <div class="row mb-4">
-                <div class="col-12">
-                    <h2 class="mb-3">B.Sc Nursing Entrance Exam Syllabus & Eligibility</h2>
-                    <p class="text-muted">Let's take a look at some important details, such as the Karnataka B.Sc
-                        Nursing syllabus for entrance exam 2025 and the B.Sc Nursing entrance exam eligibility.</p>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lg-6 mb-4">
-                    <div class="card h-100 eligibility-card p-4">
-                        <h4 class="mb-4"><i class="fas fa-check-circle text-success me-2"></i>Karnataka B.Sc Nursing
-                            Entrance Exam Eligibility</h4>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item border-0 ps-0">
-                                <i class="fas fa-graduation-cap text-primary me-2"></i>
-                                Candidates must have passed Physics, Chemistry, Biology and English papers individually
-                                in 2nd PUC/ 10+2
-                            </li>
-                            <li class="list-group-item border-0 ps-0">
-                                <i class="fas fa-percentage text-primary me-2"></i>
-                                Must have secured a minimum of 45% aggregate marks in PCB (40% for OBC/ SC/ ST)
-                            </li>
-                            <li class="list-group-item border-0 ps-0">
-                                <i class="fas fa-user-graduate text-primary me-2"></i>
-                                Minimum age: 17 years as of December 31, 2025
-                            </li>
-                            <li class="list-group-item border-0 ps-0">
-                                <i class="fas fa-passport text-primary me-2"></i>
-                                Must be a citizen of India
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 mb-4">
-                    <div class="card h-100 syllabus-card p-4">
-                        <h4 class="mb-4"><i class="fas fa-book-open text-purple me-2"></i>Karnataka B.Sc Nursing
-                            Syllabus for Entrance Exam 2025</h4>
-                        <p>The topics covered in Physics, Chemistry, and Biology subjects at the higher secondary
-                            education level is the syllabus of the B.Sc Nursing entrance exam (KCET - 2025).</p>
-
-                        <div class="accordion mt-3" id="syllabusAccordion">
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingPhysics">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapsePhysics">
-                                        <i class="fas fa-atom me-2"></i>Physics Syllabus
-                                    </button>
-                                </h2>
-                                <div id="collapsePhysics" class="accordion-collapse collapse"
-                                    data-bs-parent="#syllabusAccordion">
-                                    <div class="accordion-body">
-                                        <p>Electrostatics, Current Electricity, Magnetic Effects of Current and
-                                            Magnetism, Electromagnetic Induction and Alternating Currents,
-                                            Electromagnetic Waves, Optics, Dual Nature of Radiation and Matter, Atoms
-                                            and Nuclei, Electronic Devices, Communication Systems.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingChemistry">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseChemistry">
-                                        <i class="fas fa-flask me-2"></i>Chemistry Syllabus
-                                    </button>
-                                </h2>
-                                <div id="collapseChemistry" class="accordion-collapse collapse"
-                                    data-bs-parent="#syllabusAccordion">
-                                    <div class="accordion-body">
-                                        <p>Solid State, Solutions, Electrochemistry, Chemical Kinetics, Surface
-                                            Chemistry, General Principles and Processes of Isolation of Elements,
-                                            p-Block Elements, d- and f-Block Elements, Coordination Compounds,
-                                            Haloalkanes and Haloarenes, Alcohols, Phenols and Ethers, Aldehydes, Ketones
-                                            and Carboxylic Acids, Organic Compounds Containing Nitrogen, Biomolecules,
-                                            Polymers, Chemistry in Everyday Life.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingBiology">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#collapseBiology">
-                                        <i class="fas fa-dna me-2"></i>Biology Syllabus
-                                    </button>
-                                </h2>
-                                <div id="collapseBiology" class="accordion-collapse collapse"
-                                    data-bs-parent="#syllabusAccordion">
-                                    <div class="accordion-body">
-                                        <p>Diversity in Living World, Structural Organization in Animals and Plants,
-                                            Cell Structure and Function, Plant Physiology, Human Physiology,
-                                            Reproduction, Genetics and Evolution, Biology and Human Welfare,
-                                            Biotechnology and Its Applications, Ecology and Environment.</p>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="logo-card">
+                        <div class="logo-icon">
+                            <img src="Carousal/NIRF.svg" alt="">
                         </div>
+                        <h4>AICTE</h4>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Tips Section -->
-        <section id="tips" class="mb-5">
-            <div class="row mb-4">
-                <div class="col-12">
-                    <h2 class="mb-3">B.Sc Nursing Entrance Exam 2025 Tips</h2>
-                    <p class="text-muted">Aspirants must take certain important measures to secure a strong rank in the
-                        KCET-2025 B.Sc Nursing entrance examination. These steps must be followed right from when they
-                        begin to fill in the B.Sc Nursing application form 2025 until the completion of the KCET B.Sc
-                        Nursing counselling process.</p>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="card tip-card h-100 p-4">
-                        <h5 class="mb-3"><i class="fas fa-calendar-check text-warning me-2"></i>Complete Application
-                            Early</h5>
-                        <p>Complete your KCET B.Sc Nursing application form 2025 well in advance to avoid errors and
-                            confusion.</p>
+                    <div class="logo-card">
+                        <div class="logo-icon">
+                            <img src="Carousal/QS World University Rankings 2020.svg" alt="">
+                        </div>
+                        <h4>NAAC A++</h4>
                     </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="card tip-card h-100 p-4">
-                        <h5 class="mb-3"><i class="fas fa-books text-warning me-2"></i>Follow Syllabus</h5>
-                        <p>Make sure your exam preparation is in line with the B.Sc Nursing entrance exam syllabus.</p>
+                    <div class="logo-card">
+                        <div class="logo-icon">
+                            <img src="Carousal/THE.svg" alt="">
+                        </div>
+                        <h4>NIRF #8</h4>
                     </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="card tip-card h-100 p-4">
-                        <h5 class="mb-3"><i class="fas fa-clipboard-list text-warning me-2"></i>Take Mock Tests</h5>
-                        <p>Take several B.Sc Nursing mock tests to get familiar with the exam pattern.</p>
+                    <div class="logo-card">
+                        <div class="logo-icon">
+                            <img src="Carousal/UGC.svg" alt="">
+                        </div>
+                        <h4>WES</h4>
                     </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="card tip-card h-100 p-4">
-                        <h5 class="mb-3"><i class="fas fa-map-marked-alt text-warning me-2"></i>Check Exam Center</h5>
-                        <p>Once the KCET 2025 B.Sc Nursing admit card is released, check your exam centre and plan on
-                            how to reach it.</p>
+                    <div class="logo-card">
+                        <div class="logo-icon">
+                            <img src="Carousal/WES.svg" alt="">
+                        </div>
+                        <h4>THE Impact</h4>
                     </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="card tip-card h-100 p-4">
-                        <h5 class="mb-3"><i class="fas fa-id-card text-warning me-2"></i>Carry Admit Card</h5>
-                        <p>Remember to carry your KCET B.Sc Nursing entrance exam admit card on the day of the exam.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="card tip-card h-100 p-4">
-                        <h5 class="mb-3"><i class="fas fa-clock text-warning me-2"></i>Time Management</h5>
-                        <p>Practice time management during mock tests to ensure you can complete all sections during the
-                            actual exam.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Colleges Section -->
-        <section id="colleges" class="mb-5">
-            <div class="row mb-4">
-                <div class="col-12">
-                    <h2 class="mb-3">Top Nursing Colleges in Bangalore for B.Sc Nursing</h2>
-                    <p class="text-muted">Bangalore has a wide range of top nursing colleges that have some of the best
-                        nursing faculty in India. B.Sc Nursing is one of the popular courses chosen by students who are
-                        eager to enter the field of nursing. Students have to mandatorily clear the B.Sc Nursing
-                        entrance exam 2025 to get admission to any of the best nursing colleges in Bangalore.</p>
-                    <p>Below is a list of the top nursing colleges in Bangalore that offer B.Sc Nursing and other
-                        related courses that can elevate the students' skills and knowledge necessary to pursue a
-                        successful career in the field of nursing.</p>
-                </div>
-            </div>
-
-            <div class="row" id="colleges-container">
-                <!-- College cards will be inserted here by JavaScript -->
-            </div>
-
-            <div class="row mt-4">
-                <div class="col-12 text-center">
-                    <button id="loadMoreColleges" class="btn btn-outline-primary">Load More Colleges</button>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <h4 class="footer-heading">
-                        <i class="fas fa-user-md me-2"></i>Nursing Entrance Guide
-                    </h4>
-                    <p>Your comprehensive guide to B.Sc Nursing entrance exams in Karnataka. Get accurate information,
-                        expert guidance, and support for your nursing career journey.</p>
-                    <div class="social-links mt-4">
-                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <h4 class="footer-heading">Quick Links</h4>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#overview" class="text-light text-decoration-none">Exam Overview</a>
-                        </li>
-                        <li class="mb-2"><a href="#admission-process" class="text-light text-decoration-none">Admission
-                                Process</a></li>
-                        <li class="mb-2"><a href="#schedule" class="text-light text-decoration-none">Exam Schedule</a>
-                        </li>
-                        <li class="mb-2"><a href="#eligibility" class="text-light text-decoration-none">Eligibility &
-                                Syllabus</a></li>
-                        <li class="mb-2"><a href="#colleges" class="text-light text-decoration-none">Top Colleges</a>
-                        </li>
-                        <li class="mb-2"><a href="#tips" class="text-light text-decoration-none">Preparation Tips</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <h4 class="footer-heading">Contact Information</h4>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><i class="fas fa-phone-alt me-2"></i> Helpline: +91 9876543210</li>
-                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> info@nursingguidekarnataka.com</li>
-                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Bangalore, Karnataka</li>
-                    </ul>
-                    <div class="mt-4">
-                        <a href="#contact-form" class="btn btn-outline-light btn-sm">
-                            <i class="fas fa-info-circle me-2"></i>Get More Information
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <hr class="mt-4 mb-4" style="border-color: #495057;">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <p class="mb-0">&copy; 2025 Karnataka B.Sc Nursing Entrance Exam Guide. All rights reserved.</p>
-                    <p class="small mt-2">Disclaimer: This website provides information about B.Sc Nursing entrance
-                        exams in Karnataka. For official information, please refer to the Karnataka Examinations
-                        Authority (KEA) website.</p>
+                    
+                    
+                    
                 </div>
             </div>
         </div>
-    </footer>
+    </section>
+    <style>
+        /* Trusted By Section - Unique Carousel */
+        .trusted-section {
+            padding: 50px 40px;
+            background: white !important;
+            border-bottom: 1px solid #ffffff;
+            overflow: hidden;
+            position: relative;
+        }
 
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="btn">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+        .trusted-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -50%;
+            width: 200%;
+            height: 100%;
+            background:
+                radial-gradient(circle at 30% 50%, rgba(196, 30, 58, 0.03) 0%, transparent 50%),
+                radial-gradient(circle at 70% 50%, rgba(255, 107, 53, 0.03) 0%, transparent 50%);
+            animation: moveBackground 20s ease-in-out infinite;
+        }
 
-    <!-- Bootstrap & JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // Back to top button
-            const backToTopButton = document.getElementById('backToTop');
+        @keyframes moveBackground {
 
-            window.addEventListener('scroll', function () {
-                if (window.pageYOffset > 300) {
-                    backToTopButton.style.display = 'block';
-                } else {
-                    backToTopButton.style.display = 'none';
-                }
-            });
-
-            backToTopButton.addEventListener('click', function () {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-
-            // Form submission
-            const helplineForm = document.getElementById('helplineForm');
-            helplineForm.addEventListener('submit', function (e) {
-                e.preventDefault();
-
-                // Get form values
-                const name = document.getElementById('fullName').value;
-                const email = document.getElementById('email').value;
-
-                // Show success message
-                alert(`Thank you, ${name}! We have received your information and will contact you at ${email} with more details about the B.Sc Nursing entrance exam.`);
-
-                // Reset form
-                helplineForm.reset();
-
-                // Smooth scroll to top
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-
-            // Colleges data
-            const colleges = [
-                {
-                    name: "Ramaiah Institute of Nursing Education and Research (RINER)",
-                    location: "MSR Nagara, Bangalore",
-                    type: "Private"
-                },
-                {
-                    name: "Kempegowda Institute of Nursing (KIMS campus)",
-                    location: "VV Puram, Bangalore",
-                    type: "Private"
-                },
-                {
-                    name: "RajaRajeswari College of Nursing (RRCN)",
-                    location: "Kambipura, Bangalore",
-                    type: "Private"
-                },
-                {
-                    name: "BGS Global Institute of Nursing Science (BGS GINS)",
-                    location: "Kengeri, Bangalore",
-                    type: "Private"
-                },
-                {
-                    name: "SJB College of Nursing (SJBCON)",
-                    location: "Kengeri, Bangalore",
-                    type: "Private"
-                },
-                {
-                    name: "MVJ College of Nursing",
-                    location: "Hoskote, Bangalore",
-                    type: "Private"
-                },
-                {
-                    name: "Vydehi Institute of Nursing Sciences and Research Center (VINS)",
-                    location: "Whitefield, Bangalore",
-                    type: "Private"
-                },
-                {
-                    name: "Dr. B.R. Ambedkar Institute of Nursing",
-                    location: "Kadugondanahalli, Bangalore",
-                    type: "Private"
-                },
-                {
-                    name: "The Oxford College of Nursing",
-                    location: "Hongasandra, Bangalore",
-                    type: "Private"
-                },
-                {
-                    name: "Sapthagiri School of Nursing",
-                    location: "Chikkabanavara, Bangalore",
-                    type: "Private"
-                },
-                {
-                    name: "College of Nursing Sciences, Dayananda Sagar University (DSU)",
-                    location: "Kumaraswamy Layout, Bangalore",
-                    type: "Private"
-                },
-                {
-                    name: "East Point College of Nursing",
-                    location: "Avalahalli, Bangalore",
-                    type: "Private"
-                },
-                {
-                    name: "PES University",
-                    location: "Banshankari, Bangalore",
-                    type: "Private"
-                },
-                {
-                    name: "Akash Institute of Nursing",
-                    location: "Devanahalli, Bangalore",
-                    type: "Private"
-                }
-            ];
-
-            // Load colleges function
-            const collegesContainer = document.getElementById('colleges-container');
-            const loadMoreButton = document.getElementById('loadMoreColleges');
-            let collegesToShow = 6;
-
-            function renderColleges() {
-                collegesContainer.innerHTML = '';
-
-                for (let i = 0; i < Math.min(collegesToShow, colleges.length); i++) {
-                    const college = colleges[i];
-
-                    const col = document.createElement('div');
-                    col.className = 'col-md-6 col-lg-4 mb-4';
-
-                    col.innerHTML = `
-                        <div class="card college-card h-100 p-4">
-                            <h5 class="mb-2">${college.name}</h5>
-                            <p class="location mb-3"><i class="fas fa-map-marker-alt me-1"></i> ${college.location}</p>
-                            <div>
-                                <span class="badge badge-private">${college.type}</span>
-                            </div>
-                        </div>
-                    `;
-
-                    collegesContainer.appendChild(col);
-                }
-
-                // Show/hide load more button
-                if (collegesToShow >= colleges.length) {
-                    loadMoreButton.style.display = 'none';
-                } else {
-                    loadMoreButton.style.display = 'inline-block';
-                }
+            0%,
+            100% {
+                transform: translateX(0);
             }
 
-            // Initial render
-            renderColleges();
+            50% {
+                transform: translateX(5%);
+            }
+        }
 
-            // Load more colleges
-            loadMoreButton.addEventListener('click', function () {
-                collegesToShow += 6;
-                renderColleges();
+        .trusted-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
 
-                // Smooth scroll to colleges section if needed
-                if (collegesToShow > 6) {
-                    document.getElementById('colleges').scrollIntoView({ behavior: 'smooth' });
+        .trusted-title {
+            font-size: 2rem;
+            color: rgb(0, 0, 0);
+            font-weight: 700;
+            margin-bottom: 60px;
+        }
+
+        .logo-carousel-container {
+            position: relative;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+
+        .logo-carousel-track {
+            display: flex;
+            gap: 30px;
+            animation: scrollLogos 30s linear infinite;
+            width: fit-content;
+        }
+
+        @keyframes scrollLogos {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .logo-carousel-container:hover .logo-carousel-track {
+            animation-play-state: paused;
+        }
+
+        .logo-card {
+            min-width: 280px;
+            background: white;
+            border-radius: 20px;
+            padding: 20px 30px;
+            /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); */
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid transparent;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--bg-gradient);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 0;
+        }
+
+        .logo-card:hover::before {
+            opacity: 0.05;
+
+        }
+
+        .logo-card:hover {
+            transform: translateY(-10px) scale(1);
+            box-shadow: 0 20px 60px rgba(196, 30, 58, 0.15);
+            border-color: var(--primary);
+        }
+
+        .logo-icon {
+            width: 110px;
+            height: 110px;
+            background: linear-gradient(135deg, rgba(196, 30, 58, 0.1), rgba(255, 107, 53, 0.1));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            transition: all 0.4s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* IMAGE INSIDE ICON */
+        .logo-icon img {
+            width: 75%;
+            height: 75%;
+            object-fit: contain;
+            transition: transform 0.4s ease;
+        }
+
+        /* HOVER EFFECT */
+        .logo-card:hover .logo-icon {
+            background: #ad1b3150;
+            transform: rotate(360deg) scale(1.1);
+        }
+
+        .logo-card:hover .logo-icon img {
+            transform: scale(1.05);
+        }
+
+
+        .logo-card h4 {
+            font-size: 1.2rem;
+            color: var(--dark);
+            margin-bottom: 10px;
+            font-weight: 500;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo-card p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Alternative: Diagonal Grid Pattern */
+        @media (min-width: 1200px) {
+            .logo-carousel-container {
+                perspective: 1000px;
+            }
+
+            .logo-card {
+                transform-style: preserve-3d;
+            }
+
+            .logo-card:hover {
+                transform: translateY(-10px) scale(1.05) rotateY(5deg);
+            }
+        }
+    </style>
+
+
+
+    <!-- ========================================
+         PROGRAMS SECTION
+         ======================================== -->
+    <section class="programs-section" id="courses">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fs-3 text-dark fw-bold">Programmes Offered</h2>
+                <p class="section-subtitle">There are a plethora of online Amrita University courses on offer that can
+                    provide tangible and accessible education for students irrespective of their location. These
+                    programmes impart meticulously designed practical knowledge from various industries coupled with
+                    rigorous academic standards, thereby ensuring that students gain relevant skills. Prospective
+                    students are able to tap into the expert faculty guidance and make thorough use of the interactive
+                    platforms which Amrita Ahead online programs utilizes. The curriculum is aligned with contemporary
+                    trends and emphasizes real-world application, preparing graduates for success in their chosen
+                    fields.
+                </p>
+            </div>
+
+            <!-- Program Category Tabs -->
+            <div class="program-tabs-wrapper">
+                <div class="program-tabs">
+                    <button class="program-tab active" data-category="undergraduate">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Undergraduate</span>
+                    </button>
+                    <button class="program-tab" data-category="postgraduate">
+                        <i class="fas fa-user-graduate"></i>
+                        <span>Postgraduate</span>
+                    </button>
+                    <button class="program-tab" data-category="certificate">
+                        <i class="fas fa-certificate"></i>
+                        <span>Certificate Programs</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Program Cards Container -->
+            <div class="programs-container">
+                <!-- Undergraduate Programs -->
+                <div class="program-category active" data-category="undergraduate">
+                    <div class="row g-4">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="program-card">
+                                <div class="program-card-header">
+                                    <div class="program-icon">
+                                        <i class="fas fa-briefcase"></i>
+                                    </div>
+                                    <h3 class="program-title">Bachelor of Commerce (B.Com)</h3>
+                                </div>
+                                <div class="program-card-body">
+                                    <p class="program-description">This 3-year course prepares students for careers in
+                                        commerce, banking, and corporate sectors by building a strong foundation in
+                                        accounting, finance, taxation, economics, and business management.</p>
+                                    <!-- <ul class="program-features">
+                                        <li><i class="fas fa-check-circle"></i> 3 Years Duration</li>
+                                        <li><i class="fas fa-check-circle"></i> 6 Specializations</li>
+                                        <li><i class="fas fa-check-circle"></i> Industry Projects</li>
+                                    </ul> -->
+                                </div>
+                                <div class="program-card-footer">
+                                    <a href="https://admission.onlineamrita.com/" class="program-apply-btn">Apply Now <i
+                                            class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="program-card">
+                                <div class="program-card-header">
+                                    <div class="program-icon">
+                                        <i class="fas fa-laptop-code"></i>
+                                    </div>
+                                    <h3 class="program-title">Bachelor of Computer Application (BCA)</h3>
+                                </div>
+                                <div class="program-card-body">
+                                    <p class="program-description text-dark">This 3-year program equips students for careers in
+                                        IT, software, and technology-driven industries by developing core skills in
+                                        programming, software development, databases, and computer applications.
+                                    </p>
+                                    <!-- <ul class="program-features">
+                                        <li><i class="fas fa-check-circle"></i> 3 Years Duration</li>
+                                        <li><i class="fas fa-check-circle"></i> Latest Tech Stack</li>
+                                        <li><i class="fas fa-check-circle"></i> Hands-on Coding</li>
+                                    </ul> -->
+                                </div>
+                                <div class="program-card-footer">
+                                    <a href="https://admission.onlineamrita.com/" class="program-apply-btn">Apply Now <i
+                                            class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="program-card">
+                                <div class="program-card-header">
+                                    <div class="program-icon">
+                                        <i class="fas fa-calculator"></i>
+                                    </div>
+                                    <h3 class="program-title">Bachelor of Business Administration (BBA)</h3>
+                                </div>
+                                <div class="program-card-body">
+                                    <p class="program-description">This 3-year program builds leadership and
+                                        decision-making skills for future business professionals by making them gain
+                                        essential knowledge in management, marketing, finance, and entrepreneurship.
+                                    </p>
+                                    <!-- <ul class="program-features">
+                                        <li><i class="fas fa-check-circle"></i> 3 Years Duration</li>
+                                        <li><i class="fas fa-check-circle"></i> Accounting Focus</li>
+                                        <li><i class="fas fa-check-circle"></i> Career Ready</li>
+                                    </ul> -->
+                                </div>
+                                <div class="program-card-footer">
+                                    <a href="https://admission.onlineamrita.com/" class="program-apply-btn">Apply Now <i
+                                            class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Postgraduate Programs -->
+                <div class="program-category" data-category="postgraduate">
+                    <div class="row g-4">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="program-card">
+                                <div class="program-card-header">
+                                    <div class="program-icon">
+                                        <i class="fas fa-chart-line"></i>
+                                    </div>
+                                    <h3 class="program-title">Master of Business Administration (MBA)</h3>
+                                </div>
+                                <div class="program-card-body">
+                                    <p class="program-description">This 2-year program prepares graduates for managerial
+                                        and executive roles across industries by enhancing leadership, strategic
+                                        thinking, and business management capabilities. </p>
+                                    <ul class="program-features">
+                                        <li><i class="fas fa-check-circle"></i> Human Resources Management</li>
+                                        <li><i class="fas fa-check-circle"></i> Marketing</li>
+                                        <li><i class="fas fa-check-circle"></i> Finance</li>
+                                        <li><i class="fas fa-check-circle"></i> Operations</li>
+                                        <li><i class="fas fa-check-circle"></i> General Management</li>
+
+                                        <li><i class="fas fa-check-circle"></i> Business Analytics</li>
+                                        <li><i class="fas fa-check-circle"></i> Fintech</li>
+                                        <li><i class="fas fa-check-circle"></i> Environment, Social and Governance</li>
+                                    </ul>
+                                </div>
+                                <div class="program-card-footer">
+                                    <a href="https://admission.onlineamrita.com/" class="program-apply-btn">Apply Now <i
+                                            class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="program-card">
+                                <div class="program-card-header">
+                                    <div class="program-icon">
+                                        <i class="fas fa-code"></i>
+                                    </div>
+                                    <h3 class="program-title">Master of Computer Application (MCA)</h3>
+                                </div>
+                                <div class="program-card-body">
+                                    <p class="program-description text-dark">This 2-year program prepares graduates for senior
+                                        roles in IT and software industries by advancing knowledge in software
+                                        engineering, application development, databases, and emerging technologies
+                                        including AI.
+                                    </p>
+                                    <ul class="program-features">
+                                        <li><i class="fas fa-check-circle"></i> Artificial Intelligence</li>
+                                        <li><i class="fas fa-check-circle"></i> Cybersecurity</li>
+                                    </ul>
+                                </div>
+                                <div class="program-card-footer">
+                                    <a href="https://admission.onlineamrita.com/" class="program-apply-btn">Apply Now <i
+                                            class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="program-card">
+                                <div class="program-card-header">
+                                    <div class="program-icon">
+                                        <i class="fas fa-coins"></i>
+                                    </div>
+                                    <h3 class="program-title">Master of Commerce (M.Com)</h3>
+                                </div>
+                                <div class="program-card-body">
+                                    <p class="program-description">This 2-year program prepares graduates for careers in
+                                        academia, finance, and corporate management by providing advanced knowledge in
+                                        accounting, finance, taxation, economics, and business research.</p>
+                                    <!-- <ul class="program-features">
+                                        <li><i class="fas fa-check-circle"></i> 2 Years Duration</li>
+                                        <li><i class="fas fa-check-circle"></i> Research Focus</li>
+                                        <li><i class="fas fa-check-circle"></i> Expert Faculty</li>
+                                    </ul> -->
+                                </div>
+                                <div class="program-card-footer">
+                                    <a href="https://admission.onlineamrita.com/" class="program-apply-btn">Apply Now <i
+                                            class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificate Programs -->
+                <div class="program-category" data-category="certificate">
+                    <div class="row g-4">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="program-card">
+                                <div class="program-card-header">
+                                    <div class="program-icon">
+                                        <i class="fas fa-robot"></i>
+                                    </div>
+                                    <h3 class="program-title">Certificate Program in Digital Marketing</h3>
+                                </div>
+                                <div class="program-card-body">
+                                    <p class="program-description">This 3-month course is designed for students and
+                                        professionals seeking fast-track career growth in the digital economy with a
+                                        focus on hands-on expertise in digital platforms, online advertising, and
+                                        data-driven marketing strategies.</p>
+                                    <!-- <ul class="program-features">
+                                        <li><i class="fas fa-check-circle"></i> 6 Months Duration</li>
+                                        <li><i class="fas fa-check-circle"></i> Practical Labs</li>
+                                        <li><i class="fas fa-check-circle"></i> Industry Certificate</li>
+                                    </ul> -->
+                                </div>
+                                <div class="program-card-footer">
+                                    <a href="https://admission.onlineamrita.com/" class="program-apply-btn">Apply Now <i
+                                            class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="program-card">
+                                <div class="program-card-header">
+                                    <div class="program-icon">
+                                        <i class="fas fa-chart-pie"></i>
+                                    </div>
+                                    <h3 class="program-title">Certificate Program in Data Analytics</h3>
+                                </div>
+                                <div class="program-card-body">
+                                    <p class="program-description text-dark">This 3-month program prepares learners to make
+                                        data-driven decisions across industries by making them thrive via practical
+                                        skills in data collection, visualization, statistical analysis, and reporting
+                                        using modern tools and techniques.</p>
+                                    <!-- <ul class="program-features">
+                                        <li><i class="fas fa-check-circle"></i> 6 Months Duration</li>
+                                        <li><i class="fas fa-check-circle"></i> Real Datasets</li>
+                                        <li><i class="fas fa-check-circle"></i> Job Assistance</li>
+                                    </ul> -->
+                                </div>
+                                <div class="program-card-footer">
+                                    <a href="https://admission.onlineamrita.com/" class="program-apply-btn">Apply Now <i
+                                            class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="program-card">
+                                <div class="program-card-header">
+                                    <div class="program-icon">
+                                        <i class="fas fa-bullhorn"></i>
+                                    </div>
+                                    <h3 class="program-title">Certificate in Digital Marketing</h3>
+                                </div>
+                                <div class="program-card-body">
+                                    <p class="program-description">Learn SEO, social media marketing, content strategy,
+                                        and digital advertising to excel in modern marketing.</p>
+                                    <ul class="program-features">
+                                        <li><i class="fas fa-check-circle"></i> 6 Months Duration</li>
+                                        <li><i class="fas fa-check-circle"></i> Live Campaigns</li>
+                                        <li><i class="fas fa-check-circle"></i> Google Certified</li>
+                                    </ul>
+                                </div>
+                                <div class="program-card-footer">
+                                    <a href="https://admission.onlineamrita.com/" class="program-apply-btn">Apply Now <i
+                                            class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* ========================================
+           PROGRAMS SECTION STYLES
+           ======================================== */
+        .programs-section {
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            font-weight: 400;
+        }
+
+        /* Program Tabs */
+        .program-tabs-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+
+        .program-tabs {
+            display: inline-flex;
+            background: white;
+            padding: 8px;
+            border-radius: 60px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .program-tab {
+            padding: 14px 30px;
+            background: transparent;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            white-space: nowrap;
+        }
+
+        .program-tab i {
+            font-size: 1.1rem;
+        }
+
+        .program-tab:hover {
+            background: rgba(190, 31, 79, 0.05);
+            color: var(--primary);
+        }
+
+        .program-tab.active {
+            background: var(--bg-gradient);
+            color: white;
+            box-shadow: 0 5px 20px rgba(190, 31, 79, 0.3);
+        }
+
+        .program-tab.active:hover {
+            color: white;
+        }
+
+        /* Program Cards Container */
+        .programs-container {
+            position: relative;
+            min-height: 500px;
+        }
+
+        .program-category {
+            display: none;
+            animation: fadeInScale 0.5s ease-out;
+        }
+
+        .program-category.active {
+            display: block;
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Program Cards */
+        .program-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            border: 2px solid transparent;
+        }
+
+
+        .program-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+            border-color: var(--primary);
+        }
+
+        .program-card-header {
+            margin-bottom: 20px;
+        }
+
+        .program-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .program-icon i {
+            font-size: 1.8rem;
+            color: white;
+        }
+
+        .program-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 0;
+            line-height: 1.4;
+        }
+
+        .program-card-body {
+            flex-grow: 1;
+            margin-bottom: 25px;
+        }
+
+        .program-description {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .program-features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .program-features li {
+            font-size: 0.9rem;
+            color: var(--text);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .program-features i {
+            color: var(--primary);
+            font-size: 1rem;
+        }
+
+        .program-card-footer {
+            margin-top: auto;
+        }
+
+        .program-apply-btn {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            background: var(--bg-gradient);
+            color: white;
+            text-align: center;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(190, 31, 79, 0.2);
+        }
+
+        .program-apply-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(190, 31, 79, 0.35);
+            color: white;
+        }
+
+        .program-apply-btn i {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .program-apply-btn:hover i {
+            transform: translateX(5px);
+        }
+
+        /* ========================================
+           CONTACT FORM STYLES
+           ======================================== */
+        .contact-form-card {
+            background: white;
+            padding: 30px;
+            border-radius: 30px;
+            box-shadow: 0 30px 90px rgba(0, 0, 0, 0.25);
+            animation: fadeInUp 1s ease-out 0.8s backwards;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-form-card h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+            font-weight: 600;
+        }
+
+        .form-control-custom {
+            width: 100%;
+            padding: 12px 20px;
+            border: 2px solid #E2E8F0;
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: #F8FAFC;
+        }
+
+        .form-control-custom:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: white;
+            box-shadow: 0 0 0 5px rgba(196, 30, 58, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .submit-btn-custom {
+            width: 100%;
+            margin-top: 10px;
+            padding: 14px;
+            background: var(--bg-gradient);
+            color: white;
+            border: none;
+            border-radius: 14px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(196, 30, 58, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .submit-btn-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(196, 30, 58, 0.4);
+        }
+
+        /* ========================================
+           MOBILE RESPONSIVE STYLES
+           ======================================== */
+
+        /* Tablet and below */
+        @media (max-width: 992px) {
+            .custom-navbar {
+                top: 0;
+                width: 100%;
+                padding: 12px 0;
+                border-radius: 0;
+                max-width: 100%;
+            }
+
+            .programs-section {
+                padding: 60px 15px;
+            }
+
+            .program-tabs {
+                justify-content: center;
+            }
+
+            .program-tab {
+                padding: 12px 20px;
+                font-size: 0.9rem;
+            }
+
+            .program-card {
+                margin-bottom: 20px;
+            }
+        }
+
+        /* Mobile phones */
+        @media (max-width: 576px) {
+            .custom-navbar {
+                top: 0;
+                width: 100%;
+                border-radius: 0;
+                padding: 10px 0;
+            }
+
+            .programs-section {
+                padding: 50px 12px;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .section-subtitle {
+                font-size: 0.95rem;
+            }
+
+            .program-tabs-wrapper {
+                margin-bottom: 30px;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .program-tabs {
+                display: flex;
+                padding: 6px;
+                gap: 6px;
+                border-radius: 50px;
+                min-width: min-content;
+            }
+
+            .program-tab {
+                padding: 10px 18px;
+                font-size: 0.85rem;
+                gap: 6px;
+                flex-shrink: 0;
+            }
+
+            .program-tab i {
+                font-size: 1rem;
+            }
+
+            .program-tab span {
+                display: inline;
+            }
+
+            .program-card {
+                padding: 24px;
+                border-radius: 16px;
+            }
+
+            .program-icon {
+                width: 50px;
+                height: 50px;
+                margin-bottom: 15px;
+            }
+
+            .program-icon i {
+                font-size: 1.5rem;
+            }
+
+            .program-title {
+                font-size: 1.2rem;
+            }
+
+            .program-description {
+                font-size: 0.9rem;
+            }
+
+            .program-features li {
+                font-size: 0.85rem;
+                margin-bottom: 8px;
+            }
+
+            .program-apply-btn {
+                padding: 12px;
+                font-size: 0.95rem;
+            }
+
+        }
+
+        .program-category .col-lg-4:nth-child(2) .program-card {
+            background: linear-gradient(135deg, #ffeaf0d5, #ffe8ec);
+            color: #ffffff;
+            border: 2px solid #be1f4f;
+        }
+    </style>
+
+
+
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        // Program Tabs Functionality
+        const programTabs = document.querySelectorAll('.program-tab');
+        const programCategories = document.querySelectorAll('.program-category');
+
+        programTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const category = tab.getAttribute('data-category');
+
+                // Remove active class from all tabs
+                programTabs.forEach(t => t.classList.remove('active'));
+
+                // Add active class to clicked tab
+                tab.classList.add('active');
+
+                // Hide all program categories
+                programCategories.forEach(cat => cat.classList.remove('active'));
+
+                // Show selected category
+                const selectedCategory = document.querySelector(`.program-category[data-category="${category}"]`);
+                if (selectedCategory) {
+                    selectedCategory.classList.add('active');
                 }
             });
+        });
 
-            // Smooth scrolling for navigation links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
 
-                    const targetId = this.getAttribute('href');
-                    if (targetId === '#') return;
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                state: document.getElementById('state').value,
+                course: document.getElementById('course').value,
+                message: document.getElementById('message').value
+            };
 
-                    const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        window.scrollTo({
-                            top: targetElement.offsetTop - 80,
-                            behavior: 'smooth'
-                        });
+            console.log('Form submitted:', formData);
 
-                        // Update active nav link
-                        document.querySelectorAll('.nav-link').forEach(link => {
-                            link.classList.remove('active');
-                        });
-                        this.classList.add('active');
+            // Show success message
+            alert('Thank you for your interest! We will contact you soon.');
+
+            // Reset form
+            this.reset();
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+
+                    // Close mobile menu if open
+                    const navbarCollapse = document.querySelector('.navbar-collapse');
+                    if (navbarCollapse.classList.contains('show')) {
+                        navbarCollapse.classList.remove('show');
                     }
-                });
-            });
-
-            // Update active nav link on scroll
-            const sections = document.querySelectorAll('section[id]');
-            window.addEventListener('scroll', function () {
-                let current = '';
-
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop - 100;
-                    const sectionHeight = section.clientHeight;
-
-                    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-                        current = section.getAttribute('id');
-                    }
-                });
-
-                document.querySelectorAll('.nav-link').forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${current}`) {
-                        link.classList.add('active');
-                    }
-                });
+                }
             });
         });
+
+        // Add scroll effect to navbar
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.custom-navbar');
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > 100) {
+                navbar.style.boxShadow = '0 15px 50px rgba(0, 0, 0, 0.15)';
+            } else {
+                navbar.style.boxShadow = '0 10px 40px rgba(0, 0, 0, 0.1)';
+            }
+
+            lastScroll = currentScroll;
+        });
     </script>
+
 </body>
 
 </html>

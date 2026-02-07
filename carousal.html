@@ -43,8 +43,8 @@
         }
 
         .highlight {
-            background: linear-gradient(180deg, #ffd500 0%, #ffd500 100%);
-            font-size: 5rem !important;
+            background: linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
+            font-size: 4.3rem !important;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -112,21 +112,25 @@
         }
 
         .hero-section {
-            min-height: 100vh;
-            padding-top: 120px;
+            margin: 10px;
+            border-radius: 30px;
+            min-height: 97vh !important;
+            padding-top: 140px;
             position: relative;
             overflow: hidden;
 
             background:
-                linear-gradient(130deg,
-                    rgba(137, 0, 23, 0.336) 10%,
-                    rgba(255, 255, 255, 0) 100%),
+                linear-gradient(90deg,
+                    rgba(190, 31, 79, 0),
+                    rgba(255, 255, 255, 0),
+                    rgba(190, 31, 79, 0)),
                 url("Media/24951945 (1).jpg.jpeg");
 
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
         }
+
 
 
         .hero-section::before {
@@ -155,12 +159,37 @@
         }
 
         .hero-title {
+            position: relative;
+            display: inline-block;
+
             font-size: clamp(2.5rem, 5vw, 3.3rem);
-            color: rgb(255, 255, 255) !important;
             line-height: 1.1;
             font-weight: 700;
+            color: #ffffff;
+
             animation: fadeInUp 1s ease-out;
+            animation-fill-mode: both;
+            /* 🔥 THIS FIXES IT */
         }
+
+
+        /* BACKGROUND STRIP */
+        .hero-title::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+
+            padding: 0.15em 0.4em;
+            margin-left: -0.4em;
+
+            background: linear-gradient(90deg,
+                    rgba(190, 31, 79, 0.95) 0%,
+                    rgba(190, 31, 79, 0.85) 40%,
+                    rgba(190, 31, 79, 0.85) 70%,
+                    rgba(190, 31, 79, 0) 100%);
+        }
+
 
         @keyframes fadeInUp {
             from {
@@ -176,7 +205,7 @@
 
         .hero-subtitle {
             font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.9);
+            color: rgba(0, 0, 0, 0.9);
             font-weight: 500;
             line-height: 1.7;
         }
@@ -214,7 +243,7 @@
         /* Contact Form */
         .contact-form-card {
             background: white;
-            padding: 40px;
+            padding: 30px;
             border-radius: 30px;
             box-shadow: 0 30px 90px rgba(0, 0, 0, 0.25);
             animation: fadeInUp 1s ease-out 0.8s backwards;
@@ -945,7 +974,7 @@
                             <div class="mb-3">
                                 <!-- <label for="email" class="form-label fw-semibold">Email Address</label> -->
                                 <input type="email" class="form-control form-control-custom" id="email" name="email"
-                                    required placeholder="your@email.com"> 
+                                    required placeholder="your@email.com">
                             </div>
                             <div class="mb-3">
                                 <!-- <label for="phone" class="form-label fw-semibold">Contact Number</label> -->
