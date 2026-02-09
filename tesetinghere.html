@@ -1,0 +1,286 @@
+
+    <style>
+        .faq-section {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+
+        /* LEFT SIDE - STICKY HEADER */
+        .faq-header-sticky {
+            position: sticky;
+            top: 100px;
+        }
+
+        .faq-section h2 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            color: #0a0a0a;
+            margin-bottom: 20px;
+            letter-spacing: -1.5px;
+            line-height: 1.1;
+        }
+
+        .faq-section .lead {
+            font-size: clamp(1rem, 1.5vw, 1.2rem);
+            color: #666666;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        /* ACCORDION CUSTOM STYLES */
+        .accordion-item {
+            background: #ffffff;
+            border: 2px solid #f0f0f0 !important;
+            border-radius: 16px !important;
+            margin-bottom: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .accordion-item:hover {
+            border-color: #e0e0e0 !important;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+        }
+
+        .accordion-item:has(.accordion-button:not(.collapsed)) {
+            border-color: #b51f4a !important;
+            box-shadow: 0 8px 30px rgba(181, 31, 74, 0.08);
+        }
+
+        .accordion-button {
+            padding: 8px 12px;
+            font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+            font-weight: 600;
+            color: #0a0a0a;
+            background-color: #ffffff;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .accordion-button:hover {
+            background-color: #fafafa;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: #fafafa;
+            color: #0a0a0a;
+            box-shadow: none;
+        }
+
+        .accordion-button:focus {
+            box-shadow: none;
+            border: none;
+        }
+
+        /* CUSTOM TOGGLE ICON */
+        .accordion-button::after {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: #f5f5f5;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230a0a0a' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-size: 16px;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: all 0.3s ease;
+        }
+
+        .accordion-button:not(.collapsed)::after {
+            background-color: #b51f4a;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            transform: rotate(180deg);
+        }
+
+        /* NUMBER BADGE */
+        .faq-number {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #b51f4a, #d946a6);
+            color: white;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 16px;
+            opacity: 0.9;
+        }
+
+        .accordion-body {
+            padding: 0 32px 28px 32px;
+            font-size: clamp(0.95rem, 1.4vw, 1.1rem);
+            line-height: 1.8;
+            color: #666666;
+        }
+
+        /* TABLET */
+        @media (max-width: 992px) {
+            .faq-header-sticky {
+                position: static;
+            }
+
+            .faq-section h2 {
+                font-size: 2.5rem;
+            }
+
+            .faq-section {
+                padding: 60px 0;
+            }
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+            .faq-section h2 {
+                font-size: 2rem;
+                margin-bottom: 16px;
+            }
+
+            .accordion-item {
+                margin-bottom: 14px;
+                border-radius: 14px !important;
+            }
+
+            .accordion-button {
+                padding: 24px;
+                font-size: 1rem;
+            }
+
+            .accordion-body {
+                padding: 0 24px 24px 24px;
+                font-size: 0.95rem;
+            }
+
+            .accordion-button::after {
+                width: 30px;
+                height: 30px;
+            }
+
+            .faq-number {
+                width: 26px;
+                height: 26px;
+                font-size: 0.8rem;
+                margin-right: 12px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .accordion-item {
+                border-radius: 14px !important;
+            }
+
+            .accordion-button {
+                padding: 20px;
+            }
+
+            .accordion-body {
+                padding: 0 20px 20px 20px;
+            }
+
+            .faq-number {
+                display: none;
+            }
+
+            .accordion-button::after {
+                width: 28px;
+                height: 28px;
+            }
+        }
+    </style>
+
+
+    <section class="faq-section">
+        <div class="container">
+            <div class="row g-5">
+                
+                <!-- LEFT COLUMN - HEADER -->
+                <div class="col-lg-4">
+                    <div class="faq-header-sticky">
+                        <h2>Frequently Asked Questions</h2>
+                        <p class="lead">Everything you need to know about Amrita Online</p>
+                    </div>
+                </div>
+
+                <!-- RIGHT COLUMN - FAQ ACCORDION -->
+                <div class="col-lg-8">
+                    <div class="accordion accordion-flush" id="faqAccordion">
+
+                        <!-- FAQ 1 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                                    <span class="faq-number">1</span>
+                                    What programs does Amrita Online offer?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Amrita Online offers a wide range of undergraduate and postgraduate programs including BBA, BCA, B.Com, MBA, MCA, and M.Com. All programs are UGC-approved and designed to meet industry standards while providing the flexibility of online learning.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 2 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                    <span class="faq-number">2</span>
+                                    Is the degree recognized and valid?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes, absolutely! All degrees from Amrita Online are AICTE and UGC recognized, making them equivalent to traditional on-campus degrees. They are valid for higher education, government jobs, and employment in both private and public sectors.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 3 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                                    <span class="faq-number">3</span>
+                                    What is the duration of the programs?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Undergraduate programs (BBA, BCA, B.Com) are typically 3 years in duration, while postgraduate programs (MBA, MCA, M.Com) are 2 years. The programs follow a semester system with flexibility to complete at your own pace within the specified timeframe.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 4 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                                    <span class="faq-number">4</span>
+                                    Can I work while pursuing my degree?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes! Our online programs are specifically designed for working professionals. You can study at your own pace and schedule, making it easy to balance your education with your career and personal commitments.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 5 -->
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                                    <span class="faq-number">5</span>
+                                    What are the admission requirements?
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    For undergraduate programs, you need to have completed 10+2 from a recognized board. For postgraduate programs, you need a bachelor's degree in the relevant field from a recognized university. Specific program requirements may vary, so please check the individual program pages for detailed eligibility criteria.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
