@@ -102,16 +102,25 @@
         }
 
         .apply-btn-nav {
-            background: var(--bg-gradient);
-            color: white !important;
-            padding: 10px 25px !important;
-            border-radius: 50px;
-            transition: transform 0.3s ease;
-            font-weight: 600;
-        }
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
 
-        .apply-btn-nav:hover {
-            transform: scale(1.05);
+            margin: 0 auto;
+            /* centers horizontally */
+            background: #be1f4f;
+            /* your brand color */
+            color: #ffffff !important;
+
+            padding: 8px 16px;
+            border-radius: 999px;
+
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+
+            text-decoration: none;
+            transition: all 0.35s ease;
         }
 
         /* ========================================
@@ -220,18 +229,32 @@
            BADGES & STATS
            ======================================== */
         .badge-custom {
-            padding: 10px 20px;
-            background: rgba(255, 255, 255, 0.475);
-            backdrop-filter: blur(10px);
-            border-radius: 50px;
-            color: rgb(0, 0, 0);
-            font-size: 0.95rem;
-            font-weight: 600;
-            border: 1px solid rgba(255, 255, 255, 0.454);
             display: inline-flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
+
+            padding: 7px 12px;
+
+            background: rgba(255, 255, 255, 0.567);
+            /* stronger contrast */
+            backdrop-filter: blur(12px);
+
+            border-radius: 999px;
+
+            color: #2c2c2c;
+            font-size: 0.95rem;
+            font-weight: 700;
+            letter-spacing: 0.2px;
+
+            border: 1px solid rgba(0, 0, 0, 0.12);
+
+            box-shadow:
+                0 6px 20px rgba(0, 0, 0, 0.08),
+                inset 0 1px 0 rgba(255, 255, 255, 0.6);
+
+            transition: all 0.3s ease;
         }
+
 
         .stat-item {
             text-align: left;
@@ -364,7 +387,7 @@
             }
 
             .apply-btn-nav {
-                margin-top: 10px;
+                margin-top: 0px;
                 text-align: center;
                 display: block;
             }
@@ -591,7 +614,7 @@
                         <a class="nav-link" href="#features">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#courses">Programmes</a>
+                        <a class="nav-link" href="#courses">Programs</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#why-amrita">Why Amrita</a>
@@ -602,8 +625,8 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
-                    <li class="nav-item ms-lg-2">
-                        <a class="nav-link apply-btn-nav" href="https://admission.onlineamrita.com/">Apply Now</a>
+                    <li class="nav-item ms-lg-0">
+                        <a class=" apply-btn-nav text-white" href="https://admission.onlineamrita.com/">Apply Now</a>
                     </li>
                 </ul>
             </div>
@@ -627,22 +650,43 @@
                     </p>
 
                     <div class="d-flex flex-wrap gap-3 mb-0 mt-5">
-                        <span class="badge-custom">
+                        <!-- <span class="badge-custom">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-award-fill" viewBox="0 0 16 16">
                                 <path
                                     d="m8 0 1.669.864 1.858.282.842 1.68 1.337 1.32L13.4 6l.306 1.854-1.337 1.32-.842 1.68-1.858.282L8 12l-1.669-.864-1.858-.282-.842-1.68-1.337-1.32L2.6 6l-.306-1.854 1.337-1.32.842-1.68L6.331.864z" />
                                 <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1z" />
-                            </svg> NIRF Rank #8
-                        </span>
-                        <span class="badge-custom">✓ NAAC A++ Accredited</span>
-                        <span class="badge-custom">
+                            </svg>B.Com
+                        </span> -->
+                        <span class="badge-custom"><span class="tick"></span>B.Com</span>
+                        <span class="badge-custom"><span class="tick"></span>BBA</span>
+                        <span class="badge-custom"><span class="tick"></span>BCA</span>
+                        <span class="badge-custom"><span class="tick"></span>M.Com</span>
+                        <span class="badge-custom"><span class="tick"></span>MBA</span>
+                        <span class="badge-custom"><span class="tick"></span>MCA</span>
+                        <style>
+                            .badge-custom {
+                                position: relative;
+                                padding-left: 22px;
+                            }
+
+                            .badge-custom::before {
+                                content: "✓";
+                                position: absolute;
+                                left: 14px;
+                                color: #c10c43;
+                                font-weight: 700;
+                            }
+                        </style>
+
+
+                        <!-- <span class="badge-custom">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-globe-americas-fill" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
                                     d="m8 0 .412.01A7.97 7.97 0 0 1 13.29 2a8.04 8.04 0 0 1 2.548 4.382 8 8 0 1 1-15.674 0 8 8 0 0 1 1.361-3.078A8 8 0 0 1 2.711 2 7.96 7.96 0 0 1 8 0m0 1a7 7 0 0 0-5.958 3.324C2.497 6.192 6.669 7.827 6.5 8c-.5.5-1.034.884-1 1.5.07 1.248 2.259.774 2.5 2 .202 1.032-1.051 3 0 3 1.5-.5 3.798-3.186 4-5 .138-1.242-2-2-3.5-2.5-.828-.276-1.055.648-1.5.5S4.5 5.5 5.5 5s1 0 1.5.5c1 .5.5-1 1-1.5.838-.838 3.16-1.394 3.605-2.001A6.97 6.97 0 0 0 8 1" />
                             </svg> WES Approved
-                        </span>
+                        </span> -->
                     </div>
 
                     <div class="row mt-5">
@@ -661,13 +705,13 @@
                         <div class="col-md-3">
                             <div class="stat-item">
                                 <span class="stat-number">50+</span>
-                                <span class="stat-label">Student's Countries</span>
+                                <span class="stat-label">Student's <br>Countries</span>
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="stat-item">
                                 <span class="stat-number">28</span>
-                                <span class="stat-label">Indian State's Students</span>
+                                <span class="stat-label">Indian State's <br>Students</span>
                             </div>
                         </div>
                     </div>
@@ -757,7 +801,8 @@
     <section class="trusted-section">
         <div class="trusted-content">
             <h2 class="text-dark fw-bold mt-4 mb-4" style="font-weight: 600 !important; font-size: 40px;">Recognized
-                <span style=" font-weight: 700;  color: #c2173c;">&</span> Accredited</h2>
+                <span style=" font-weight: 700;  color: #c2173c;">&</span> Accredited
+            </h2>
             <p class="trusted-title"></p>
             <div class="logo-carousel-container">
                 <div class="logo-carousel-track">
@@ -765,78 +810,76 @@
                         <div class="logo-icon">
                             <img src="Carousal/NAAC A++.svg" alt="">
                         </div>
-                        <h4>UGC</h4>
+                        <h4>NAAC, MoE 2023 A++ Grade</h4>
                     </div>
                     <div class="logo-card">
                         <div class="logo-icon">
                             <img src="Carousal/NIRF.svg" alt="">
                         </div>
-                        <h4>AICTE</h4>
+                        <h4>NIRF 2025
+                            8th Ranked University in India</h4>
                     </div>
                     <div class="logo-card">
                         <div class="logo-icon">
                             <img src="Carousal/QS World University Rankings 2020.svg" alt="">
                         </div>
-                        <h4>NAAC A++</h4>
+                        <h4>#1 for International Faculty</h4>
                     </div>
                     <div class="logo-card">
                         <div class="logo-icon">
                             <img src="Carousal/THE.svg" alt="">
                         </div>
-                        <h4>NIRF #8</h4>
+                        <h4>#1 Private University in India</h4>
                     </div>
                     <div class="logo-card">
                         <div class="logo-icon">
                             <img src="Carousal/UGC.svg" alt="">
                         </div>
-                        <h4>WES</h4>
+                        <h4>Category 1 Graded Autonomy</h4>
                     </div>
                     <div class="logo-card">
                         <div class="logo-icon">
                             <img src="Carousal/WES.svg" alt="">
                         </div>
-                        <h4>THE Impact</h4>
+                        <h4>WES Accredited In USA & Canada</h4>
                     </div>
-
                     <div class="logo-card">
                         <div class="logo-icon">
                             <img src="Carousal/NAAC A++.svg" alt="">
                         </div>
-                        <h4>UGC</h4>
+                        <h4>NAAC, MoE 2023 A++ Grade</h4>
                     </div>
                     <div class="logo-card">
                         <div class="logo-icon">
                             <img src="Carousal/NIRF.svg" alt="">
                         </div>
-                        <h4>AICTE</h4>
+                        <h4>NIRF 2025
+                            8th Ranked University in India</h4>
                     </div>
                     <div class="logo-card">
                         <div class="logo-icon">
                             <img src="Carousal/QS World University Rankings 2020.svg" alt="">
                         </div>
-                        <h4>NAAC A++</h4>
+                        <h4>#1 for International Faculty</h4>
                     </div>
                     <div class="logo-card">
                         <div class="logo-icon">
                             <img src="Carousal/THE.svg" alt="">
                         </div>
-                        <h4>NIRF #8</h4>
+                        <h4>#1 Private University in India</h4>
                     </div>
                     <div class="logo-card">
                         <div class="logo-icon">
                             <img src="Carousal/UGC.svg" alt="">
                         </div>
-                        <h4>WES</h4>
+                        <h4>Category 1 Graded Autonomy</h4>
                     </div>
                     <div class="logo-card">
                         <div class="logo-icon">
                             <img src="Carousal/WES.svg" alt="">
                         </div>
-                        <h4>THE Impact</h4>
+                        <h4>WES Accredited In USA & Canada</h4>
                     </div>
-
-
-
                 </div>
             </div>
         </div>
@@ -899,7 +942,7 @@
 
         .logo-carousel-track {
             display: flex;
-            gap: 20px;
+            gap: 80px;
             animation: scrollLogos 30s linear infinite;
             width: fit-content;
         }
@@ -914,15 +957,15 @@
             }
         }
 
-        .logo-carousel-container:hover .logo-carousel-track {
+        /* .logo-carousel-container:hover .logo-carousel-track {
             animation-play-state: paused;
-        }
+        } */
 
         .logo-card {
             min-width: 280px;
             background: white;
             border-radius: 20px;
-            padding: 10px 10px;
+            padding: 10px 30px;
             /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); */
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             border: 1px solid transparent;
@@ -931,34 +974,13 @@
             overflow: hidden;
         }
 
-        .logo-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: var(--bg-gradient);
-            opacity: 0;
-            transition: opacity 0.4s ease;
-            z-index: 0;
-        }
 
-        .logo-card:hover::before {
-            opacity: 0.05;
 
-        }
-
-        .logo-card:hover {
-            transform: translateY(-10px) scale(1);
-            box-shadow: 0 20px 60px rgba(196, 30, 58, 0.15);
-            border-color: var(--primary);
-        }
 
         .logo-icon {
             width: 140px;
             height: 140px;
-            background: linear-gradient(135deg, rgba(196, 30, 58, 0.1), rgba(255, 107, 53, 0.1));
+
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -977,11 +999,7 @@
             transition: transform 0.4s ease;
         }
 
-        /* HOVER EFFECT */
-        .logo-card:hover .logo-icon {
-            background: #ad1b3150;
-            transform: rotate(360deg) scale(1.1);
-        }
+
 
         .logo-card:hover .logo-icon img {
             transform: scale(1.05);
@@ -989,7 +1007,7 @@
 
 
         .logo-card h4 {
-            font-size: 1.2rem;
+            font-size: 1rem;
             color: var(--dark);
             margin-bottom: 10px;
             font-weight: 500;
@@ -1779,13 +1797,13 @@
                 <div class="col-lg-6">
                     <!-- LOGO GRID -->
                     <div class="partner-logos">
-                        <img src="https://f2.leadsquaredcdn.com/t/amrita1/content/common/images/Group%201060.png"
+                        <img src="placement/OAKLAND University.svg"
                             alt="Oakland University">
-                        <img src="https://f2.leadsquaredcdn.com/t/amrita1/content/common/images/Group%201060.png"
+                        <img src="placement/University of New Mexico.svg"
                             alt="University of New Mexico">
-                        <img src="https://f2.leadsquaredcdn.com/t/amrita1/content/common/images/Group%201060.png"
+                        <img src="placement/Universitat de Barcelona.svg"
                             alt="Institut Mines-Télécom">
-                        <img src="https://f2.leadsquaredcdn.com/t/amrita1/content/common/images/Group%201060.png"
+                        <img src="placement/Institut Mines-Télécom.svg"
                             alt="University of Barcelona">
                     </div>
                 </div>
@@ -1899,10 +1917,8 @@
         }
 
         .partner-logos img {
-            max-width: 140px;
+            max-width: 160px;
             width: 100%;
-            opacity: 0.75;
-            filter: grayscale(100%);
             transition: all 0.4s ease;
         }
 
@@ -2702,6 +2718,265 @@
     </style>
 
 
+
+
+    <style>
+        .placement-section {
+            padding: 40px 0px 0px 0px;
+            background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+            overflow: hidden;
+        }
+
+
+
+        .section-header h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            color: #0a0a0a;
+            margin-bottom: 12px;
+            letter-spacing: -1px;
+        }
+
+        .section-header p {
+            font-size: clamp(1rem, 1.5vw, 1.2rem);
+            color: #666666;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        /* CAROUSEL WRAPPER */
+        .logo-carousel-wrapper {
+            position: relative;
+            overflow: hidden;
+            padding: 40px 0;
+        }
+
+        /* Gradient masks on edges */
+        .logo-carousel-wrapper::before,
+        .logo-carousel-wrapper::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 150px;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .logo-carousel-wrapper::before {
+            left: 0;
+            background: linear-gradient(90deg, #ffffff 0%, transparent 100%);
+        }
+
+        .logo-carousel-wrapper::after {
+            right: 0;
+            background: linear-gradient(90deg, transparent 0%, #ffffff 100%);
+        }
+
+        /* CAROUSEL TRACK */
+        .logo-carousel-track {
+            display: flex;
+            width: max-content;
+            animation: scroll 40s linear infinite;
+            gap: 60px;
+        }
+
+        .logo-carousel-track:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* LOGO ITEM */
+        .logo-item {
+            flex-shrink: 0;
+            width: 200px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+
+        .logo-item img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            opacity: 1;
+            transition: all 0.3s ease;
+        }
+
+        .logo-item:hover img {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+
+        /* TABLET */
+        @media (max-width: 992px) {
+
+            .logo-carousel-wrapper::before,
+            .logo-carousel-wrapper::after {
+                width: 80px;
+            }
+
+            .logo-carousel-track {
+                gap: 40px;
+            }
+
+            .logo-item {
+                width: 160px;
+                height: 100px;
+                padding: 20px;
+            }
+
+            .placement-stats {
+                margin-top: 60px;
+                padding: 50px 20px;
+            }
+        }
+
+        /* MOBILE */
+        @media (max-width: 768px) {
+            .placement-section {
+                padding: 60px 0;
+            }
+
+            .section-header {
+                margin-bottom: 40px;
+            }
+
+            .logo-carousel-wrapper {
+                padding: 30px 0;
+            }
+
+            .logo-carousel-wrapper::before,
+            .logo-carousel-wrapper::after {
+                width: 50px;
+            }
+
+            .logo-carousel-track {
+                gap: 30px;
+                animation-duration: 30s;
+            }
+
+            .logo-item {
+                width: 140px;
+                height: 90px;
+                padding: 18px;
+                border-radius: 12px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .logo-carousel-track {
+                gap: 25px;
+            }
+
+            .logo-item {
+                width: 120px;
+                height: 80px;
+                padding: 15px;
+            }
+        }
+    </style>
+
+
+    <section class="placement-section">
+        <div class="container-fluid">
+
+            <!-- SECTION HEADER -->
+            <div class="section-header">
+                <h2></h2>
+                <h2 class="text-dark fw-bold" style="font-weight: 500 !important; font-size: 40px;">Our <span
+                        style=" font-weight: 700;  color: #c2173c;"> Placement </span>Partners</h2>
+            </div>
+
+            <!-- LOGO CAROUSEL -->
+            <div class="logo-carousel-wrapper">
+                <div class="logo-carousel-track">
+
+                    <!-- First set of logos -->
+                    <div class="logo-item">
+                        <img src="placement/Airtel.svg" alt="Google">
+                    </div>
+                    <div class="logo-item">
+                        <img src="placement/Amazon.svg" alt="Amazon">
+                    </div>
+                    <div class="logo-item">
+                        <img src="placement/Apple.svg" alt="Microsoft">
+                    </div>
+                    <div class="logo-item">
+                        <img src="placement/BNY Mellon.svg" alt="IBM">
+                    </div>
+                    <div class="logo-item">
+                        <img src="placement/Caterpillar.svg" alt="Oracle">
+                    </div>
+                    <div class="logo-item">
+                        <img src="placement/Deloitte.svg" alt="Infosys">
+                    </div>
+                    <div class="logo-item">
+                        <img src="placement/DHL.svg" alt="TCS">
+                    </div>
+                    <div class="logo-item">
+                        <img src="placement/EXIDE.svg" alt="Wipro">
+                    </div>
+                    <div class="logo-item">
+                        <img src="placement/EY.svg" alt="Accenture">
+                    </div>
+                    <div class="logo-item">
+                        <img src="placement/Grant Thornton.svg" alt="Cognizant">
+                    </div>
+
+                    <!-- Duplicate set for seamless loop -->
+                    <div class="logo-item">
+                        <img src="placement/HCL Tech.svg" alt="Google">
+                    </div>
+                    <div class="logo-item">
+                        <img src="placement/HDFC.svg" alt="Amazon">
+                    </div>
+                    <div class="logo-item">
+                        <img src="placement/Honeywell.svg" alt="Microsoft">
+                    </div>
+                    <div class="logo-item">
+                        <img src="placement/ICICI.svg" alt="IBM">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://via.placeholder.com/200x80/ea4335/ffffff?text=Oracle" alt="Oracle">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://via.placeholder.com/200x80/0668e1/ffffff?text=Infosys" alt="Infosys">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://via.placeholder.com/200x80/7b68ee/ffffff?text=TCS" alt="TCS">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://via.placeholder.com/200x80/ff6b35/ffffff?text=Wipro" alt="Wipro">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://via.placeholder.com/200x80/1da1f2/ffffff?text=Accenture" alt="Accenture">
+                    </div>
+                    <div class="logo-item">
+                        <img src="https://via.placeholder.com/200x80/f7931e/ffffff?text=Cognizant" alt="Cognizant">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
     <section class="testimonials-section">
         <div class="container">
 
@@ -2709,7 +2984,6 @@
             <div class="section-header">
                 <h2 class="text-dark fw-bold" style="font-weight: 500 !important; font-size: 40px;">Student <span
                         style=" font-weight: 700;  color: #c2173c;"> Testimonials</span> </h2>
-                <h2></h2>
 
             </div>
 
@@ -3467,15 +3741,15 @@
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
                                     <span class="faq-number">1</span>
-                                    What programs does Amrita Online offer?
+                                    What is Amrita Online?
                                 </button>
                             </h2>
                             <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    Amrita Online offers a wide range of undergraduate and postgraduate programs
-                                    including BBA, BCA, B.Com, MBA, MCA, and M.Com. All programs are UGC-approved and
-                                    designed to meet industry standards while providing the flexibility of online
-                                    learning.
+                                    Amrita Online, formerly known as Amrita AHEAD, is the online learning initiative of
+                                    Amrita Vishwa Vidyapeetham offering UGC approved online ug degrees along with online
+                                    postgraduate degrees as well.
+
                                 </div>
                             </div>
                         </div>
@@ -3486,14 +3760,17 @@
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
                                     <span class="faq-number">2</span>
-                                    Is the degree recognized and valid?
+                                    Are the Amrita University online degrees valid and recognized?
                                 </button>
                             </h2>
                             <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    Yes, absolutely! All degrees from Amrita Online are AICTE and UGC recognized, making
-                                    them equivalent to traditional on-campus degrees. They are valid for higher
-                                    education, government jobs, and employment in both private and public sectors.
+                                    Yes, all Amrita Online degree programs are recognized as they are considered
+                                    equivalent to on-campus degrees from Amrita University. They are UGC-entitled, WES
+                                    evaluated for use in the USA and Canada, not to mention that the university holds
+                                    the highest NAAC A++ accreditation and is ranked 8th among the top universities in
+                                    India by NIRF.
+
                                 </div>
                             </div>
                         </div>
@@ -3504,14 +3781,15 @@
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
                                     <span class="faq-number">3</span>
-                                    What is the duration of the programs?
+                                    What is the Amrita Online eligibility criteria?
                                 </button>
                             </h2>
                             <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    Undergraduate programs (BBA, BCA, B.Com) are typically 3 years in duration, while
-                                    postgraduate programs (MBA, MCA, M.Com) are 2 years. The programs follow a semester
-                                    system with flexibility to complete at your own pace within the specified timeframe.
+                                    The eligibility varies by program. For instance, when it comes to Amrita Online ug
+                                    courses like BBA, B.Com and BCA, a minimum of 45% in your 12th grade is required. On
+                                    the other hand, you need a minimum of 50% in your 10th, 12th, and Bachelor’s when it
+                                    comes to PG courses like MBA, M.Com and MCA.
                                 </div>
                             </div>
                         </div>
@@ -3522,33 +3800,34 @@
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
                                     <span class="faq-number">4</span>
-                                    Can I work while pursuing my degree?
+                                    Can international students apply to Amrita Online courses?
                                 </button>
                             </h2>
                             <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    Yes! Our online programs are specifically designed for working professionals. You
-                                    can study at your own pace and schedule, making it easy to balance your education
-                                    with your career and personal commitments.
+                                   Yes, international students can apply for Amrita Online degree programs. However, they must provide a Certificate of Equivalence from the Association of Indian Universities (AIU).
+
                                 </div>
                             </div>
                         </div>
 
-                        <!-- FAQ 5 -->
+
                         <div class="accordion-item">
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
-                                    <span class="faq-number">5</span>
-                                    What are the admission requirements?
+                                    <span class="faq-number">6</span>
+                                   Does Amrita Online provide placement support?
+
+
+
                                 </button>
                             </h2>
                             <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    For undergraduate programs, you need to have completed 10+2 from a recognized board.
-                                    For postgraduate programs, you need a bachelor's degree in the relevant field from a
-                                    recognized university. Specific program requirements may vary, so please check the
-                                    individual program pages for detailed eligibility criteria.
+                                    Amrita Online offers comprehensive placement support for online degree students. They provide career counseling, resume building workshops, mock interviews, and connect students with potential employers. This helps graduates gain the skills and confidence needed to succeed in the job market.
+
+
                                 </div>
                             </div>
                         </div>
@@ -3560,10 +3839,280 @@
 
 
 
+    <section class="cta-section">
+        <div class="cta-overlay"></div>
+
+        <div class="cta-content">
+            <h2>
+                Empower Your Ambitions with<br> <span
+                    style="color: #b41f49 !important; font-size: 50px; font-weight: 700;">Online Degree Programs at
+                    Amrita Online,</span> <br>Enroll Today!
+            </h2>
+            <a href="#" class="cta-btn">Apply Now</a>
+        </div>
+    </section>
+    <style>
+        .cta-section {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 70px 20px;
+            background: url("Media/4075.jpg.jpeg") center / cover no-repeat;
+            overflow: hidden;
+        }
+
+        /* Dark gradient overlay */
+        .cta-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg,
+                    rgba(0, 0, 0, 0.117),
+                    #000000a9,
+                    rgba(0, 0, 0, 0.088));
+            z-index: 1;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 100;
+            max-width: 1300px;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        /* TITLE */
+        .cta-content h2 {
+            font-size: clamp(2rem, 4vw, 2.2rem);
+            font-weight: 600;
+            line-height: 1.25;
+            margin-bottom: 20px;
+        }
+
+        .cta-content h2 span {
+            color: #be1f4f;
+        }
+
+        /* DESCRIPTION */
+        .cta-content p {
+            font-size: clamp(1rem, 1.4vw, 1.15rem);
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 700px;
+            margin: 0 auto 35px;
+            line-height: 1.7;
+        }
+
+        /* CTA BUTTON */
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 36px;
+            background: #be1f4f;
+            color: #ffffff;
+            font-size: 1.05rem;
+            font-weight: 700;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.35s ease;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 18px 45px rgba(190, 31, 79, 0.6);
+        }
+
+        /* MOBILE */
+        @media (max-width: 576px) {
+            .cta-section {
+                min-height: auto;
+                padding: 60px 16px;
+                border-radius: 16px;
+            }
+
+            .cta-content h2 {
+                font-size: 1.9rem;
+            }
+
+            .cta-content p {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
 
 
+    <footer class="footer-section">
+        <div class="footer-container">
+
+            <!-- LEFT : LOGO -->
+            <div class="footer-left">
+                <img src="https://admin.onlineamrita.com/sites/default/files/2025-04/Amrita%20Online%20Logo%20red%201.svg"
+                    alt="Amrita Online Logo" class="footer-logo">
+            </div>
+
+            <!-- RIGHT : CONTENT -->
+            <div class="footer-right">
+                <h4>Have queries that need clarification?</h4>
+                <p class="footer-subtext">Our team is ready to assist you.</p>
+
+                <ul class="footer-contact">
+                    <li><strong>E-mail:</strong> online@amrita.edu</li>
+                    <li><strong>Toll Free:</strong> 08065131430</li>
+                    <li><strong>WhatsApp:</strong> 9447498840</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- BOTTOM NOTE -->
+        <div class="footer-note">
+            <p>
+                Please note: The above contact details are only for Amrita AHEAD - Amrita’s Online programs. For
+                on-campus queries, please contact the number listed here: amrita.edu/admissions (044-462 76066).
+            </p>
+        </div>
+    </footer>
+    <style>
+        .footer-section {
+            background: #0a0a0a;
+            color: #ffffff;
+            padding-top: 60px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* MAIN LAYOUT */
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 104px 10px;
+            display: flex;
+            justify-content: space-between;
+            /* keeps them at extremes */
+            align-items: flex-start;
+            gap: 60px;
+        }
+
+        /* LEFT */
+        .footer-left {
+            flex: 1;
+        }
+
+        /* RIGHT */
+        .footer-right {
+            flex: 1;
+            /* reduce from 1.2 to 1 so it doesn’t shrink toward the left */
+            margin-left: 179px;
+            /* pushes it more right */
+        }
 
 
+        .footer-logo {
+            max-width: 500px;
+            /* bigger on desktop */
+            width: 100%;
+            height: 160px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 576px) {
+            .footer-logo {
+                max-width: 220px;
+                /* bigger on mobile too */
+            }
+        }
+
+
+        /* RIGHT */
+        .footer-right {
+            flex: 1.2;
+        }
+
+        .footer-right h4 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .footer-subtext {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 22px;
+        }
+
+        .footer-contact {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-contact li {
+            font-size: 1rem;
+            margin-bottom: 12px;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .footer-contact strong {
+            color: #be1f4f;
+            font-weight: 600;
+        }
+
+        /* BOTTOM NOTE */
+        .footer-note {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 20px 24px;
+            text-align: center;
+            background: #080808;
+        }
+
+        .footer-note p {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.65);
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* TABLET */
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                gap: 40px;
+            }
+
+            .footer-right {
+                flex: unset;
+            }
+
+            .footer-contact li {
+                justify-content: center;
+            }
+        }
+
+        /* MOBILE */
+        @media (max-width: 576px) {
+            .footer-section {
+                padding-top: 40px;
+            }
+
+            .footer-logo {
+                max-width: 150px;
+            }
+
+            .footer-right h4 {
+                font-size: 1.25rem;
+            }
+
+            .footer-subtext {
+                font-size: 0.95rem;
+            }
+
+            .footer-note p {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
 
 
     <!-- Scripts -->
