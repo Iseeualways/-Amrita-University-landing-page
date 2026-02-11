@@ -44,7 +44,7 @@
 
         .highlight {
             background: linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
-            font-size: 4.3rem !important;
+            font-size: 4rem !important;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -58,33 +58,20 @@
            NAVBAR STYLES
            ======================================== */
         .custom-navbar {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            background: #ffffff;
+            /* solid white */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             padding: 15px 0;
+
             position: fixed;
-            top: 22px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 95%;
-            max-width: 1200px;
+            top: 0;
+            left: 0;
+            width: 100%;
+
             z-index: 1000;
-            border-radius: 100px;
-            animation: slideDown 0.8s ease-out;
         }
 
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateX(-50%) translateY(-30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateX(-50%) translateY(0);
-            }
-        }
-
+        /* Remove slide animation if not needed */
         .navbar-logo {
             height: 36px;
         }
@@ -92,7 +79,7 @@
         .navbar-nav .nav-link {
             color: var(--text) !important;
             font-weight: 600;
-            margin: 0 10px;
+            margin: 0 12px;
             transition: color 0.3s ease;
             font-size: 0.95rem;
         }
@@ -102,25 +89,18 @@
         }
 
         .apply-btn-nav {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-
-            margin: 0 auto;
-            /* centers horizontally */
             background: #be1f4f;
-            /* your brand color */
             color: #ffffff !important;
-
-            padding: 8px 16px;
-            border-radius: 999px;
-
+            padding: 8px 18px;
+            border-radius: 50px;
             font-size: 0.95rem;
             font-weight: 600;
-            letter-spacing: 0.3px;
-
             text-decoration: none;
-            transition: all 0.35s ease;
+            transition: all 0.3s ease;
+        }
+
+        .apply-btn-nav:hover {
+            background: #a31843;
         }
 
         /* ========================================
@@ -130,7 +110,7 @@
             margin: 10px;
             border-radius: 30px;
             height: 95vh !important;
-            padding-top: 140px;
+            padding-top: 100px;
             padding-bottom: 70px;
             position: relative;
             overflow: hidden;
@@ -617,7 +597,7 @@
                         <a class="nav-link" href="#courses">Programs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#why-amrita">Why Amrita</a>
+                        <a class="nav-link" href="#why-amrita">Why Amrita?</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#faq">FAQs</a>
@@ -645,7 +625,7 @@
                         <br><span class="highlight">Amrita University</span> Online
                     </h1>
                     <p class="hero-subtitle mb-5">
-                        Discover in-demand programmes with
+                        Discover in-demand programs with
                         global recognition at Amrita Online
                     </p>
 
@@ -723,11 +703,11 @@
                         <form id="contactForm">
                             <div class="mb-3">
                                 <input type="text" class="form-control form-control-custom" id="name" name="name"
-                                    required placeholder="Enter your name">
+                                    required placeholder="Name">
                             </div>
                             <div class="mb-3">
                                 <input type="email" class="form-control form-control-custom" id="email" name="email"
-                                    required placeholder="your@email.com">
+                                    required placeholder="Email">
                             </div>
                             <div class="mb-3">
                                 <input type="tel" class="form-control form-control-custom" id="phone" name="phone"
@@ -766,32 +746,30 @@
     <section class="aboutus mt-5">
         <div class="container text-center">
             <h2 class="text-dark fw-bold mt-4 mb-0" style="font-weight: 600 !important; font-size: 20px;">
-                About<br><span style=" font-weight: 700; font-size: 40px;  color: #c2173c;">Amrita University</span>
+                About<br><span style=" font-weight: 700; font-size: 40px;  color: #c2173c;">Amrita University
+                    Online<span>
             </h2>
             <h2 class="text-dark fs-3 fw-bold"><span class="text-muted"></span> <br></h2>
-            <p class="section-subtitle text-dark">Amrita Online is the Online learning initiative of Amrita Vishwa
-                Vidyapeetham,
-                one of India’s premier
-                multi-campus and multi-disciplinary universities accredited with the highest NAAC grade of A++ and
-                ranked 8th nationally by NIRF 2025.
+            <p class="section-subtitle text-dark">Amrita Online is the online learning initiative of Amrita Vishwa
+                Vidyapeetham, one of India’s premier multi-campus and multi-disciplinary universities accredited with
+                the highest NAAC grade of A++ and ranked 8th nationally by NIRF 2025.<br><br>
 
-                Amrita Online brings the excellence of Amrita University into a flexible and learner-driven online
-                environment, empowering individuals across India and the world to pursue UGC-entitled and AICTE-approved
-                undergraduate and postgraduate programs.
 
                 The Amrita Online courses combine academic rigor, industry alignment, and global recognition (including
-                WES equivalence in the USA and Canada). Learners benefit from live interactive sessions, recorded
-                content, and a comprehensive Learning Management System that ensures continuous engagement and
-                personalized academic support.<br>
+                WES equivalence in the USA and Canada), empowering individuals across India and the world to pursue
+                UGC-entitled and AICTE-approved undergraduate and postgraduate programs. Learners benefit from live
+                interactive sessions, recorded content, and a comprehensive learning management system that ensures
+                continuous engagement and personalized academic support.<br><br>
 
-                Amrita University online degrees are in high-demand areas such as Management, Computer Applications,
-                Commerce, and Emerging Technologies as they have a strong focus on future-ready skills, designed for
-                working professionals, graduates, and lifelong learners seeking to upgrade their qualifications without
-                disrupting their careers.
+                Amrita University online degrees are in high-demand when it comes to Management, Computer Applications,
+                Commerce, and other emerging technologies as they have a strong focus on future-ready skills, designed
+                for working professionals, graduates, and lifelong learners seeking to upgrade their qualifications
+                without disrupting their careers.<br><br>
 
                 Every Amrita Online learner becomes part of Amrita University’s legacy of compassion-driven education,
                 research excellence, and global impact, supported by a strong network of faculty mentors, industry
                 collaborators, and alumni across the world.
+
             </p>
         </div>
     </section>
@@ -800,8 +778,8 @@
     <!-- Trusted By Section - Unique Carousel -->
     <section class="trusted-section">
         <div class="trusted-content">
-            <h2 class="text-dark fw-bold mt-4 mb-4" style="font-weight: 600 !important; font-size: 40px;">Recognized
-                <span style=" font-weight: 700;  color: #c2173c;">&</span> Accredited
+            <h2 class="text-dark fw-bold mt-0 mb-4" style="font-weight: 600 !important; font-size: 30px;">Rankings &
+                <span style=" font-weight: 700;  color: #c2173c;">&</span> Accreditations
             </h2>
             <p class="trusted-title"></p>
             <div class="logo-carousel-container">
@@ -821,13 +799,13 @@
                     </div>
                     <div class="logo-card">
                         <div class="logo-icon">
-                            <img src="Carousal/QS World University Rankings 2020.svg" alt="">
+                            <img src="Carousal/qs-world-university-ranking2020.svg" alt="">
                         </div>
                         <h4>#1 for International Faculty</h4>
                     </div>
                     <div class="logo-card">
                         <div class="logo-icon">
-                            <img src="Carousal/THE.svg" alt="">
+                            <img src="Carousal/impact-2025.svg" alt="">
                         </div>
                         <h4>#1 Private University in India</h4>
                     </div>
@@ -844,6 +822,43 @@
                         <h4>WES Accredited In USA & Canada</h4>
                     </div>
                     <div class="logo-card">
+                        <div class="logo-icon">
+                            <img src="Carousal/NAAC A++.svg" alt="">
+                        </div>
+                        <h4>NAAC, MoE 2023 A++ Grade</h4>
+                    </div>
+                    <div class="logo-card">
+                        <div class="logo-icon">
+                            <img src="Carousal/NIRF.svg" alt="">
+                        </div>
+                        <h4>NIRF 2025
+                            8th Ranked University in India</h4>
+                    </div>
+                    <div class="logo-card">
+                        <div class="logo-icon">
+                            <img src="Carousal/qs-world-university-ranking2020.svg" alt="">
+                        </div>
+                        <h4>#1 for International Faculty</h4>
+                    </div>
+                    <div class="logo-card">
+                        <div class="logo-icon">
+                            <img src="Carousal/impact-2025.svg" alt="">
+                        </div>
+                        <h4>#1 Private University in India</h4>
+                    </div>
+                    <div class="logo-card">
+                        <div class="logo-icon">
+                            <img src="Carousal/UGC.svg" alt="">
+                        </div>
+                        <h4>Category 1 Graded Autonomy</h4>
+                    </div>
+                    <div class="logo-card">
+                        <div class="logo-icon">
+                            <img src="Carousal/WES.svg" alt="">
+                        </div>
+                        <h4>WES Accredited In USA & Canada</h4>
+                    </div>
+                    <!-- <div class="logo-card">
                         <div class="logo-icon">
                             <img src="Carousal/NAAC A++.svg" alt="">
                         </div>
@@ -879,7 +894,7 @@
                             <img src="Carousal/WES.svg" alt="">
                         </div>
                         <h4>WES Accredited In USA & Canada</h4>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -887,7 +902,7 @@
     <style>
         /* Trusted By Section - Unique Carousel */
         .trusted-section {
-            padding: 50px 40px;
+            padding: 20px 40px;
             background: white !important;
             border-bottom: 1px solid #ffffff;
             overflow: hidden;
@@ -978,8 +993,8 @@
 
 
         .logo-icon {
-            width: 140px;
-            height: 140px;
+            width: 160px;
+            height: 160px;
 
             border-radius: 50%;
             display: flex;
@@ -1048,11 +1063,10 @@
         <div class="container">
             <div class="text-center mb-5">
                 <h2 class="text-white fw-bold mt-4 mb-4" style="font-weight: 500 !important; font-size: 40px;"> <span
-                        style=" font-weight: 700;  color: #c2173c;">Programmes </span> Offered</h2>
+                        style=" font-weight: 700;  color: #c2173c;">Programs </span> Offered</h2>
                 <p class="section-subtitle fs-6">There are a plethora of online Amrita University courses on offer that
-                    can
                     provide tangible and accessible education for students irrespective of their location. These
-                    programmes impart meticulously designed practical knowledge from various industries coupled with
+                    programs impart meticulously designed practical knowledge from various industries coupled with
                     rigorous academic standards, thereby ensuring that students gain relevant skills. Prospective
                     students are able to tap into the expert faculty guidance and make thorough use of the interactive
                     platforms which Amrita Ahead online programs utilizes. The curriculum is aligned with contemporary
@@ -1189,6 +1203,8 @@
                                         <li><i class="fas fa-check-circle"></i> Business Analytics</li>
                                         <li><i class="fas fa-check-circle"></i> Fintech</li>
                                         <li><i class="fas fa-check-circle"></i> Environment, Social and Governance</li>
+                                        <li><i class="fas fa-check-circle"></i> International Finance and Accounting
+                                            (Accredited by ACCA)</li>
                                     </ul>
                                 </div>
                                 <div class="program-card-footer">
@@ -1265,8 +1281,8 @@
                                 </div>
                                 <div class="program-card-body">
                                     <p class="program-description">This 3-month course is designed for students and
-                                        professionals seeking fast-track career growth in the digital economy with a
-                                        focus on hands-on expertise in digital platforms, online advertising, and
+                                        professionals seeking fast-track career growth in the digital economy with
+                                        hands-on expertise in digital platforms, online advertising, and
                                         data-driven marketing strategies.</p>
                                     <!-- <ul class="program-features">
                                         <li><i class="fas fa-check-circle"></i> 6 Months Duration</li>
@@ -1307,30 +1323,6 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="col-lg-4 col-md-6">
-                            <div class="program-card">
-                                <div class="program-card-header">
-                                    <div class="program-icon">
-                                        <i class="fas fa-bullhorn"></i>
-                                    </div>
-                                    <h3 class="program-title">Certificate in Digital Marketing</h3>
-                                </div>
-                                <div class="program-card-body">
-                                    <p class="program-description">Learn SEO, social media marketing, content strategy,
-                                        and digital advertising to excel in modern marketing.</p>
-                                    <ul class="program-features">
-                                        <li><i class="fas fa-check-circle"></i> 6 Months Duration</li>
-                                        <li><i class="fas fa-check-circle"></i> Live Campaigns</li>
-                                        <li><i class="fas fa-check-circle"></i> Google Certified</li>
-                                    </ul>
-                                </div>
-                                <div class="program-card-footer">
-                                    <a href="https://admission.onlineamrita.com/" class="program-apply-btn">Apply Now <i
-                                            class="fas fa-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -1345,7 +1337,7 @@
             margin: 20px;
             border-radius: 10px;
             padding: 10px 20px;
-            background: linear-gradient(135deg, #2e1a1f 0%, #2e1a1f 100%);
+            background: linear-gradient(135deg, #2e1a1fb4 0%, #2e1a1f 100%);
         }
 
         .section-title {
@@ -1370,7 +1362,7 @@
 
         .program-tabs {
             display: inline-flex;
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0);
             padding: 8px;
             border-radius: 60px;
             box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
@@ -1401,7 +1393,7 @@
 
         .program-tab:hover {
             background: rgba(190, 31, 79, 0.15);
-            color: #ff6b9d;
+            color: #be1f4f;
         }
 
         .program-tab.active {
@@ -1513,14 +1505,14 @@
         .program-features li {
             font-size: 0.9rem;
             color: #d0d0d0;
-            margin-bottom: 10px;
+            margin-bottom: 0px;
             display: flex;
             align-items: center;
             gap: 10px;
         }
 
         .program-features i {
-            color: #ff6b9d;
+            color: #be1f4f;
             font-size: 1rem;
         }
 
@@ -1788,8 +1780,8 @@
 
     <section class="abroad-split">
         <div class="container">
-            <h2 class="text-dark fw-bold" style="font-weight: 500 !important; font-size: 40px;">Study <span
-                    style=" font-weight: 700;  color: #c2173c;">Abroad</span> </h2>
+            <h2 class="text-dark fw-bold" style="font-weight: 500 !important; font-size: 40px;"> <span
+                    style=" font-weight: 700;  color: #c2173c;">Global</span> Learning Opportunities</h2>
 
             <div class="row align-items-center g-5">
 
@@ -1797,14 +1789,10 @@
                 <div class="col-lg-6">
                     <!-- LOGO GRID -->
                     <div class="partner-logos">
-                        <img src="placement/OAKLAND University.svg"
-                            alt="Oakland University">
-                        <img src="placement/University of New Mexico.svg"
-                            alt="University of New Mexico">
-                        <img src="placement/Universitat de Barcelona.svg"
-                            alt="Institut Mines-Télécom">
-                        <img src="placement/Institut Mines-Télécom.svg"
-                            alt="University of Barcelona">
+                        <img src="placement/OAKLAND University.svg" alt="Oakland University">
+                        <img src="placement/University of New Mexico.svg" alt="University of New Mexico">
+                        <img src="placement/Universitat de Barcelona.svg" alt="Institut Mines-Télécom">
+                        <img src="placement/Institut Mines-Télécom.svg" alt="University of Barcelona">
                     </div>
                 </div>
 
@@ -1967,8 +1955,8 @@
 
     <section class="degree-section">
         <div class="section-title">
-            <h2 class="text-dark fw-bold mb-5" style="font-weight: 500 !important; font-size: 40px;">Why <span
-                    style=" font-weight: 700;  color: #c2173c;">Amrita Admission </span>Process </h2>
+            <h2 class="text-dark fw-bold mb-5" style="font-weight: 500 !important; font-size: 40px;">The <span
+                    style=" font-weight: 700;  color: #c2173c;">Amrita Online Admission </span>Process </h2>
             <h2 class="text-dark fs-3 fw-bold"></h2>
         </div>
 
@@ -1982,7 +1970,8 @@
                     </div>
                     <div class="step-content">
                         <h3>Choose a Degree</h3>
-                        <p>Choose a degree ranging from Undergraduate to Master's programs</p>
+                        <p>Choose a degree from the various undergraduate, postgraduate and certificate programs on
+                            offer</p>
                     </div>
                 </div>
 
@@ -1992,7 +1981,8 @@
                     </div>
                     <div class="step-content">
                         <h3>Learn Anytime Anywhere</h3>
-                        <p>Earn credits wherever you are just need a smartphone<br> and internet</p>
+                        <p>Earn credits wherever you are, <br>with the help of a smartphone/<br>tablet/computer
+                            and internet</p>
                     </div>
                 </div>
 
@@ -2313,8 +2303,9 @@
         <div class="container">
 
             <div class="advantage-title">
-                <h2 class="text-dark fw-bold" style="font-weight: 500 !important; font-size: 40px;">Why <span
-                        style=" font-weight: 700;  color: #c2173c;">Amrita</span> </h2>
+                <h2 class="text-dark fw-bold" style="font-weight: 500 !important; font-size: 40px;">The <span
+                        style=" font-weight: 700;  color: #c2173c;">Amrita Online
+                    </span> Advantage</h2>
             </div>
 
             <div class="advantage-grid">
@@ -2436,33 +2427,35 @@
                     <div class="adv-logo">
                         <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
 
-                            <!-- Outer Frame -->
-                            <rect x="4" y="4" width="56" height="56" rx="14" stroke="#be1f4f" stroke-width="2" />
+                            <!-- Outer Circle -->
+                            <circle cx="32" cy="32" r="30" stroke="#be1f4f" stroke-width="2" />
 
-                            <!-- Person Head -->
-                            <circle cx="24" cy="24" r="4" stroke="#be1f4f" stroke-width="2" />
-
-                            <!-- Person Body -->
-                            <path d="M18 36C18 32.5 21.5 31 24 31C26.5 31 30 32.5 30 36" stroke="#be1f4f"
-                                stroke-width="2" stroke-linecap="round" />
-
-                            <!-- Briefcase -->
-                            <rect x="34" y="28" width="14" height="10" rx="2" stroke="#be1f4f" stroke-width="2" />
-
-                            <line x1="38" y1="28" x2="38" y2="25" stroke="#be1f4f" stroke-width="2"
-                                stroke-linecap="round" />
-
-                            <line x1="44" y1="28" x2="44" y2="25" stroke="#be1f4f" stroke-width="2"
-                                stroke-linecap="round" />
-
-                            <!-- Check Mark (Assistance / Success) -->
-                            <path d="M37 34L40 37L45 31" stroke="#be1f4f" stroke-width="2" stroke-linecap="round"
+                            <!-- Graduation Cap Top -->
+                            <path d="M16 26L32 20L48 26L32 32L16 26Z" stroke="#be1f4f" stroke-width="2"
                                 stroke-linejoin="round" />
+
+                            <!-- Cap Base -->
+                            <path d="M22 30V36C22 39 27 42 32 42C37 42 42 39 42 36V30" stroke="#be1f4f" stroke-width="2"
+                                stroke-linecap="round" />
+
+                            <!-- Tassel -->
+                            <line x1="48" y1="26" x2="48" y2="34" stroke="#be1f4f" stroke-width="2"
+                                stroke-linecap="round" />
+
+                            <!-- Network Nodes -->
+                            <circle cx="20" cy="44" r="2.5" fill="#be1f4f" />
+                            <circle cx="32" cy="48" r="2.5" fill="#be1f4f" />
+                            <circle cx="44" cy="44" r="2.5" fill="#be1f4f" />
+
+                            <!-- Network Lines -->
+                            <line x1="22.5" y1="44" x2="29.5" y2="48" stroke="#be1f4f" stroke-width="1.8" />
+                            <line x1="41.5" y1="44" x2="34.5" y2="48" stroke="#be1f4f" stroke-width="1.8" />
 
                         </svg>
 
+
                     </div>
-                    <p>Career Placement Assistance</p>
+                    <p>Strong Alumni Network</p>
                 </div>
 
                 <div class="adv-card">
@@ -2748,7 +2741,7 @@
         .logo-carousel-wrapper {
             position: relative;
             overflow: hidden;
-            padding: 40px 0;
+            padding: 10px 0;
         }
 
         /* Gradient masks on edges */
@@ -2799,7 +2792,7 @@
         .logo-item {
             flex-shrink: 0;
             width: 200px;
-            height: 100px;
+            height: 130px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -3805,7 +3798,9 @@
                             </h2>
                             <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                   Yes, international students can apply for Amrita Online degree programs. However, they must provide a Certificate of Equivalence from the Association of Indian Universities (AIU).
+                                    Yes, international students can apply for Amrita Online degree programs. However,
+                                    they must provide a Certificate of Equivalence from the Association of Indian
+                                    Universities (AIU).
 
                                 </div>
                             </div>
@@ -3816,8 +3811,8 @@
                             <h2 class="accordion-header">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
-                                    <span class="faq-number">6</span>
-                                   Does Amrita Online provide placement support?
+                                    <span class="faq-number">5</span>
+                                    Does Amrita Online provide placement support?
 
 
 
@@ -3825,7 +3820,10 @@
                             </h2>
                             <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body">
-                                    Amrita Online offers comprehensive placement support for online degree students. They provide career counseling, resume building workshops, mock interviews, and connect students with potential employers. This helps graduates gain the skills and confidence needed to succeed in the job market.
+                                    Amrita Online offers comprehensive placement support for online degree students.
+                                    They provide career counseling, resume building workshops, mock interviews, and
+                                    connect students with potential employers. This helps graduates gain the skills and
+                                    confidence needed to succeed in the job market.
 
 
                                 </div>
@@ -3952,25 +3950,22 @@
 
             <!-- RIGHT : CONTENT -->
             <div class="footer-right">
-                <h4>Have queries that need clarification?</h4>
-                <p class="footer-subtext">Our team is ready to assist you.</p>
+                <!-- <h4>Have queries that need clarification?</h4> -->
+                <p class="footer-subtext"><i class="fa-solid fa-map-location" style="color: #be1f4f;"></i>
+                    Kasavanahalli, Carmelaram P.O.
+                    Bengaluru - 560035, Karnataka, India
+                </p>
 
                 <ul class="footer-contact">
-                    <li><strong>E-mail:</strong> online@amrita.edu</li>
-                    <li><strong>Toll Free:</strong> 08065131430</li>
-                    <li><strong>WhatsApp:</strong> 9447498840</li>
+                    <li><strong><i class="fa-regular fa-envelope"></i></strong> info.amritaonline@gmail.com</li>
+                    <li><strong><i class="fa-solid fa-phone"></i></strong> 080-22454991 | 080-26631169</li>
+                    <li><strong><i class="fa-brands fa-whatsapp"></i></strong> +91 9036020076</li>
                 </ul>
             </div>
 
         </div>
 
-        <!-- BOTTOM NOTE -->
-        <div class="footer-note">
-            <p>
-                Please note: The above contact details are only for Amrita AHEAD - Amrita’s Online programs. For
-                on-campus queries, please contact the number listed here: amrita.edu/admissions (044-462 76066).
-            </p>
-        </div>
+
     </footer>
     <style>
         .footer-section {
@@ -3982,7 +3977,7 @@
 
         /* MAIN LAYOUT */
         .footer-container {
-            max-width: 1400px;
+            max-width: 1500px;
             margin: 0 auto;
             padding: 0 104px 10px;
             display: flex;
@@ -4030,12 +4025,12 @@
         .footer-right h4 {
             font-size: 1.4rem;
             font-weight: 600;
-            margin-bottom: 8px;
+            margin-bottom: 0px;
         }
 
         .footer-subtext {
             font-size: 1rem;
-            color: rgba(255, 255, 255, 0.7);
+            color: rgb(255, 255, 255);
             margin-bottom: 22px;
         }
 
@@ -4054,22 +4049,6 @@
         .footer-contact strong {
             color: #be1f4f;
             font-weight: 600;
-        }
-
-        /* BOTTOM NOTE */
-        .footer-note {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 20px 24px;
-            text-align: center;
-            background: #080808;
-        }
-
-        .footer-note p {
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.65);
-            max-width: 900px;
-            margin: 0 auto;
-            line-height: 1.6;
         }
 
         /* TABLET */
