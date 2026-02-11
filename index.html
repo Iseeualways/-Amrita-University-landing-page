@@ -36,6 +36,10 @@
             box-sizing: border-box;
         }
 
+        p {
+            font-size: 18px !important;
+        }
+
         body {
             font-family: 'Poppins', sans-serif;
             color: var(--text);
@@ -44,7 +48,7 @@
 
         .highlight {
             background: linear-gradient(180deg, #ffffff 0%, #ffffff 100%);
-            font-size: 4rem !important;
+            font-size: 3rem !important;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -153,7 +157,7 @@
         .hero-title {
             position: relative;
             display: inline-block;
-            font-size: clamp(2.5rem, 5vw, 3.3rem);
+            font-size: clamp(2.5rem, 5vw, 2.3rem);
             line-height: 1.2;
             font-weight: 700;
             color: #ffffff;
@@ -591,13 +595,13 @@
                         <a class="nav-link" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#features">About Us</a>
+                        <a class="nav-link" href="#aboutus">About Us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#courses">Programs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#why-amrita">Why Amrita?</a>
+                        <a class="nav-link" href="#why-amrita">Why Choose Us?</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#faq">FAQs</a>
@@ -623,21 +627,67 @@
                     <h1 class="hero-title playfair-display mb-4">
                         Unlock Your Potential with
                         <br><span class="highlight">Amrita University</span> Online
-                    </h1>
+                    </h1><br>
                     <p class="hero-subtitle mb-5">
                         Discover in-demand programs with
                         global recognition at Amrita Online
                     </p>
 
-                    <div class="d-flex flex-wrap gap-3 mb-0 mt-5">
-                        <!-- <span class="badge-custom">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-award-fill" viewBox="0 0 16 16">
-                                <path
-                                    d="m8 0 1.669.864 1.858.282.842 1.68 1.337 1.32L13.4 6l.306 1.854-1.337 1.32-.842 1.68-1.858.282L8 12l-1.669-.864-1.858-.282-.842-1.68-1.337-1.32L2.6 6l-.306-1.854 1.337-1.32.842-1.68L6.331.864z" />
-                                <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1z" />
-                            </svg>B.Com
-                        </span> -->
+                    <div class="admission-highlight my-5">
+                        <span class="live-indicator"></span>
+                        Admissions Open – Amrita Online 2026
+                    </div>
+                    <style>
+                        .admission-highlight {
+                            display: inline-flex;
+                            align-items: center;
+                            gap: 12px;
+                            padding: 10px 24px;
+                            border-radius: 40px;
+                            background: rgba(141, 31, 55, 0.55);
+                            border: 1px solid rgb(192, 48, 45);
+                            color: #ffffff;
+                            font-weight: 700;
+                            font-size: 20px;
+                        }
+
+                        /* DOT */
+                        .live-indicator {
+                            width: 14px;
+                            height: 14px;
+                            background: #ffc800;
+                            border-radius: 50%;
+                            position: relative;
+                        }
+
+                        /* OUTER PULSE RING */
+                        .live-indicator::before {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 50%;
+                            background: rgba(255, 200, 0, 0.6);
+                            animation: livePulseEffect 1.2s ease-out infinite;
+                        }
+
+                        /* KEYFRAMES */
+                        @keyframes livePulseEffect {
+                            0% {
+                                transform: scale(1);
+                                opacity: 0.8;
+                            }
+
+                            100% {
+                                transform: scale(3);
+                                opacity: 0;
+                            }
+                        }
+                    </style>
+
+                    <div class="d-flex flex-wrap gap-3 mb-0 mt-0">
                         <span class="badge-custom"><span class="tick"></span>B.Com</span>
                         <span class="badge-custom"><span class="tick"></span>BBA</span>
                         <span class="badge-custom"><span class="tick"></span>BCA</span>
@@ -743,7 +793,7 @@
     </section>
 
 
-    <section class="aboutus mt-5">
+    <section class="aboutus mt-5" id="aboutus">
         <div class="container text-center">
             <h2 class="text-dark fw-bold mt-4 mb-0" style="font-weight: 600 !important; font-size: 20px;">
                 About<br><span style=" font-weight: 700; font-size: 40px;  color: #c2173c;">Amrita University
@@ -752,7 +802,7 @@
             <h2 class="text-dark fs-3 fw-bold"><span class="text-muted"></span> <br></h2>
             <p class="section-subtitle text-dark">Amrita Online is the online learning initiative of Amrita Vishwa
                 Vidyapeetham, one of India’s premier multi-campus and multi-disciplinary universities accredited with
-                the highest NAAC grade of A++ and ranked 8th nationally by NIRF 2025.<br><br>
+                the highest NAAC grade of A++ and ranked 8th nationally by NIRF 2025.
 
 
                 The Amrita Online courses combine academic rigor, industry alignment, and global recognition (including
@@ -764,7 +814,7 @@
                 Amrita University online degrees are in high-demand when it comes to Management, Computer Applications,
                 Commerce, and other emerging technologies as they have a strong focus on future-ready skills, designed
                 for working professionals, graduates, and lifelong learners seeking to upgrade their qualifications
-                without disrupting their careers.<br><br>
+                without disrupting their careers.
 
                 Every Amrita Online learner becomes part of Amrita University’s legacy of compassion-driven education,
                 research excellence, and global impact, supported by a strong network of faculty mentors, industry
@@ -775,284 +825,223 @@
     </section>
 
 
-    <!-- Trusted By Section - Unique Carousel -->
     <section class="trusted-section">
         <div class="trusted-content">
-            <h2 class="text-dark fw-bold mt-0 mb-4" style="font-weight: 600 !important; font-size: 30px;">Rankings &
-                <span style=" font-weight: 700;  color: #c2173c;">&</span> Accreditations
+
+            <h2 class="text-dark fw-bold mt-0 mb-4" style="font-size: 30px;">
+                Rankings
+                <span style="color:#c2173c;">&</span> Accreditations
             </h2>
-            <p class="trusted-title"></p>
+
             <div class="logo-carousel-container">
-                <div class="logo-carousel-track">
-                    <div class="logo-card">
-                        <div class="logo-icon">
-                            <img src="Carousal/NAAC A++.svg" alt="">
+
+                <!-- LEFT ARROW -->
+                <button class="carousel-arrow left-arrow">&#10094;</button>
+
+                <!-- TRACK WRAPPER -->
+                <div class="logo-carousel-wrapper">
+                    <div class="logo-carousel-track" id="logoTrack">
+
+                        <!-- ORIGINAL CARDS -->
+                        <div class="logo-card">
+                            <div class="logo-icon">
+                                <img src="Carousal/NAAC A++.svg" alt="">
+                            </div>
+                            <h4>NAAC, MoE 2023 A++ Grade</h4>
                         </div>
-                        <h4>NAAC, MoE 2023 A++ Grade</h4>
+
+                        <div class="logo-card">
+                            <div class="logo-icon">
+                                <img src="Carousal/NIRF.svg" alt="">
+                            </div>
+                            <h4>NIRF 2025 8th Ranked University in India</h4>
+                        </div>
+
+                        <div class="logo-card">
+                            <div class="logo-icon">
+                                <img src="Carousal/qs-world-university-ranking2020.svg" alt="">
+                            </div>
+                            <h4>#1 for International Faculty</h4>
+                        </div>
+
+                        <div class="logo-card">
+                            <div class="logo-icon">
+                                <img src="Carousal/impact-2025.svg" alt="">
+                            </div>
+                            <h4>#1 Private University in India</h4>
+                        </div>
+
+                        <div class="logo-card">
+                            <div class="logo-icon">
+                                <img src="Carousal/UGC.svg" alt="">
+                            </div>
+                            <h4>Category 1 Graded Autonomy</h4>
+                        </div>
+
+                        <div class="logo-card">
+                            <div class="logo-icon">
+                                <img src="Carousal/WES.svg" alt="">
+                            </div>
+                            <h4>WES Accredited In USA & Canada</h4>
+                        </div>
+
                     </div>
-                    <div class="logo-card">
-                        <div class="logo-icon">
-                            <img src="Carousal/NIRF.svg" alt="">
-                        </div>
-                        <h4>NIRF 2025
-                            8th Ranked University in India</h4>
-                    </div>
-                    <div class="logo-card">
-                        <div class="logo-icon">
-                            <img src="Carousal/qs-world-university-ranking2020.svg" alt="">
-                        </div>
-                        <h4>#1 for International Faculty</h4>
-                    </div>
-                    <div class="logo-card">
-                        <div class="logo-icon">
-                            <img src="Carousal/impact-2025.svg" alt="">
-                        </div>
-                        <h4>#1 Private University in India</h4>
-                    </div>
-                    <div class="logo-card">
-                        <div class="logo-icon">
-                            <img src="Carousal/UGC.svg" alt="">
-                        </div>
-                        <h4>Category 1 Graded Autonomy</h4>
-                    </div>
-                    <div class="logo-card">
-                        <div class="logo-icon">
-                            <img src="Carousal/WES.svg" alt="">
-                        </div>
-                        <h4>WES Accredited In USA & Canada</h4>
-                    </div>
-                    <div class="logo-card">
-                        <div class="logo-icon">
-                            <img src="Carousal/NAAC A++.svg" alt="">
-                        </div>
-                        <h4>NAAC, MoE 2023 A++ Grade</h4>
-                    </div>
-                    <div class="logo-card">
-                        <div class="logo-icon">
-                            <img src="Carousal/NIRF.svg" alt="">
-                        </div>
-                        <h4>NIRF 2025
-                            8th Ranked University in India</h4>
-                    </div>
-                    <div class="logo-card">
-                        <div class="logo-icon">
-                            <img src="Carousal/qs-world-university-ranking2020.svg" alt="">
-                        </div>
-                        <h4>#1 for International Faculty</h4>
-                    </div>
-                    <div class="logo-card">
-                        <div class="logo-icon">
-                            <img src="Carousal/impact-2025.svg" alt="">
-                        </div>
-                        <h4>#1 Private University in India</h4>
-                    </div>
-                    <div class="logo-card">
-                        <div class="logo-icon">
-                            <img src="Carousal/UGC.svg" alt="">
-                        </div>
-                        <h4>Category 1 Graded Autonomy</h4>
-                    </div>
-                    <div class="logo-card">
-                        <div class="logo-icon">
-                            <img src="Carousal/WES.svg" alt="">
-                        </div>
-                        <h4>WES Accredited In USA & Canada</h4>
-                    </div>
-                    <!-- <div class="logo-card">
-                        <div class="logo-icon">
-                            <img src="Carousal/NAAC A++.svg" alt="">
-                        </div>
-                        <h4>NAAC, MoE 2023 A++ Grade</h4>
-                    </div>
-                    <div class="logo-card">
-                        <div class="logo-icon">
-                            <img src="Carousal/NIRF.svg" alt="">
-                        </div>
-                        <h4>NIRF 2025
-                            8th Ranked University in India</h4>
-                    </div>
-                    <div class="logo-card">
-                        <div class="logo-icon">
-                            <img src="Carousal/QS World University Rankings 2020.svg" alt="">
-                        </div>
-                        <h4>#1 for International Faculty</h4>
-                    </div>
-                    <div class="logo-card">
-                        <div class="logo-icon">
-                            <img src="Carousal/THE.svg" alt="">
-                        </div>
-                        <h4>#1 Private University in India</h4>
-                    </div>
-                    <div class="logo-card">
-                        <div class="logo-icon">
-                            <img src="Carousal/UGC.svg" alt="">
-                        </div>
-                        <h4>Category 1 Graded Autonomy</h4>
-                    </div>
-                    <div class="logo-card">
-                        <div class="logo-icon">
-                            <img src="Carousal/WES.svg" alt="">
-                        </div>
-                        <h4>WES Accredited In USA & Canada</h4>
-                    </div> -->
                 </div>
+
+                <!-- RIGHT ARROW -->
+                <button class="carousel-arrow right-arrow">&#10095;</button>
+
             </div>
         </div>
     </section>
+
+
+
     <style>
-        /* Trusted By Section - Unique Carousel */
         .trusted-section {
-            padding: 20px 40px;
-            background: white !important;
-            border-bottom: 1px solid #ffffff;
-            overflow: hidden;
+            padding: 60px 0;
+            background: #fff;
             position: relative;
-        }
-
-        .trusted-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -50%;
-            width: 200%;
-            height: 100%;
-            background:
-                radial-gradient(circle at 30% 50%, rgba(196, 30, 58, 0.03) 0%, transparent 50%),
-                radial-gradient(circle at 70% 50%, rgba(255, 107, 53, 0.03) 0%, transparent 50%);
-            animation: moveBackground 20s ease-in-out infinite;
-        }
-
-        @keyframes moveBackground {
-
-            0%,
-            100% {
-                transform: translateX(0);
-            }
-
-            50% {
-                transform: translateX(5%);
-            }
+            overflow: hidden;
         }
 
         .trusted-content {
-            max-width: 1400px;
-            margin: 0 auto;
+            max-width: 1200px;
+            margin: auto;
             text-align: center;
-            position: relative;
-            z-index: 1;
         }
 
-        .trusted-title {
-            font-size: 2rem;
-            color: rgb(0, 0, 0);
-            font-weight: 700;
-            margin-bottom: 60px;
-        }
-
+        /* CAROUSEL CONTAINER */
         .logo-carousel-container {
             position: relative;
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            /* THIS ensures vertical center */
+        }
+
+        /* WRAPPER */
+        .logo-carousel-wrapper {
             overflow: hidden;
-            padding: 20px 0;
+            width: 100%;
         }
 
         .logo-carousel-track {
             display: flex;
-            gap: 80px;
-            animation: scrollLogos 30s linear infinite;
-            width: fit-content;
+            gap: 60px;
+            transition: transform 0.6s ease;
         }
-
-        @keyframes scrollLogos {
-            0% {
-                transform: translateX(0);
-            }
-
-            100% {
-                transform: translateX(-50%);
-            }
-        }
-
-        /* .logo-carousel-container:hover .logo-carousel-track {
-            animation-play-state: paused;
-        } */
 
         .logo-card {
-            min-width: 280px;
-            background: white;
+            min-width: 260px;
+            background: #fff;
             border-radius: 20px;
-            padding: 10px 30px;
-            /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); */
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 1px solid transparent;
+            padding: 30px 20px;
             text-align: center;
-            position: relative;
-            overflow: hidden;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
-
-
-
         .logo-icon {
-            width: 160px;
-            height: 160px;
-
-            border-radius: 50%;
+            width: 140px;
+            height: 140px;
+            margin-bottom: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 25px;
-            transition: all 0.4s ease;
-            position: relative;
-            z-index: 1;
         }
 
-        /* IMAGE INSIDE ICON */
+
         .logo-icon img {
             width: 100%;
             height: 100%;
             object-fit: contain;
-            transition: transform 0.4s ease;
         }
-
-
-
-        .logo-card:hover .logo-icon img {
-            transform: scale(1.05);
-        }
-
 
         .logo-card h4 {
-            font-size: 1rem;
-            color: var(--dark);
-            margin-bottom: 10px;
+            font-size: 15px;
             font-weight: 500;
-            position: relative;
-            z-index: 1;
         }
 
-        .logo-card p {
-            font-size: 0.95rem;
-            color: var(--text-light);
-            line-height: 1.6;
-            position: relative;
-            z-index: 1;
+        /* ARROWS */
+
+
+        /* ARROWS */
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            /* TRUE CENTER */
+            transform: translateY(-50%);
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            border: none;
+            background: #fff;
+            font-size: 22px;
+            cursor: pointer;
+            z-index: 20;
+            transition: 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        /* Alternative: Diagonal Grid Pattern */
-        @media (min-width: 1200px) {
-            .logo-carousel-container {
-                perspective: 1000px;
-            }
+
+        /* Position inside container properly */
+        .left-arrow {
+            left: -100px !important;
+        }
+
+        .right-arrow {
+            right: -100px !important;
+        }
+
+        /* Responsive */
+
+        @media(max-width:768px) {
 
             .logo-card {
-                transform-style: preserve-3d;
+                min-width: 200px;
             }
 
-            .logo-card:hover {
-                transform: translateY(-10px) scale(1.05) rotateY(5deg);
+            .carousel-arrow {
+                width: 45px;
+                height: 45px;
+            }
+
+        }
+
+        @media (max-width: 992px) {
+            .carousel-arrow {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+
+            .left-arrow {
+                left: 5px;
+            }
+
+            .right-arrow {
+                right: 5px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .carousel-arrow {
+                display: none;
+                /* hide arrows on small mobile for cleaner look */
             }
         }
     </style>
+
+
+
+
 
 
 
@@ -1063,8 +1052,9 @@
         <div class="container">
             <div class="text-center mb-5">
                 <h2 class="text-white fw-bold mt-4 mb-4" style="font-weight: 500 !important; font-size: 40px;"> <span
-                        style=" font-weight: 700;  color: #c2173c;">Programs </span> Offered</h2>
-                <p class="section-subtitle fs-6">There are a plethora of online Amrita University courses on offer that
+                        style=" font-weight: 700;  color: #ffffff;">Programs </span> Offered</h2>
+                <p class="section-subtitle fs-6" style="font-size: 18px !important;">There are a plethora of online
+                    Amrita University courses on offer that
                     provide tangible and accessible education for students irrespective of their location. These
                     programs impart meticulously designed practical knowledge from various industries coupled with
                     rigorous academic standards, thereby ensuring that students gain relevant skills. Prospective
@@ -1348,7 +1338,7 @@
         }
 
         .section-subtitle {
-            font-size: 1.1rem;
+            font-size: 18px;
             color: #ffffff;
             font-weight: 400;
         }
@@ -1758,18 +1748,6 @@
             }
 
         }
-
-        /* Featured/Highlighted Card - Dark Theme */
-        .program-category .col-lg-4:nth-child(2) .program-card {
-            background: linear-gradient(135deg, rgba(190, 31, 79, 0.15), rgba(190, 31, 79, 0.25));
-            border: 2px solid #be1f4f;
-
-        }
-
-        .program-category .col-lg-4:nth-child(2) .program-card:hover {
-            background: linear-gradient(135deg, rgba(190, 31, 79, 0.2), rgba(190, 31, 79, 0.3));
-            box-shadow: 0 10px 30px rgba(190, 31, 79, 0.5);
-        }
     </style>
 
 
@@ -1777,180 +1755,6 @@
 
 
 
-
-    <section class="abroad-split">
-        <div class="container">
-            <h2 class="text-dark fw-bold" style="font-weight: 500 !important; font-size: 40px;"> <span
-                    style=" font-weight: 700;  color: #c2173c;">Global</span> Learning Opportunities</h2>
-
-            <div class="row align-items-center g-5">
-
-                <!-- LEFT : VISUALS -->
-                <div class="col-lg-6">
-                    <!-- LOGO GRID -->
-                    <div class="partner-logos">
-                        <img src="placement/OAKLAND University.svg" alt="Oakland University">
-                        <img src="placement/University of New Mexico.svg" alt="University of New Mexico">
-                        <img src="placement/Universitat de Barcelona.svg" alt="Institut Mines-Télécom">
-                        <img src="placement/Institut Mines-Télécom.svg" alt="University of Barcelona">
-                    </div>
-                </div>
-
-                <!-- RIGHT : CONTENT + LOGOS -->
-                <div class="col-lg-6">
-                    <div class="abroad-content">
-
-                        <span class="mini-title">International Exposure</span>
-
-                        <p>
-                            Study abroad with Amrita University’s international partners. There are multiple avenues to
-                            pursue this dream via our international programs - Student Exchange, Study Abroad and 3 + 1
-                            + x Integrated Master’s.
-
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <style>
-        .abroad-split {
-            padding: 30px 0px;
-            background: #ffffff;
-
-        }
-
-        /* LEFT VISUALS */
-        .abroad-visual {
-            position: relative;
-            height: 420px;
-        }
-
-        .visual-card {
-            position: absolute;
-            border-radius: 24px;
-            background-size: cover;
-            background-position: center;
-            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
-        }
-
-        /* CONTENT */
-        .abroad-content {
-            max-width: 540px;
-        }
-
-        .mini-title {
-            font-size: 13px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            color: #c2173c;
-            margin-bottom: 4px;
-            display: inline-block;
-        }
-
-        .abroad-content h2 {
-            font-size: 40px;
-            font-weight: 700;
-            line-height: 1.2;
-            color: #111;
-        }
-
-        .abroad-content h2 span {
-            color: #c2173c;
-        }
-
-        .abroad-content p {
-            margin-top: 20px;
-            font-size: 16px;
-            color: #000000;
-            line-height: 1.7;
-        }
-
-        /* PROGRAM LIST */
-        .program-list {
-            list-style: none;
-            padding: 0;
-            margin: 30px 0;
-        }
-
-        .program-list li {
-            padding-left: 26px;
-            margin-bottom: 14px;
-            position: relative;
-            font-size: 15px;
-            color: #111;
-        }
-
-        .program-list li::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 7px;
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #c2173c;
-        }
-
-        /* LOGO GRID (2 x 2) */
-        .partner-logos {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px 40px;
-            margin-top: 40px;
-            align-items: center;
-        }
-
-        .partner-logos img {
-            max-width: 160px;
-            width: 100%;
-            transition: all 0.4s ease;
-        }
-
-        .partner-logos img:hover {
-            opacity: 1;
-            filter: grayscale(0);
-            transform: translateY(-4px);
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 991px) {
-            .abroad-visual {
-                height: 360px;
-                margin-bottom: 40px;
-            }
-
-            .abroad-content h2 {
-                font-size: 32px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .abroad-split {
-                padding: 10px 0;
-            }
-
-            .abroad-visual {
-                height: 280px;
-            }
-
-            .abroad-content h2 {
-                font-size: 26px;
-            }
-
-            .partner-logos {
-                gap: 20px;
-            }
-
-            .partner-logos img {
-                max-width: 120px;
-                margin: 0 auto;
-            }
-        }
-    </style>
 
 
     <section class="degree-section">
@@ -2019,7 +1823,6 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 0 5%;
             overflow: hidden;
         }
 
@@ -2297,13 +2100,187 @@
 
 
 
+    <section class="abroad-split">
+        <div class="container">
+            <h2 class="text-dark fw-bold" style="font-weight: 500 !important; font-size: 40px;"> <span
+                    style=" font-weight: 700;  color: #c2173c;">Global</span> Learning Opportunities</h2>
+
+            <div class="row align-items-center g-5">
+
+                <!-- LEFT : VISUALS -->
+                <div class="col-lg-6">
+                    <!-- LOGO GRID -->
+                    <div class="partner-logos">
+                        <img src="placement/OAKLAND University.svg" alt="Oakland University">
+                        <img src="placement/University of New Mexico.svg" alt="University of New Mexico">
+                        <img src="placement/Universitat de Barcelona.svg" alt="Institut Mines-Télécom">
+                        <img src="placement/Institut Mines-Télécom.svg" alt="University of Barcelona">
+                    </div>
+                </div>
+
+                <!-- RIGHT : CONTENT + LOGOS -->
+                <div class="col-lg-6">
+                    <div class="abroad-content">
+
+                        <span class="mini-title">International Exposure</span>
+
+                        <p>
+                            Study abroad with Amrita University’s international partners. There are multiple avenues to
+                            pursue this dream via our international programs - Student Exchange, Study Abroad and 3 + 1
+                            + x Integrated Master’s.
+
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <style>
+        .abroad-split {
+            padding: 30px 0px;
+            background: #ffffff;
+
+        }
+
+        /* LEFT VISUALS */
+        .abroad-visual {
+            position: relative;
+            height: 420px;
+        }
+
+        .visual-card {
+            position: absolute;
+            border-radius: 24px;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
+        }
+
+        /* CONTENT */
+        .abroad-content {
+            max-width: 540px;
+        }
+
+        .mini-title {
+            font-size: 18px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #c2173c;
+            margin-bottom: 4px;
+            display: inline-block;
+        }
+
+        .abroad-content h2 {
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 1.2;
+            color: #111;
+        }
+
+        .abroad-content h2 span {
+            color: #c2173c;
+        }
+
+        .abroad-content p {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #000000;
+            line-height: 1.7;
+        }
+
+        /* PROGRAM LIST */
+        .program-list {
+            list-style: none;
+            padding: 0;
+            margin: 30px 0;
+        }
+
+        .program-list li {
+            padding-left: 26px;
+            margin-bottom: 14px;
+            position: relative;
+            font-size: 15px;
+            color: #111;
+        }
+
+        .program-list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 7px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #c2173c;
+        }
+
+        /* LOGO GRID (2 x 2) */
+        .partner-logos {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px 40px;
+            margin-top: 40px;
+            align-items: center;
+        }
+
+        .partner-logos img {
+            max-width: 160px;
+            width: 100%;
+            transition: all 0.4s ease;
+        }
+
+        .partner-logos img:hover {
+            opacity: 1;
+            filter: grayscale(0);
+            transform: translateY(-4px);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 991px) {
+            .abroad-visual {
+                height: 360px;
+                margin-bottom: 40px;
+            }
+
+            .abroad-content h2 {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .abroad-split {
+                padding: 10px 0;
+            }
+
+            .abroad-visual {
+                height: 280px;
+            }
+
+            .abroad-content h2 {
+                font-size: 26px;
+            }
+
+            .partner-logos {
+                gap: 20px;
+            }
+
+            .partner-logos img {
+                max-width: 120px;
+                margin: 0 auto;
+            }
+        }
+    </style>
+
 
 
     <section class="amrita-advantage">
         <div class="container">
 
             <div class="advantage-title">
-                <h2 class="text-dark fw-bold" style="font-weight: 500 !important; font-size: 40px;">The <span
+                <h2 class="text-dark fw-bold mb-5" style="font-weight: 500 !important; font-size: 40px;">The <span
                         style=" font-weight: 700;  color: #c2173c;">Amrita Online
                     </span> Advantage</h2>
             </div>
@@ -2711,263 +2688,191 @@
     </style>
 
 
+    <section class="partner-carousel-section">
 
+        <!-- Navigation Arrows -->
+        <button class="partner-nav partner-nav-left">&#10094;</button>
+        <button class="partner-nav partner-nav-right">&#10095;</button>
 
-    <style>
-        .placement-section {
-            padding: 40px 0px 0px 0px;
-            background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
-            overflow: hidden;
-        }
+        <div class="container">
 
-
-
-        .section-header h2 {
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            font-weight: 700;
-            color: #0a0a0a;
-            margin-bottom: 12px;
-            letter-spacing: -1px;
-        }
-
-        .section-header p {
-            font-size: clamp(1rem, 1.5vw, 1.2rem);
-            color: #666666;
-            font-weight: 400;
-            line-height: 1.6;
-        }
-
-        /* CAROUSEL WRAPPER */
-        .logo-carousel-wrapper {
-            position: relative;
-            overflow: hidden;
-            padding: 10px 0;
-        }
-
-        /* Gradient masks on edges */
-        .logo-carousel-wrapper::before,
-        .logo-carousel-wrapper::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 150px;
-            z-index: 2;
-            pointer-events: none;
-        }
-
-        .logo-carousel-wrapper::before {
-            left: 0;
-            background: linear-gradient(90deg, #ffffff 0%, transparent 100%);
-        }
-
-        .logo-carousel-wrapper::after {
-            right: 0;
-            background: linear-gradient(90deg, transparent 0%, #ffffff 100%);
-        }
-
-        /* CAROUSEL TRACK */
-        .logo-carousel-track {
-            display: flex;
-            width: max-content;
-            animation: scroll 40s linear infinite;
-            gap: 60px;
-        }
-
-        .logo-carousel-track:hover {
-            animation-play-state: paused;
-        }
-
-        @keyframes scroll {
-            0% {
-                transform: translateX(0);
-            }
-
-            100% {
-                transform: translateX(-50%);
-            }
-        }
-
-        /* LOGO ITEM */
-        .logo-item {
-            flex-shrink: 0;
-            width: 200px;
-            height: 130px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-        }
-
-
-        .logo-item img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-            opacity: 1;
-            transition: all 0.3s ease;
-        }
-
-        .logo-item:hover img {
-            filter: grayscale(0%);
-            opacity: 1;
-        }
-
-
-        /* TABLET */
-        @media (max-width: 992px) {
-
-            .logo-carousel-wrapper::before,
-            .logo-carousel-wrapper::after {
-                width: 80px;
-            }
-
-            .logo-carousel-track {
-                gap: 40px;
-            }
-
-            .logo-item {
-                width: 160px;
-                height: 100px;
-                padding: 20px;
-            }
-
-            .placement-stats {
-                margin-top: 60px;
-                padding: 50px 20px;
-            }
-        }
-
-        /* MOBILE */
-        @media (max-width: 768px) {
-            .placement-section {
-                padding: 60px 0;
-            }
-
-            .section-header {
-                margin-bottom: 40px;
-            }
-
-            .logo-carousel-wrapper {
-                padding: 30px 0;
-            }
-
-            .logo-carousel-wrapper::before,
-            .logo-carousel-wrapper::after {
-                width: 50px;
-            }
-
-            .logo-carousel-track {
-                gap: 30px;
-                animation-duration: 30s;
-            }
-
-            .logo-item {
-                width: 140px;
-                height: 90px;
-                padding: 18px;
-                border-radius: 12px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .logo-carousel-track {
-                gap: 25px;
-            }
-
-            .logo-item {
-                width: 120px;
-                height: 80px;
-                padding: 15px;
-            }
-        }
-    </style>
-
-
-    <section class="placement-section">
-        <div class="container-fluid">
-
-            <!-- SECTION HEADER -->
-            <div class="section-header">
-                <h2></h2>
-                <h2 class="text-dark fw-bold" style="font-weight: 500 !important; font-size: 40px;">Our <span
-                        style=" font-weight: 700;  color: #c2173c;"> Placement </span>Partners</h2>
+            <div class="partner-section-header text-center">
+                <h2>
+                    Our <span>Placement</span> Partners
+                </h2>
             </div>
 
-            <!-- LOGO CAROUSEL -->
-            <div class="logo-carousel-wrapper">
-                <div class="logo-carousel-track">
+            <div class="partner-carousel-viewport">
+                <div class="partner-carousel-track" id="partnerTrack">
 
-                    <!-- First set of logos -->
-                    <div class="logo-item">
-                        <img src="placement/Airtel.svg" alt="Google">
-                    </div>
-                    <div class="logo-item">
-                        <img src="placement/Amazon.svg" alt="Amazon">
-                    </div>
-                    <div class="logo-item">
-                        <img src="placement/Apple.svg" alt="Microsoft">
-                    </div>
-                    <div class="logo-item">
-                        <img src="placement/BNY Mellon.svg" alt="IBM">
-                    </div>
-                    <div class="logo-item">
-                        <img src="placement/Caterpillar.svg" alt="Oracle">
-                    </div>
-                    <div class="logo-item">
-                        <img src="placement/Deloitte.svg" alt="Infosys">
-                    </div>
-                    <div class="logo-item">
-                        <img src="placement/DHL.svg" alt="TCS">
-                    </div>
-                    <div class="logo-item">
-                        <img src="placement/EXIDE.svg" alt="Wipro">
-                    </div>
-                    <div class="logo-item">
-                        <img src="placement/EY.svg" alt="Accenture">
-                    </div>
-                    <div class="logo-item">
-                        <img src="placement/Grant Thornton.svg" alt="Cognizant">
-                    </div>
-
-                    <!-- Duplicate set for seamless loop -->
-                    <div class="logo-item">
-                        <img src="placement/HCL Tech.svg" alt="Google">
-                    </div>
-                    <div class="logo-item">
-                        <img src="placement/HDFC.svg" alt="Amazon">
-                    </div>
-                    <div class="logo-item">
-                        <img src="placement/Honeywell.svg" alt="Microsoft">
-                    </div>
-                    <div class="logo-item">
-                        <img src="placement/ICICI.svg" alt="IBM">
-                    </div>
-                    <div class="logo-item">
-                        <img src="https://via.placeholder.com/200x80/ea4335/ffffff?text=Oracle" alt="Oracle">
-                    </div>
-                    <div class="logo-item">
-                        <img src="https://via.placeholder.com/200x80/0668e1/ffffff?text=Infosys" alt="Infosys">
-                    </div>
-                    <div class="logo-item">
-                        <img src="https://via.placeholder.com/200x80/7b68ee/ffffff?text=TCS" alt="TCS">
-                    </div>
-                    <div class="logo-item">
-                        <img src="https://via.placeholder.com/200x80/ff6b35/ffffff?text=Wipro" alt="Wipro">
-                    </div>
-                    <div class="logo-item">
-                        <img src="https://via.placeholder.com/200x80/1da1f2/ffffff?text=Accenture" alt="Accenture">
-                    </div>
-                    <div class="logo-item">
-                        <img src="https://via.placeholder.com/200x80/f7931e/ffffff?text=Cognizant" alt="Cognizant">
-                    </div>
+                    <!-- Logos -->
+                    <div class="partner-logo"><img src="placement/Airtel.svg"></div>
+                    <div class="partner-logo"><img src="placement/Amazon.svg"></div>
+                    <div class="partner-logo"><img src="placement/Apple.svg"></div>
+                    <div class="partner-logo"><img src="placement/BNY Mellon.svg"></div>
+                    <div class="partner-logo"><img src="placement/Caterpillar.svg"></div>
+                    <div class="partner-logo"><img src="placement/Deloitte.svg"></div>
+                    <div class="partner-logo"><img src="placement/DHL.svg"></div>
+                    <div class="partner-logo"><img src="placement/EXIDE.svg"></div>
+                    <div class="partner-logo"><img src="placement/EY.svg"></div>
+                    <div class="partner-logo"><img src="placement/Grant Thornton.svg"></div>
 
                 </div>
             </div>
         </div>
     </section>
+    <style>
+        .partner-carousel-section {
+            position: relative;
+            padding: 80px 0;
+            background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+            overflow: hidden;
+        }
 
+        .partner-section-header h2 {
+            font-size: clamp(28px, 4vw, 40px);
+            font-weight: 600;
+            margin-bottom: 50px;
+        }
 
+        .partner-section-header span {
+            color: #c2173c;
+            font-weight: 700;
+        }
+
+        /* VIEWPORT */
+        .partner-carousel-viewport {
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* TRACK */
+        .partner-carousel-track {
+            display: flex;
+            gap: 60px;
+            width: max-content;
+            will-change: transform;
+        }
+
+        /* LOGO ITEM */
+        .partner-logo {
+            flex-shrink: 0;
+            width: 200px;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .partner-logo img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .partner-logo:hover img {
+            transform: scale(1.08);
+        }
+
+        /* NAVIGATION ARROWS */
+        .partner-nav {
+            position: absolute;
+            top: 60%;
+            transform: translateY(-50%);
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            border: none;
+            background: #c2173c4a;
+            font-size: 22px;
+            cursor: pointer;
+            z-index: 20;
+
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .partner-nav:hover {
+            background: #c2173c;
+            color: #fff;
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        .partner-nav-left {
+            left: 50px !important;
+        }
+
+        .partner-nav-right {
+            right: 50px !important;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 992px) {
+            .partner-logo {
+                width: 160px;
+                height: 100px;
+            }
+
+            .partner-carousel-track {
+                gap: 40px;
+            }
+
+            .partner-nav {
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .partner-logo {
+                width: 140px;
+                height: 90px;
+            }
+
+            .partner-nav {
+                display: none;
+                /* cleaner mobile experience */
+            }
+        }
+    </style>
+    <script>
+        const partnerTrack = document.getElementById("partnerTrack");
+        const navLeft = document.querySelector(".partner-nav-left");
+        const navRight = document.querySelector(".partner-nav-right");
+
+        let scrollPosition = 0;
+        let autoSpeed = 0.5;
+
+        // Duplicate logos for infinite loop
+        partnerTrack.innerHTML += partnerTrack.innerHTML;
+
+        function autoScroll() {
+            scrollPosition -= autoSpeed;
+
+            if (Math.abs(scrollPosition) >= partnerTrack.scrollWidth / 2) {
+                scrollPosition = 0;
+            }
+
+            partnerTrack.style.transform = `translateX(${scrollPosition}px)`;
+            requestAnimationFrame(autoScroll);
+        }
+
+        autoScroll();
+
+        // Manual controls
+        navRight.addEventListener("click", () => {
+            scrollPosition -= 250;
+        });
+
+        navLeft.addEventListener("click", () => {
+            scrollPosition += 250;
+        });
+    </script>
 
 
     <section class="testimonials-section">
@@ -3957,9 +3862,9 @@
                 </p>
 
                 <ul class="footer-contact">
-                    <li><strong><i class="fa-regular fa-envelope"></i></strong> info.amritaonline@gmail.com</li>
-                    <li><strong><i class="fa-solid fa-phone"></i></strong> 080-22454991 | 080-26631169</li>
-                    <li><strong><i class="fa-brands fa-whatsapp"></i></strong> +91 9036020076</li>
+                    <li><strong><i class="fa-regular fa-envelope"  style="color: #be1f4f;"></i></strong> info.amritaonline@gmail.com</li>
+                    <li><strong><i class="fa-solid fa-phone"  style="color: #be1f4f;"></i></strong> 080-22454991 | 080-26631169</li>
+                    <li><strong><i class="fa-brands fa-whatsapp"  style="color: #be1f4f;"></i></strong> +91 9036020076</li>
                 </ul>
             </div>
 
@@ -3971,19 +3876,18 @@
         .footer-section {
             background: #0a0a0a;
             color: #ffffff;
-            padding-top: 60px;
+            padding: 60px 0;
             font-family: 'Inter', sans-serif;
         }
 
         /* MAIN LAYOUT */
         .footer-container {
-            max-width: 1500px;
+            max-width: 1300px;
             margin: 0 auto;
-            padding: 0 104px 10px;
+            padding: 0 40px;
             display: flex;
             justify-content: space-between;
-            /* keeps them at extremes */
-            align-items: flex-start;
+            align-items: center;
             gap: 60px;
         }
 
@@ -3995,43 +3899,20 @@
         /* RIGHT */
         .footer-right {
             flex: 1;
-            /* reduce from 1.2 to 1 so it doesn’t shrink toward the left */
-            margin-left: 179px;
-            /* pushes it more right */
         }
 
-
+        /* LOGO */
         .footer-logo {
-            max-width: 500px;
-            /* bigger on desktop */
+            max-width: 520px;
             width: 100%;
-            height: 160px;
+            height: auto;
         }
 
-        /* MOBILE */
-        @media (max-width: 576px) {
-            .footer-logo {
-                max-width: 220px;
-                /* bigger on mobile too */
-            }
-        }
-
-
-        /* RIGHT */
-        .footer-right {
-            flex: 1.2;
-        }
-
-        .footer-right h4 {
-            font-size: 1.4rem;
-            font-weight: 600;
-            margin-bottom: 0px;
-        }
-
+        /* TEXT */
         .footer-subtext {
             font-size: 1rem;
-            color: rgb(255, 255, 255);
-            margin-bottom: 22px;
+            margin-bottom: 20px;
+            line-height: 1.6;
         }
 
         .footer-contact {
@@ -4046,49 +3927,31 @@
             color: rgba(255, 255, 255, 0.85);
         }
 
-        .footer-contact strong {
-            color: #be1f4f;
-            font-weight: 600;
-        }
+        /* ========================= */
+        /* TABLET + MOBILE */
+        /* ========================= */
 
-        /* TABLET */
         @media (max-width: 768px) {
+
             .footer-container {
                 flex-direction: column;
-                align-items: center;
                 text-align: center;
-                gap: 40px;
+                align-items: center;
+                gap: 30px;
             }
 
+            .footer-left,
             .footer-right {
-                flex: unset;
-            }
-
-            .footer-contact li {
-                justify-content: center;
-            }
-        }
-
-        /* MOBILE */
-        @media (max-width: 576px) {
-            .footer-section {
-                padding-top: 40px;
+                width: 100%;
             }
 
             .footer-logo {
-                max-width: 150px;
+                max-width: 220px;
+                margin: 0 auto;
             }
 
-            .footer-right h4 {
-                font-size: 1.25rem;
-            }
-
-            .footer-subtext {
-                font-size: 0.95rem;
-            }
-
-            .footer-note p {
-                font-size: 0.85rem;
+            .footer-contact li {
+                text-align: center;
             }
         }
     </style>
@@ -4184,7 +4047,45 @@
             lastScroll = currentScroll;
         });
     </script>
+    <script>
 
+        const tracks = document.getElementById('logoTrack');
+        const leftBtns = document.querySelector('.left-arrow');
+        const rightBtns = document.querySelector('.right-arrow');
+
+        let scrollAmount = 0;
+        const cardWidth = 320; // card width + gap
+
+        // Duplicate cards for infinite loop
+        tracks.innerHTML += tracks.innerHTML;
+
+        function moveRight() {
+            scrollAmount += cardWidth;
+
+            if (scrollAmount >= tracks.scrollWidth / 2) {
+                scrollAmount = 0;
+            }
+
+            tracks.style.transform = `translateX(-${scrollAmount}px)`;
+        }
+
+        function moveLeft() {
+            scrollAmount -= cardWidth;
+
+            if (scrollAmount < 0) {
+                scrollAmount = tracks.scrollWidth / 2;
+            }
+
+            tracks.style.transform = `translateX(-${scrollAmount}px)`;
+        }
+
+        rightBtns.addEventListener('click', moveRight);
+        leftBtns.addEventListener('click', moveLeft);
+
+        // Auto Scroll
+        setInterval(moveRight, 4000);
+
+    </script>
 </body>
 
 </html>
